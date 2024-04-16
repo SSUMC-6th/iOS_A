@@ -6,24 +6,20 @@
 //
 
 import UIKit
+import SnapKit
 
 class SecondTabBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .green
-        // Do any additional setup after loading the view.
+        // SafeArea VS SuperView
+        view.backgroundColor = .white
+        let safeAreaView = UIView()
+        safeAreaView.backgroundColor = .green
+        view.addSubview(safeAreaView)
+        safeAreaView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
