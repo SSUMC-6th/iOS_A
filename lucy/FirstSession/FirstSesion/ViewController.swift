@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+        setNavigationBar()
     }
     
     func setView() {
@@ -19,6 +20,19 @@ class ViewController: UIViewController {
         // viewDidLoad에서 delegate, dataSource를 view에 위임해주기
         homeView.tableView.dataSource = self
         homeView.tableView.delegate = self
+    }
+    
+    func setNavigationBar() {
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addButtonTapped))
+        let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: self, action: #selector(addButtonTapped))
+        navigationItem.title = "네비게이션 타이틀"
+        navigationItem.rightBarButtonItems = [addButton, editButton]
+    }
+    
+    @objc func addButtonTapped() {
+    }
+    
+    @objc func editButtonTapped() {
     }
 }
 
