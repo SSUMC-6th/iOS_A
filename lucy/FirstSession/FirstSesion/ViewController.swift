@@ -26,6 +26,14 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    //셀 클릭 시 다음 뷰로 데이터 전달하기
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let secondVC = SecondViewController()
+        let cell = homeView.tableView.cellForRow(at: indexPath) as? CustomUITableViewCell
+        secondVC.titleLabel.text = cell?.titleLabel.text
+        navigationController?.pushViewController(secondVC, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -44,6 +52,6 @@ extension ViewController: UITableViewDataSource {
         cell.titleLabel.text = titleText
         cell.subtitleLabel.text = subTitleText
         cell.prizeLabel.text = prize
-        return CustomUITableViewCell()
+        return cell
     }
 }
