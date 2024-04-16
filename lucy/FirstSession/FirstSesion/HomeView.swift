@@ -28,6 +28,8 @@ class HomeView: UIView {
     // 1. 테이블 뷰 생성
     var tableView: UITableView = {
         let tableView = UITableView()
+        // tableView에 register 추가하기
+        tableView.register(CustomUITableViewCell.self, forCellReuseIdentifier: CustomUITableViewCell.identifier)
         return tableView
     }()
     
