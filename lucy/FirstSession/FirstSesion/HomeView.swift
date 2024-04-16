@@ -13,6 +13,7 @@ class HomeView: UIView {
     // MARK: init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         configureSubviews()
         makeConstraints()
     }
