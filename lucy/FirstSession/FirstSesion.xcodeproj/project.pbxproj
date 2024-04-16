@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		800D216F2BCE36AA004E1E15 /* CustomUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D216E2BCE36AA004E1E15 /* CustomUITableViewCell.swift */; };
 		800D21782BCE4978004E1E15 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D21772BCE4978004E1E15 /* Extension.swift */; };
+		800D217C2BCE52F0004E1E15 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D217B2BCE52F0004E1E15 /* SecondViewController.swift */; };
 		80A2C1002BCE2E110015AD1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2C0FF2BCE2E110015AD1B /* AppDelegate.swift */; };
 		80A2C1022BCE2E110015AD1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2C1012BCE2E110015AD1B /* SceneDelegate.swift */; };
 		80A2C1042BCE2E110015AD1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2C1032BCE2E110015AD1B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		800D216E2BCE36AA004E1E15 /* CustomUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITableViewCell.swift; sourceTree = "<group>"; };
 		800D21772BCE4978004E1E15 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		800D217B2BCE52F0004E1E15 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		80A2C0FC2BCE2E110015AD1B /* FirstSesion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSesion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A2C0FF2BCE2E110015AD1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80A2C1012BCE2E110015AD1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				80A2C1132BCE2EE20015AD1B /* HomeView.swift */,
 				800D216E2BCE36AA004E1E15 /* CustomUITableViewCell.swift */,
 				800D21772BCE4978004E1E15 /* Extension.swift */,
+				800D217B2BCE52F0004E1E15 /* SecondViewController.swift */,
 			);
 			path = FirstSesion;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				80A2C1142BCE2EE20015AD1B /* HomeView.swift in Sources */,
 				80A2C1002BCE2E110015AD1B /* AppDelegate.swift in Sources */,
 				800D21782BCE4978004E1E15 /* Extension.swift in Sources */,
+				800D217C2BCE52F0004E1E15 /* SecondViewController.swift in Sources */,
 				80A2C1022BCE2E110015AD1B /* SceneDelegate.swift in Sources */,
 				800D216F2BCE36AA004E1E15 /* CustomUITableViewCell.swift in Sources */,
 			);
