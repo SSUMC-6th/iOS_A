@@ -77,6 +77,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RSF-tY-Xx3" secondAttribute="trailing" constant="176" id="yda-iK-SZq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closureTimeLabel" destination="eOV-ok-Nmk" id="otg-k5-sBG"/>
+                        <outlet property="combineTimeLabel" destination="Zkq-qK-VPZ" id="i5K-cv-a6x"/>
+                        <outlet property="observableTimeLabel" destination="qaV-7G-04y" id="V4B-18-rdr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

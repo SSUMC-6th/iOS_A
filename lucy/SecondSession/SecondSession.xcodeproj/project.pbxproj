@@ -60,6 +60,7 @@
 		80AE1A512BDB7AEF003290CD /* SecondSession */ = {
 			isa = PBXGroup;
 			children = (
+				80AE1A602BDB7AF0003290CD /* Info.plist */,
 				80AE1A6E2BDB7C7A003290CD /* Others */,
 				80AE1A692BDB7C37003290CD /* Controllers */,
 				80AE1A682BDB7C32003290CD /* ViewModel */,
@@ -107,7 +108,6 @@
 				80AE1A542BDB7AEF003290CD /* SceneDelegate.swift */,
 				80AE1A522BDB7AEF003290CD /* AppDelegate.swift */,
 				80AE1A5D2BDB7AF0003290CD /* LaunchScreen.storyboard */,
-				80AE1A602BDB7AF0003290CD /* Info.plist */,
 				80AE1A5B2BDB7AF0003290CD /* Assets.xcassets */,
 			);
 			path = Others;
