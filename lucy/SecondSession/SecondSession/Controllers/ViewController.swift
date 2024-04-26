@@ -7,13 +7,22 @@
 
 import UIKit
 
+// 뷰 컨트롤러 (ViewController)
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var closureTimeLabel: UILabel!
+    @IBOutlet weak var observableTimeLabel: UILabel!
+    @IBOutlet weak var combineTimeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        startTimer()
     }
-
-
+    
+    // 매 초마다 시간을 업데이트
+    private func startTimer() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        
+        }
+    }
 }
-
