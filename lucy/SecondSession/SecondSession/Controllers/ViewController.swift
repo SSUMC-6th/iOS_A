@@ -24,11 +24,9 @@ class ViewController: UIViewController {
     }
 
     func setBindings() {
-        // 클로저 변수를 설정해준다 -> Binding 한다
-        // VM과 VC를 연결해주는 역할
-        viewModel.didChangeTime = { [weak self] viewModel in
-            self?.closureTimeLabel.text = viewModel.closureTime
-        }
+        viewModel.observableTime.bind({ [weak self] time in
+            self?.observableTimeLabel.text = time
+        })
     }
     
     func startTimer() {
