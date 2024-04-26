@@ -1,1 +1,7 @@
 .DS_Store
+
+# 제이시/최지웅의 .gitignore
+*.xcassets
+*.lproj
+*.plist
+*.xcodeproj
