@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     // 매 초마다 시간을 업데이트
     private func startTimer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-        
+            self.closureTimeLabel.text = Clock.currentTime()
         }
     }
 }
