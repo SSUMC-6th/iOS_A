@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 		80AE1A532BDB7AEF003290CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A522BDB7AEF003290CD /* AppDelegate.swift */; };
 		80AE1A552BDB7AEF003290CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A542BDB7AEF003290CD /* SceneDelegate.swift */; };
 		80AE1A572BDB7AEF003290CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A562BDB7AEF003290CD /* ViewController.swift */; };
@@ -30,6 +31,21 @@
 		80AE1A6A2BDB7C67003290CD /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 		80AE1A6C2BDB7C73003290CD /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		80AE1A6F2BDB8933003290CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+=======
+		80FF90222BB9E5DC0029152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF90212BB9E5DC0029152A /* AppDelegate.swift */; };
+		80FF90242BB9E5DC0029152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF90232BB9E5DC0029152A /* SceneDelegate.swift */; };
+		80FF90262BB9E5DC0029152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF90252BB9E5DC0029152A /* ViewController.swift */; };
+		80FF902B2BB9E5DE0029152A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FF902A2BB9E5DE0029152A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80FF901E2BB9E5DC0029152A /* iOS_Study_A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Study_A.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FF90212BB9E5DC0029152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80FF90232BB9E5DC0029152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		80FF90252BB9E5DC0029152A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80FF902A2BB9E5DE0029152A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80FF902F2BB9E5DE0029152A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +78,20 @@
 		80AE1A512BDB7AEF003290CD /* SecondSession */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 				80AE1A602BDB7AF0003290CD /* Info.plist */,
 				80AE1A6E2BDB7C7A003290CD /* Others */,
 				80AE1A692BDB7C37003290CD /* Controllers */,
 				80AE1A682BDB7C32003290CD /* ViewModel */,
 				80AE1A672BDB7C29003290CD /* View */,
 				80AE1A662BDB7C24003290CD /* Model */,
+=======
+				80FF90212BB9E5DC0029152A /* AppDelegate.swift */,
+				80FF90232BB9E5DC0029152A /* SceneDelegate.swift */,
+				80FF90252BB9E5DC0029152A /* ViewController.swift */,
+				80FF902A2BB9E5DE0029152A /* Assets.xcassets */,
+				80FF902F2BB9E5DE0029152A /* Info.plist */,
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 			);
 			path = SecondSession;
 			sourceTree = "<group>";
@@ -174,9 +198,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 				80AE1A5F2BDB7AF0003290CD /* LaunchScreen.storyboard in Resources */,
 				80AE1A5C2BDB7AF0003290CD /* Assets.xcassets in Resources */,
 				80AE1A5A2BDB7AEF003290CD /* Main.storyboard in Resources */,
+=======
+				80FF902B2BB9E5DE0029152A /* Assets.xcassets in Resources */,
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +226,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 /* Begin PBXVariantGroup section */
 		80AE1A582BDB7AEF003290CD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -217,6 +246,8 @@
 		};
 /* End PBXVariantGroup section */
 
+=======
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 /* Begin XCBuildConfiguration section */
 		80AE1A612BDB7AF0003290CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -345,12 +376,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 				INFOPLIST_FILE = SecondSession/Info.plist;
+=======
+				INFOPLIST_FILE = iOS_Study_A/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,12 +408,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
 				INFOPLIST_FILE = SecondSession/Info.plist;
+=======
+				INFOPLIST_FILE = iOS_Study_A/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+>>>>>>> a505fa9 (스토리보드 삭제):iOS_Study_A/iOS_Study_A.xcodeproj/project.pbxproj
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
