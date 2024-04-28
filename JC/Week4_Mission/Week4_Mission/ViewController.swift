@@ -10,6 +10,9 @@ import SnapKit
 import UIKit
 
 class ViewController: UIViewController {
+  // MARK: - UI Elements
+  
+  // Username text field
   private let usernameTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "Username"
@@ -18,6 +21,7 @@ class ViewController: UIViewController {
     return textField
   }()
 
+  // Password text field
   private let passwordTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "Password"
@@ -27,7 +31,8 @@ class ViewController: UIViewController {
     return textField
   }()
 
-  private let signInButton: UIButton = {
+  // Sign In button
+  private lazy var signInButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Sign In", for: .normal)
     button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
@@ -35,7 +40,8 @@ class ViewController: UIViewController {
     return button
   }()
 
-  private let signUpButton: UIButton = {
+  // Sign Up button
+  private lazy var signUpButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Sign Up", for: .normal)
     button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
@@ -43,16 +49,29 @@ class ViewController: UIViewController {
     return button
   }()
 
+  // MARK: - View Lifecycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     view.backgroundColor = .systemBackground
 
+    setupViews()
+    setupConstraints()
+  }
+
+  // MARK: - UI Setup
+  
+  // Add UI elements to the view
+  private func setupViews() {
     view.addSubview(usernameTextField)
     view.addSubview(passwordTextField)
     view.addSubview(signInButton)
     view.addSubview(signUpButton)
+  }
 
+  // Set up constraints for UI elements
+  private func setupConstraints() {
     usernameTextField.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.centerY.equalToSuperview().offset(-50)
@@ -78,15 +97,20 @@ class ViewController: UIViewController {
     }
   }
 
+  // MARK: - Button Actions
+  
+  // Handle sign in button tapped event
   @objc private func signInButtonTapped() {
-    // Handle sign in button tapped event
     guard let username = usernameTextField.text, let password = passwordTextField.text else {
       return
     }
 
     Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
       if let error = error {
-        print("Sign in error: \(error.localizedDescription)")
+        // Display error message on the screen
+        let alertController = UIAlertController(title: "에러", message: "이메일이나 비밀번호가 틀립니다.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        self?.present(alertController, animated: true, completion: nil)
       } else {
         print("Sign in successful")
         let profileVC = ProfileViewController()
@@ -95,8 +119,8 @@ class ViewController: UIViewController {
     }
   }
 
+  // Handle sign up button tapped event
   @objc private func signUpButtonTapped() {
-    // Handle sign up button tapped event
     guard let username = usernameTextField.text, let password = passwordTextField.text else {
       return
     }

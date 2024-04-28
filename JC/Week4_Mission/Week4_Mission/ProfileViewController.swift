@@ -1,6 +1,6 @@
 import FirebaseAuth
-import UIKit
 import SnapKit
+import UIKit
 
 class ProfileViewController: UIViewController {
   let emailLabel: UILabel = {
@@ -26,13 +26,13 @@ class ProfileViewController: UIViewController {
     view.addSubview(emailLabel)
     view.addSubview(logoutButton)
 
-    emailLabel.snp.makeConstraints { make in 
-        make.center.equalToSuperview()
+    emailLabel.snp.makeConstraints { make in
+      make.center.equalToSuperview()
     }
 
     logoutButton.snp.makeConstraints { make in
-        make.centerX.equalToSuperview()
-        make.top.equalTo(emailLabel.snp.bottom).offset(20)
+      make.centerX.equalToSuperview()
+      make.top.equalTo(emailLabel.snp.bottom).offset(20)
     }
   }
 
@@ -40,8 +40,8 @@ class ProfileViewController: UIViewController {
     do {
       try Auth.auth().signOut()
       self.dismiss(animated: true, completion: nil)
-    } catch let signOutError as NSError {
-      print("Error signing out: %@", signOutError)
+    } catch {
+      print("Error signing out: \(error)")
     }
   }
 }
