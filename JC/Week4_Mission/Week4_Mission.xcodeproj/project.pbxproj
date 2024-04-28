@@ -13,6 +13,10 @@
 		DA67457C2BDE028F005EA4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA67457B2BDE028F005EA4D5 /* Assets.xcassets */; };
 		DA67458D2BDE0449005EA4D5 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA67458C2BDE0449005EA4D5 /* SwiftFormat */; };
 		DA67458F2BDE0449005EA4D5 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DA67458E2BDE0449005EA4D5 /* SwiftFormatConfiguration */; };
+		DA6745972BDE04A5005EA4D5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA6745962BDE04A5005EA4D5 /* SnapKit */; };
+		DA6745992BDE04A5005EA4D5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DA6745982BDE04A5005EA4D5 /* SnapKit-Dynamic */; };
+		DA67459C2BDE04C0005EA4D5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA67459B2BDE04C0005EA4D5 /* FirebaseAuth */; };
+		DA67459E2BDE04C0005EA4D5 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DA67459D2BDE04C0005EA4D5 /* FirebaseAuthCombine-Community */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +34,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA67458F2BDE0449005EA4D5 /* SwiftFormatConfiguration in Frameworks */,
+				DA67459E2BDE04C0005EA4D5 /* FirebaseAuthCombine-Community in Frameworks */,
+				DA67459C2BDE04C0005EA4D5 /* FirebaseAuth in Frameworks */,
 				DA67458D2BDE0449005EA4D5 /* SwiftFormat in Frameworks */,
+				DA6745972BDE04A5005EA4D5 /* SnapKit in Frameworks */,
+				DA6745992BDE04A5005EA4D5 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +92,10 @@
 			packageProductDependencies = (
 				DA67458C2BDE0449005EA4D5 /* SwiftFormat */,
 				DA67458E2BDE0449005EA4D5 /* SwiftFormatConfiguration */,
+				DA6745962BDE04A5005EA4D5 /* SnapKit */,
+				DA6745982BDE04A5005EA4D5 /* SnapKit-Dynamic */,
+				DA67459B2BDE04C0005EA4D5 /* FirebaseAuth */,
+				DA67459D2BDE04C0005EA4D5 /* FirebaseAuthCombine-Community */,
 			);
 			productName = Week4_Mission;
 			productReference = DA67456F2BDE028C005EA4D5 /* Week4_Mission.app */;
@@ -115,6 +127,8 @@
 			mainGroup = DA6745662BDE028C005EA4D5;
 			packageReferences = (
 				DA67458B2BDE0449005EA4D5 /* XCRemoteSwiftPackageReference "swift-format" */,
+				DA6745952BDE04A5005EA4D5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DA67459A2BDE04C0005EA4D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = DA6745702BDE028C005EA4D5 /* Products */;
 			projectDirPath = "";
@@ -355,6 +369,22 @@
 				minimumVersion = 510.1.0;
 			};
 		};
+		DA6745952BDE04A5005EA4D5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		DA67459A2BDE04C0005EA4D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +397,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA67458B2BDE0449005EA4D5 /* XCRemoteSwiftPackageReference "swift-format" */;
 			productName = SwiftFormatConfiguration;
+		};
+		DA6745962BDE04A5005EA4D5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA6745952BDE04A5005EA4D5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DA6745982BDE04A5005EA4D5 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA6745952BDE04A5005EA4D5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		DA67459B2BDE04C0005EA4D5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA67459A2BDE04C0005EA4D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DA67459D2BDE04C0005EA4D5 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA67459A2BDE04C0005EA4D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
