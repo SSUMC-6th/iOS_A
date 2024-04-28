@@ -86,12 +86,11 @@ class ViewController: UIViewController {
 
     Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
       if let error = error {
-        // Handle sign in error
         print("Sign in error: \(error.localizedDescription)")
       } else {
-        // Sign in successful
         print("Sign in successful")
-        // TODO: Navigate to the next screen or perform any other actions
+        let profileVC = ProfileViewController()
+        self?.present(profileVC, animated: true, completion: nil)
       }
     }
   }
