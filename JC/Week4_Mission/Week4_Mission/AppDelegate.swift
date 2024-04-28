@@ -5,6 +5,7 @@
 //  Created by Jiwoong CHOI on 4/28/24.
 //
 
+import FirebaseCore
 import UIKit
 
 @main
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     // Override point for customization after application launch.
+    FirebaseApp.configure()
     return true
   }
 

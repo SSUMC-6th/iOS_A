@@ -74,6 +74,13 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>Tools for plug-in “Lint Source Code”.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Week4_Mission.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
