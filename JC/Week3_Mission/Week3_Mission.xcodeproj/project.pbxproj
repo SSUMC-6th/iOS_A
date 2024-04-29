@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA18C8E62BDF602F00B46820 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C8E22BDF602F00B46820 /* ThirdViewController.swift */; };
+		DA18C8E72BDF602F00B46820 /* LifeCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C8E32BDF602F00B46820 /* LifeCycleViewController.swift */; };
+		DA18C8E82BDF602F00B46820 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C8E42BDF602F00B46820 /* SecondViewController.swift */; };
+		DA18C8E92BDF602F00B46820 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C8E52BDF602F00B46820 /* FirstViewController.swift */; };
+		DA18C8EC2BDF60E300B46820 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C8EB2BDF60E300B46820 /* SnapKit */; };
+		DA18C8EE2BDF60E300B46820 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C8ED2BDF60E300B46820 /* SnapKit-Dynamic */; };
+		DA18C8F12BDF60E900B46820 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C8F02BDF60E900B46820 /* SwiftFormat */; };
+		DA18C8F32BDF60E900B46820 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C8F22BDF60E900B46820 /* SwiftFormatConfiguration */; };
 		DAB06BCB2BDE0A6A00060EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB06BCA2BDE0A6A00060EE1 /* AppDelegate.swift */; };
 		DAB06BCD2BDE0A6A00060EE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB06BCC2BDE0A6A00060EE1 /* SceneDelegate.swift */; };
-		DAB06BCF2BDE0A6A00060EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB06BCE2BDE0A6A00060EE1 /* ViewController.swift */; };
 		DAB06BD42BDE0A6C00060EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB06BD32BDE0A6C00060EE1 /* Assets.xcassets */; };
-		DAB06BE02BDE0AE600060EE1 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DAB06BDF2BDE0AE600060EE1 /* SwiftFormat */; };
-		DAB06BE22BDE0AE600060EE1 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DAB06BE12BDE0AE600060EE1 /* SwiftFormatConfiguration */; };
-		DAB06BE52BDE0AF000060EE1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DAB06BE42BDE0AF000060EE1 /* SnapKit */; };
-		DAB06BE72BDE0AF000060EE1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAB06BE62BDE0AF000060EE1 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA18C8E22BDF602F00B46820 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		DA18C8E32BDF602F00B46820 /* LifeCycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycleViewController.swift; sourceTree = "<group>"; };
+		DA18C8E42BDF602F00B46820 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DA18C8E52BDF602F00B46820 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		DAB06BC72BDE0A6A00060EE1 /* Week3_Mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week3_Mission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB06BCA2BDE0A6A00060EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAB06BCC2BDE0A6A00060EE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAB06BCE2BDE0A6A00060EE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAB06BD32BDE0A6C00060EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAB06BD82BDE0A6C00060EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -31,10 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB06BE52BDE0AF000060EE1 /* SnapKit in Frameworks */,
-				DAB06BE22BDE0AE600060EE1 /* SwiftFormatConfiguration in Frameworks */,
-				DAB06BE02BDE0AE600060EE1 /* SwiftFormat in Frameworks */,
-				DAB06BE72BDE0AF000060EE1 /* SnapKit-Dynamic in Frameworks */,
+				DA18C8EC2BDF60E300B46820 /* SnapKit in Frameworks */,
+				DA18C8F12BDF60E900B46820 /* SwiftFormat in Frameworks */,
+				DA18C8F32BDF60E900B46820 /* SwiftFormatConfiguration in Frameworks */,
+				DA18C8EE2BDF60E300B46820 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +68,10 @@
 			children = (
 				DAB06BCA2BDE0A6A00060EE1 /* AppDelegate.swift */,
 				DAB06BCC2BDE0A6A00060EE1 /* SceneDelegate.swift */,
-				DAB06BCE2BDE0A6A00060EE1 /* ViewController.swift */,
+				DA18C8E52BDF602F00B46820 /* FirstViewController.swift */,
+				DA18C8E32BDF602F00B46820 /* LifeCycleViewController.swift */,
+				DA18C8E42BDF602F00B46820 /* SecondViewController.swift */,
+				DA18C8E22BDF602F00B46820 /* ThirdViewController.swift */,
 				DAB06BD32BDE0A6C00060EE1 /* Assets.xcassets */,
 				DAB06BD82BDE0A6C00060EE1 /* Info.plist */,
 			);
@@ -86,10 +95,10 @@
 			);
 			name = Week3_Mission;
 			packageProductDependencies = (
-				DAB06BDF2BDE0AE600060EE1 /* SwiftFormat */,
-				DAB06BE12BDE0AE600060EE1 /* SwiftFormatConfiguration */,
-				DAB06BE42BDE0AF000060EE1 /* SnapKit */,
-				DAB06BE62BDE0AF000060EE1 /* SnapKit-Dynamic */,
+				DA18C8EB2BDF60E300B46820 /* SnapKit */,
+				DA18C8ED2BDF60E300B46820 /* SnapKit-Dynamic */,
+				DA18C8F02BDF60E900B46820 /* SwiftFormat */,
+				DA18C8F22BDF60E900B46820 /* SwiftFormatConfiguration */,
 			);
 			productName = Week3_Mission;
 			productReference = DAB06BC72BDE0A6A00060EE1 /* Week3_Mission.app */;
@@ -120,8 +129,8 @@
 			);
 			mainGroup = DAB06BBE2BDE0A6A00060EE1;
 			packageReferences = (
-				DAB06BDE2BDE0AE600060EE1 /* XCRemoteSwiftPackageReference "swift-format" */,
-				DAB06BE32BDE0AF000060EE1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DA18C8EA2BDF60E300B46820 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DA18C8EF2BDF60E900B46820 /* XCRemoteSwiftPackageReference "swift-format" */,
 			);
 			productRefGroup = DAB06BC82BDE0A6A00060EE1 /* Products */;
 			projectDirPath = "";
@@ -148,9 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB06BCF2BDE0A6A00060EE1 /* ViewController.swift in Sources */,
+				DA18C8E82BDF602F00B46820 /* SecondViewController.swift in Sources */,
 				DAB06BCB2BDE0A6A00060EE1 /* AppDelegate.swift in Sources */,
+				DA18C8E72BDF602F00B46820 /* LifeCycleViewController.swift in Sources */,
+				DA18C8E62BDF602F00B46820 /* ThirdViewController.swift in Sources */,
 				DAB06BCD2BDE0A6A00060EE1 /* SceneDelegate.swift in Sources */,
+				DA18C8E92BDF602F00B46820 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,15 +366,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DAB06BDE2BDE0AE600060EE1 /* XCRemoteSwiftPackageReference "swift-format" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-format";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 510.1.0;
-			};
-		};
-		DAB06BE32BDE0AF000060EE1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		DA18C8EA2BDF60E300B46820 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -370,28 +374,36 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		DA18C8EF2BDF60E900B46820 /* XCRemoteSwiftPackageReference "swift-format" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-format";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 510.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DAB06BDF2BDE0AE600060EE1 /* SwiftFormat */ = {
+		DA18C8EB2BDF60E300B46820 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DAB06BDE2BDE0AE600060EE1 /* XCRemoteSwiftPackageReference "swift-format" */;
-			productName = SwiftFormat;
-		};
-		DAB06BE12BDE0AE600060EE1 /* SwiftFormatConfiguration */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAB06BDE2BDE0AE600060EE1 /* XCRemoteSwiftPackageReference "swift-format" */;
-			productName = SwiftFormatConfiguration;
-		};
-		DAB06BE42BDE0AF000060EE1 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAB06BE32BDE0AF000060EE1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = DA18C8EA2BDF60E300B46820 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		DAB06BE62BDE0AF000060EE1 /* SnapKit-Dynamic */ = {
+		DA18C8ED2BDF60E300B46820 /* SnapKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DAB06BE32BDE0AF000060EE1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = DA18C8EA2BDF60E300B46820 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		DA18C8F02BDF60E900B46820 /* SwiftFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA18C8EF2BDF60E900B46820 /* XCRemoteSwiftPackageReference "swift-format" */;
+			productName = SwiftFormat;
+		};
+		DA18C8F22BDF60E900B46820 /* SwiftFormatConfiguration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA18C8EF2BDF60E900B46820 /* XCRemoteSwiftPackageReference "swift-format" */;
+			productName = SwiftFormatConfiguration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
