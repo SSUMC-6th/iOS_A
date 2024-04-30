@@ -121,24 +121,3 @@ class APIDetailViewController: UIViewController {
   }()
 }
 
-#if DEBUG
-
-  import SwiftUI
-
-  struct APIDetailViewControllerRepresentable: UIViewControllerRepresentable {
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-      //
-    }
-
-    func makeUIViewController(context: Context) -> some UIViewController {
-      return APIDetailViewController()
-    }
-  }
-
-  struct APIDetailViewController_Previews: PreviewProvider {
-    static var previews: some View {
-      APIDetailViewControllerRepresentable()
-    }
-  }
-
-#endif

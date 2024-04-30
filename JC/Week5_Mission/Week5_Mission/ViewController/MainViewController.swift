@@ -33,10 +33,16 @@ class MainViewController: UITableViewController {
     navigationItem.rightBarButtonItem = fetchNewDataButton
   }
 
-  // MARK: - Functions
+  // MARK: - Fetching Data Methods
   @objc func fetchNewDataButtonTapped() {
     APIData.removeAll()
+      
+      // 첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
     fetchAPIData()
+      
+      // 두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
+      
+      // 세 번째 Combine Library를 사용한 메소드
   }
 
   private func fetchAPIData() {
@@ -71,6 +77,7 @@ class MainViewController: UITableViewController {
     }
   }
 
+    
   // MARK: - Table view data source
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -117,25 +124,3 @@ class MainViewController: UITableViewController {
   }
 }
 
-// MARK: - Preview
-#if DEBUG
-
-  import SwiftUI
-
-  struct MainViewControllerRepresentable: UIViewControllerRepresentable {
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-      //
-    }
-
-    func makeUIViewController(context: Context) -> some UIViewController {
-      return MainViewController()
-    }
-  }
-
-  struct MainViewController_Previews: PreviewProvider {
-    static var previews: some View {
-      MainViewControllerRepresentable()
-    }
-  }
-
-#endif

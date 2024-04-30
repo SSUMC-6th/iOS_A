@@ -73,8 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				DA18C9422BDF6B1000B46820 /* Extension */,
-				DA18C9252BDF69F700B46820 /* Model */,
 				DA18C9262BDF69F700B46820 /* Source */,
+				DA18C9252BDF69F700B46820 /* Model */,
 				DA18C9272BDF69F700B46820 /* View */,
 				DA18C9282BDF69F700B46820 /* ViewController */,
 				DA18C90B2BDF687500B46820 /* Assets.xcassets */,
