@@ -36,13 +36,30 @@ class MainViewController: UITableViewController {
   // MARK: - Fetching Data Methods
   @objc func fetchNewDataButtonTapped() {
     APIData.removeAll()
-      
-      // 첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
-    fetchAPIData()
-      
-      // 두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
-      
-      // 세 번째 Combine Library를 사용한 메소드
+
+    // 아래 여러 네트워크 통신 비동기 처리 코드 중 하나만 선택해서 사용할 것
+
+    // 첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
+    //    fetchAPIData()
+
+    // 두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
+    // 실시간 렌더링
+    // 실시간 렌더링이라서 value의 무결성 검사를 하지 않는 점이 안정성의 미스라고 생각한다.
+    fetchAPIDataRealtimeCallback { error in
+      debugPrint(error ?? "This is error")
+    }
+
+    // 일괄 렌더링
+    // 멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
+    fetchAPIDataOneQueueCallback { data, error in
+      if let error = error {
+        debugPrint(error)
+      } else {
+        self.APIData = data!
+        self.tableView.reloadData()
+      }
+    }
+    // 세 번째 Combine Library를 사용한 메소드
   }
 
   private func fetchAPIData() {
@@ -77,7 +94,54 @@ class MainViewController: UITableViewController {
     }
   }
 
-    
+  private func fetchAPIDataRealtimeCallback(completion: @escaping (Error?) -> Void) {
+    let endPointURL = "https://www.boredapi.com/api/activity"
+
+    for _ in 0...49 {
+      AF.request(endPointURL, method: .get)
+        .validate(statusCode: 200..<500)
+        .responseDecodable(of: BoredAPIModel.self) { response in
+          switch response.result {
+          case .success(let value):
+            self.APIData.append(value)
+            DispatchQueue.main.async {
+              self.tableView.reloadData()
+            }
+          case .failure(let error):
+            completion(error)
+          }
+        }
+    }
+  }
+
+  private func fetchAPIDataOneQueueCallback(
+    completion: @escaping ([BoredAPIModel]?, Error?) -> Void
+  ) {
+    let endPointURL = "https://www.boredapi.com/api/activity"
+    var tempAPIDATA = [BoredAPIModel]()
+    let dispatchGroup = DispatchGroup()
+
+    for _ in 0...49 {
+      dispatchGroup.enter()
+      AF.request(endPointURL, method: .get)
+        .validate(statusCode: 200..<500)
+        .responseDecodable(of: BoredAPIModel.self) { response in
+          switch response.result {
+          case .success(let value):
+            tempAPIDATA.append(value)
+          case .failure(let error):
+            debugPrint(error)
+            completion(nil, error)
+          }
+          dispatchGroup.leave()
+        }
+    }
+
+    dispatchGroup.notify(queue: .main) {
+      completion(tempAPIDATA, nil)
+    }
+  }
+
   // MARK: - Table view data source
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -123,4 +187,3 @@ class MainViewController: UITableViewController {
     navigationController?.pushViewController(detailView, animated: true)
   }
 }
-

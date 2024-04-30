@@ -120,4 +120,3 @@ class APIDetailViewController: UIViewController {
     return temp
   }()
 }
-
