@@ -11,7 +11,7 @@ class homeViewController: UIViewController {
     
     lazy var tableView = UITableView(frame: .zero, style:  .plain) //style : plain, grouped, insetGrouped
     
-    let data = [["Test 1-1","Test 1-2","Test 1-3","Test 1-4"],["Test 2-1","Test 2-2","Test 2-3"],["Test 3-1","Test 3-2"]]
+    let data = [[("Test 1-1","homeimage1"),("Test 1-2","homeimage1"),("Test 1-3","homeimage1"),("Test 1-4","homeimage1")],[("Test 2-1","homeimage1"),("Test 2-2","homeimage1"),("Test 2-3","homeimage1")],[("Test 3-1","homeimage1"),("Test 3-2","homeimage1")]]
     let header = ["Section 1","Section 2","Section 3"]
     var selectedIndexPath: IndexPath?
 
@@ -51,14 +51,18 @@ extension homeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
-        cell.textLabel?.text = data[indexPath.section][indexPath.row]
+        let (text, imageName) = data[indexPath.section][indexPath.row]
+        cell.textLabel?.text = text
+        cell.imageView?.image = UIImage(named: imageName)
         return cell
     }
     
     func reusetableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellWithIndexPath = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cellWithIndexPath.textLabel?.text = data[indexPath.section][indexPath.row]
-        return cellWithIndexPath
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let (text, imageName) = data[indexPath.section][indexPath.row]
+        cell.textLabel?.text = text
+        cell.imageView?.image = UIImage(named: imageName)
+        return cell
     } //재사용 cell 가져오기
 }
 
