@@ -24,13 +24,13 @@ class ViewController: UITabBarController{
         let vc4 = chatViewController()
         let vc5 = myViewController()
         
-        vc1.title = "Home"
+        //vc1.title = "Home"
         vc2.title = "Live"
         vc3.title = "Around"
         vc4.title = "Chat"
         vc5.title = "Carrot"
         
-        vc1.navigationItem.largeTitleDisplayMode = .always
+        //vc1.navigationItem.largeTitleDisplayMode = .always
         vc2.navigationItem.largeTitleDisplayMode = .always
         vc3.navigationItem.largeTitleDisplayMode = .always
         vc4.navigationItem.largeTitleDisplayMode = .always

@@ -11,8 +11,7 @@
 		1A37222F2BE67BFD001C28F0 /* myViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37222E2BE67BFD001C28F0 /* myViewController.swift */; };
 		1A3722312BE67C08001C28F0 /* aroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3722302BE67C08001C28F0 /* aroundViewController.swift */; };
 		1A3722332BE67C19001C28F0 /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3722322BE67C19001C28F0 /* liveViewController.swift */; };
-		1A3722372BE68462001C28F0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3722362BE68462001C28F0 /* TableViewController.swift */; };
-		1A3722392BE68A98001C28F0 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3722382BE68A98001C28F0 /* homeViewController.swift */; };
+		1A37223B2BE69C07001C28F0 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37223A2BE69C07001C28F0 /* homeViewController.swift */; };
 		1A75CC132BCD760800086135 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75CC122BCD760800086135 /* AppDelegate.swift */; };
 		1A75CC152BCD760800086135 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75CC142BCD760800086135 /* SceneDelegate.swift */; };
 		1A75CC172BCD760800086135 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75CC162BCD760800086135 /* ViewController.swift */; };
@@ -45,8 +44,7 @@
 		1A37222E2BE67BFD001C28F0 /* myViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myViewController.swift; sourceTree = "<group>"; };
 		1A3722302BE67C08001C28F0 /* aroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aroundViewController.swift; sourceTree = "<group>"; };
 		1A3722322BE67C19001C28F0 /* liveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
-		1A3722362BE68462001C28F0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		1A3722382BE68A98001C28F0 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		1A37223A2BE69C07001C28F0 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		1A75CC0F2BCD760800086135 /* baki_week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baki_week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A75CC122BCD760800086135 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A75CC142BCD760800086135 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +110,7 @@
 				1A75CC122BCD760800086135 /* AppDelegate.swift */,
 				1A75CC142BCD760800086135 /* SceneDelegate.swift */,
 				1A75CC162BCD760800086135 /* ViewController.swift */,
-				1A3722362BE68462001C28F0 /* TableViewController.swift */,
-				1A3722382BE68A98001C28F0 /* homeViewController.swift */,
+				1A37223A2BE69C07001C28F0 /* homeViewController.swift */,
 				1A3722322BE67C19001C28F0 /* liveViewController.swift */,
 				1A3722302BE67C08001C28F0 /* aroundViewController.swift */,
 				1A37222C2BE67BE3001C28F0 /* chatViewController.swift */,
@@ -276,13 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A75CC172BCD760800086135 /* ViewController.swift in Sources */,
-				1A3722392BE68A98001C28F0 /* homeViewController.swift in Sources */,
+				1A37223B2BE69C07001C28F0 /* homeViewController.swift in Sources */,
 				1A37222F2BE67BFD001C28F0 /* myViewController.swift in Sources */,
 				1A75CC132BCD760800086135 /* AppDelegate.swift in Sources */,
 				1A3722312BE67C08001C28F0 /* aroundViewController.swift in Sources */,
 				1A3722332BE67C19001C28F0 /* liveViewController.swift in Sources */,
 				1A37222D2BE67BE3001C28F0 /* chatViewController.swift in Sources */,
-				1A3722372BE68462001C28F0 /* TableViewController.swift in Sources */,
 				1A75CC152BCD760800086135 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
