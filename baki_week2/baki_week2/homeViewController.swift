@@ -53,7 +53,14 @@ extension homeViewController: UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
         let (text, imageName) = data[indexPath.section][indexPath.row]
         cell.textLabel?.text = text
-        cell.imageView?.image = UIImage(named: imageName)
+        if let image = UIImage(named: imageName) {
+                cell.imageView?.image = image
+                cell.imageView?.layer.cornerRadius = 8 // 이미지를 둥글게
+                cell.imageView?.clipsToBounds = true
+                cell.imageView?.contentMode = .scaleAspectFill // 이미지의 비율을 유지하며 이미지뷰에 맞춰 표시
+                cell.imageView?.frame.size = CGSize(width: 50, height: 50) // 이미지뷰의 크기를 조절
+                
+            }
         return cell
     }
     
