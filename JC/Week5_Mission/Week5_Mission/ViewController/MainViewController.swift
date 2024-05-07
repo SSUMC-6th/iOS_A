@@ -51,14 +51,14 @@ class MainViewController: UITableViewController {
 
 //     일괄 렌더링
 //     멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
-//    fetchAPIDataOneQueueCallback { data, error in
-//      if let error = error {
-//        debugPrint(error)
-//      } else {
-//        self.APIData = data!
-//        self.tableView.reloadData()
-//      }
-//    }
+    fetchAPIDataOneQueueCallback { data, error in
+      if let error = error {
+        debugPrint(error)
+      } else {
+        self.APIData = data!
+        self.tableView.reloadData()
+      }
+    }
 
 //     세 번째 Combine Library를 사용한 메소드
   }
