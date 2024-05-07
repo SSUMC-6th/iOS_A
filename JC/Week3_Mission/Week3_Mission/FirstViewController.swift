@@ -74,6 +74,7 @@ class FirstViewController: UIViewController {
   @objc func buttonTapped() {
     debugPrint("Button Tapped")
     let secondViewController = SecondViewController()
+    secondViewController.label.text = "Second View"
     navigationController?.pushViewController(secondViewController, animated: true)
   }
 }
