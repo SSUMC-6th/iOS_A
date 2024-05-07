@@ -45,11 +45,6 @@ class SecondViewController: UIViewController {
     }
   }
 
-  @objc func buttonTapped() {
-    let thirdViewController = ThirdViewController()
-    navigationController?.pushViewController(thirdViewController, animated: true)
-  }
-
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     debugPrint("Second View: viewWillAppear")
@@ -63,5 +58,11 @@ class SecondViewController: UIViewController {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     debugPrint("Second View: viewWillDisappear")
+  }
+
+  @objc func buttonTapped() {
+    let thirdViewController = ThirdViewController()
+    thirdViewController.label.text = "Third View"
+    navigationController?.pushViewController(thirdViewController, animated: true)
   }
 }

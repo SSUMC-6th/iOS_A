@@ -70,6 +70,7 @@ class LifeCycleViewController: UIViewController {
   @objc func buttonTapped() {
     debugPrint("Button Tapped")
     let firstViewController = FirstViewController()
+    firstViewController.label.text = "First View"
     navigationController?.pushViewController(firstViewController, animated: true)
   }
 }
