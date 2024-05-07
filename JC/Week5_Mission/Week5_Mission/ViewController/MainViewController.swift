@@ -37,29 +37,30 @@ class MainViewController: UITableViewController {
   @objc func fetchNewDataButtonTapped() {
     APIData.removeAll()
 
-    // 아래 여러 네트워크 통신 비동기 처리 코드 중 하나만 선택해서 사용할 것
+//     아래 여러 네트워크 통신 비동기 처리 코드 중 하나만 선택해서 사용할 것
 
-    // 첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
-    //    fetchAPIData()
+//     첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
+//    fetchAPIData()
 
-    // 두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
-    // 실시간 렌더링
-    // 실시간 렌더링이라서 value의 무결성 검사를 하지 않는 점이 안정성의 미스라고 생각한다.
-    fetchAPIDataRealtimeCallback { error in
-      debugPrint(error ?? "This is error")
-    }
+//     두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
+//     실시간 렌더링
+//     실시간 렌더링이라서 value의 무결성 검사를 하지 않는 점이 안정성의 미스라고 생각한다.
+//    fetchAPIDataRealtimeCallback { error in
+//      debugPrint(error ?? "This is error")
+//    }
 
-    // 일괄 렌더링
-    // 멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
-    fetchAPIDataOneQueueCallback { data, error in
-      if let error = error {
-        debugPrint(error)
-      } else {
-        self.APIData = data!
-        self.tableView.reloadData()
-      }
-    }
-    // 세 번째 Combine Library를 사용한 메소드
+//     일괄 렌더링
+//     멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
+//    fetchAPIDataOneQueueCallback { data, error in
+//      if let error = error {
+//        debugPrint(error)
+//      } else {
+//        self.APIData = data!
+//        self.tableView.reloadData()
+//      }
+//    }
+
+//     세 번째 Combine Library를 사용한 메소드
   }
 
   private func fetchAPIData() {
@@ -142,6 +143,9 @@ class MainViewController: UITableViewController {
     }
   }
 
+  private func fetchAPIDataWithCombine() {
+      
+  }
   // MARK: - Table view data source
 
   override func numberOfSections(in tableView: UITableView) -> Int {
