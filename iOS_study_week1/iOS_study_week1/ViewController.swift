@@ -10,26 +10,6 @@ import UIKit
 class ViewController: UITabBarController {
 //class ViewController: UIViewController라고 안해줘도 되나..?
     
-//    let abc: UIButton = {
-//        let view = UIButton()
-//        view.setTitle("HUMONS: aa", for: .normal)
-//        view.setTitleColor(.black, for: .normal)
-//        view.backgroundColor = .yellow
-//        return view
-//    }()
-//        
-//    let button: UIButton = {
-//        let view = UIButton()
-//        view.setTitle("HUMONS: aa", for: .normal)
-//        view.backgroundColor = .blue
-//        return view
-//    }()
-//    
-//    let titleBackground: UIView = {
-//       let view = UIView()
-//        view.backgroundColor = .color
-//        return view
-//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

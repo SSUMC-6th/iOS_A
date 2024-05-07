@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30ABC9082BE90A5D00D02F25 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABC9072BE90A5D00D02F25 /* TableViewController.swift */; };
+		30ABC90A2BE9185700D02F25 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABC9092BE9185700D02F25 /* CustomTableViewCell.swift */; };
+		30ABC9102BEA1DD400D02F25 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABC90F2BEA1DD400D02F25 /* FirstViewController.swift */; };
+		30ABC9122BEA1DE800D02F25 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABC9112BEA1DE800D02F25 /* SecondViewController.swift */; };
+		30ABC9142BEA331300D02F25 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABC9132BEA331300D02F25 /* ViewController2.swift */; };
 		30F8B62F2BCE453A00CBA992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B62E2BCE453A00CBA992 /* AppDelegate.swift */; };
 		30F8B6312BCE453A00CBA992 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B6302BCE453A00CBA992 /* SceneDelegate.swift */; };
 		30F8B6332BCE453A00CBA992 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B6322BCE453A00CBA992 /* ViewController.swift */; };
@@ -15,6 +20,7 @@
 		30F8B6462BCE453B00CBA992 /* iOS_study_week2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B6452BCE453B00CBA992 /* iOS_study_week2Tests.swift */; };
 		30F8B6502BCE453B00CBA992 /* iOS_study_week2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B64F2BCE453B00CBA992 /* iOS_study_week2UITests.swift */; };
 		30F8B6522BCE453B00CBA992 /* iOS_study_week2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B6512BCE453B00CBA992 /* iOS_study_week2UITestsLaunchTests.swift */; };
+		30F8B65F2BCE610600CBA992 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8B65E2BCE610600CBA992 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30ABC9072BE90A5D00D02F25 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		30ABC9092BE9185700D02F25 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		30ABC90F2BEA1DD400D02F25 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		30ABC9112BEA1DE800D02F25 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		30ABC9132BEA331300D02F25 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		30F8B62B2BCE453A00CBA992 /* iOS_study_week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_study_week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F8B62E2BCE453A00CBA992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F8B6302BCE453A00CBA992 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		30F8B64B2BCE453B00CBA992 /* iOS_study_week2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_study_week2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F8B64F2BCE453B00CBA992 /* iOS_study_week2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_study_week2UITests.swift; sourceTree = "<group>"; };
 		30F8B6512BCE453B00CBA992 /* iOS_study_week2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_study_week2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30F8B65E2BCE610600CBA992 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,12 @@
 				30F8B6372BCE453B00CBA992 /* Assets.xcassets */,
 				30F8B6392BCE453B00CBA992 /* LaunchScreen.storyboard */,
 				30F8B63C2BCE453B00CBA992 /* Info.plist */,
+				30F8B65E2BCE610600CBA992 /* TabBarController.swift */,
+				30ABC9072BE90A5D00D02F25 /* TableViewController.swift */,
+				30ABC9092BE9185700D02F25 /* CustomTableViewCell.swift */,
+				30ABC90F2BEA1DD400D02F25 /* FirstViewController.swift */,
+				30ABC9132BEA331300D02F25 /* ViewController2.swift */,
+				30ABC9112BEA1DE800D02F25 /* SecondViewController.swift */,
 			);
 			path = iOS_study_week2;
 			sourceTree = "<group>";
@@ -254,9 +272,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30ABC9122BEA1DE800D02F25 /* SecondViewController.swift in Sources */,
+				30ABC90A2BE9185700D02F25 /* CustomTableViewCell.swift in Sources */,
+				30ABC9142BEA331300D02F25 /* ViewController2.swift in Sources */,
 				30F8B6332BCE453A00CBA992 /* ViewController.swift in Sources */,
+				30F8B65F2BCE610600CBA992 /* TabBarController.swift in Sources */,
 				30F8B62F2BCE453A00CBA992 /* AppDelegate.swift in Sources */,
+				30ABC9082BE90A5D00D02F25 /* TableViewController.swift in Sources */,
 				30F8B6312BCE453A00CBA992 /* SceneDelegate.swift in Sources */,
+				30ABC9102BEA1DD400D02F25 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
