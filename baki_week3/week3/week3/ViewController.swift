@@ -58,6 +58,7 @@ class ViewController: UIViewController {
 
     }
     
+    
     @objc private func startButtonTapped() {
         let secondVC = CartViewController()
         secondVC.quantity = selected //데이터 전달하기
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     
-    //인터페이스 빌더와 소스 코드 연결... 버튼을 탭했을 때 
+    //인터페이스 빌더와 소스 코드 연결...
     @IBAction func selecthowmanyButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "수량 선택", message: nil, preferredStyle: .actionSheet)
         
