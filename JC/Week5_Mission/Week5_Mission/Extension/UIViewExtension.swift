@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
 
   // 탐구해야 할 코드 문법
-  func addSubview(_ views: UIView...) {
+  func addSubviews(_ views: UIView...) {
     views.forEach {
       self.addSubview($0)
     }

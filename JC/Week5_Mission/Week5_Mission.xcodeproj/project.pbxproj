@@ -19,7 +19,7 @@
 		DA18C93A2BDF6A9900B46820 /* BoredAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C9392BDF6A9900B46820 /* BoredAPIModel.swift */; };
 		DA18C93C2BDF6A9E00B46820 /* APIDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93B2BDF6A9E00B46820 /* APIDataTableCell.swift */; };
 		DA18C93F2BDF6AA400B46820 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93D2BDF6AA400B46820 /* MainViewController.swift */; };
-		DA18C9402BDF6AA400B46820 /* APIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93E2BDF6AA400B46820 /* APIDetailViewController.swift */; };
+		DA18C9402BDF6AA400B46820 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93E2BDF6AA400B46820 /* DetailViewController.swift */; };
 		DA18C9432BDF6B1000B46820 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C9412BDF6B1000B46820 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		DA18C9392BDF6A9900B46820 /* BoredAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoredAPIModel.swift; sourceTree = "<group>"; };
 		DA18C93B2BDF6A9E00B46820 /* APIDataTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataTableCell.swift; sourceTree = "<group>"; };
 		DA18C93D2BDF6AA400B46820 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DA18C93E2BDF6AA400B46820 /* APIDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDetailViewController.swift; sourceTree = "<group>"; };
+		DA18C93E2BDF6AA400B46820 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DA18C9412BDF6B1000B46820 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 		DA18C9282BDF69F700B46820 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DA18C93E2BDF6AA400B46820 /* APIDetailViewController.swift */,
+				DA18C93E2BDF6AA400B46820 /* DetailViewController.swift */,
 				DA18C93D2BDF6AA400B46820 /* MainViewController.swift */,
 			);
 			path = ViewController;
@@ -213,7 +213,7 @@
 				DA18C93A2BDF6A9900B46820 /* BoredAPIModel.swift in Sources */,
 				DA18C9052BDF687300B46820 /* SceneDelegate.swift in Sources */,
 				DA18C9432BDF6B1000B46820 /* UIViewExtension.swift in Sources */,
-				DA18C9402BDF6AA400B46820 /* APIDetailViewController.swift in Sources */,
+				DA18C9402BDF6AA400B46820 /* DetailViewController.swift in Sources */,
 				DA18C93F2BDF6AA400B46820 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

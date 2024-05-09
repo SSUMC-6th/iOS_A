@@ -11,56 +11,61 @@ import UIKit
 
 class MainViewController: UITableViewController {
   // MARK: - Properties
-  var APIData: [BoredAPIModel] = []
+  var BoredData: [BoredAPIModel] = []
 
+  // MARK: - UI Components
   lazy var fetchNewDataButton: UIBarButtonItem = {
     let temp = UIBarButtonItem(
       image: UIImage(systemName: "arrow.down.circle.dotted"), style: .plain, target: self,
       action: #selector(fetchNewDataButtonTapped))
     return temp
   }()
+
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.register(APIDataTableCell.self, forCellReuseIdentifier: APIDataTableCell.identifier)
-    fetchAPIData()
-
     tableView.backgroundColor = .systemBackground
+    self.setupNavigation()
+
+    fetchAPIData()
+  }
+
+  // MARK: - View Logics
+  private func setupNavigation() {
     navigationItem.title = "Funny Things"
     navigationItem.largeTitleDisplayMode = .automatic
     navigationController?.navigationBar.prefersLargeTitles = true
-
     navigationItem.rightBarButtonItem = fetchNewDataButton
   }
 
-  // MARK: - Fetching Data Methods
+  // MARK: - Button Actions
   @objc func fetchNewDataButtonTapped() {
-    APIData.removeAll()
+    BoredData.removeAll()
 
-//     아래 여러 네트워크 통신 비동기 처리 코드 중 하나만 선택해서 사용할 것
+    //     아래 여러 네트워크 통신 비동기 처리 코드 중 하나만 선택해서 사용할 것
 
-//     첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
-//    fetchAPIData()
+    //     첫 번째 DispatchQueue와 DispatchGroup를 사용한 메소드
+    //    fetchAPIData()
 
-//     두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
-//     실시간 렌더링
-//     실시간 렌더링이라서 value의 무결성 검사를 하지 않는 점이 안정성의 미스라고 생각한다.
-//    fetchAPIDataRealtimeCallback { error in
-//      debugPrint(error ?? "This is error")
-//    }
+    //     두 번째 Callback을 사용하여 실시간 렌더링과 일괄 렌더링을 구현하는 메소드
+    //     실시간 렌더링
+    //     실시간 렌더링이라서 value의 무결성 검사를 하지 않는 점이 안정성의 미스라고 생각한다.
+    //    fetchAPIDataRealtimeCallback { error in
+    //      debugPrint(error ?? "This is error")
+    //    }
 
-//     일괄 렌더링
-//     멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
+    //     일괄 렌더링
+    //     멀티 스레드에서 네트워크 작업을 하고 임시 변수에 받아둔 데이터를 메인스레드로 반환해 렌더링 작업을 마칩니다.
     fetchAPIDataOneQueueCallback { data, error in
       if let error = error {
         debugPrint(error)
       } else {
-        self.APIData = data!
+        self.BoredData = data!
         self.tableView.reloadData()
       }
     }
 
-//     세 번째 Combine Library를 사용한 메소드
   }
 
   private func fetchAPIData() {
@@ -81,7 +86,7 @@ class MainViewController: UITableViewController {
               mutableValue.link = "Maybe there are no link!"
             }
 
-            self.APIData.append(mutableValue)
+            self.BoredData.append(mutableValue)
 
           case .failure(let error):
             print(error)
@@ -104,7 +109,7 @@ class MainViewController: UITableViewController {
         .responseDecodable(of: BoredAPIModel.self) { response in
           switch response.result {
           case .success(let value):
-            self.APIData.append(value)
+            self.BoredData.append(value)
             DispatchQueue.main.async {
               self.tableView.reloadData()
             }
@@ -143,17 +148,13 @@ class MainViewController: UITableViewController {
     }
   }
 
-  private func fetchAPIDataWithCombine() {
-      
-  }
   // MARK: - Table view data source
-
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return APIData.count
+    return BoredData.count
   }
 
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -170,24 +171,26 @@ class MainViewController: UITableViewController {
     else { return APIDataTableCell() }
 
     // Configure the cell...
-    cell.activityUILabel.text = "\(indexPath.row + 1). \(APIData[indexPath.row].activity)"
+    cell.activityUILabel.text = "\(indexPath.row + 1). \(BoredData[indexPath.row].activity)"
 
     return cell
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let detailView: APIDetailViewController = {
-      let temp = APIDetailViewController()
-      temp.activity.text = APIData[indexPath.row].activity
-      temp.type.text = "Type : \(APIData[indexPath.row].type)"
-      temp.participants.text = "Participant : \(String(APIData[indexPath.row].participants))"
-      temp.price.text = "Price : \(String(APIData[indexPath.row].price))"
-      temp.link.text = "Link : \(APIData[indexPath.row].link)"
-      temp.key.text = "Key : \(APIData[indexPath.row].key)"
-      temp.accesibility.text = "Accesibility : \(String(APIData[indexPath.row].accessibility))"
+    let data = BoredData[indexPath.row]
+    
+    let detailViewController: DetailViewController = {
+      let temp = DetailViewController()
+      temp.activity.text = data.activity
+      temp.type.text = "Type : \(data.type)"
+      temp.participants.text = "Participant : \(data.participants))"
+      temp.price.text = "Price : \(data.price))"
+      temp.link.text = "Link : \(data.link)"
+      temp.key.text = "Key : \(data.key)"
+      temp.accesibility.text = "Accesibility : \(data.accessibility)"
       return temp
     }()
 
-    navigationController?.pushViewController(detailView, animated: true)
+    navigationController?.pushViewController(detailViewController, animated: true)
   }
 }
