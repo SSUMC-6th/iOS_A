@@ -4,7 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+<<<<<<<< HEAD:baki_week3/baki_week3.xcodeproj/xcuserdata/heemings.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>baki_week3.xcscheme_^#shared#^_</key>
+========
 		<key>SecondSession.xcscheme_^#shared#^_</key>
+>>>>>>>> main:lucy/SecondSession/SecondSession.xcodeproj/xcuserdata/kimsoomin.xcuserdatad/xcschemes/xcschememanagement.plist
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>

@@ -1,14 +1,8 @@
 //
 //  SceneDelegate.swift
-<<<<<<<< HEAD:baki_week3/baki_week3/SceneDelegate.swift
 //  week3
 //
 //  Created by 박희민 on 5/5/24.
-========
-//  SecondSession
-//
-//  Created by 김수민 on 4/26/24.
->>>>>>>> main:lucy/SecondSession/SecondSession/Others/SceneDelegate.swift
 //
 
 import UIKit
@@ -59,3 +53,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
