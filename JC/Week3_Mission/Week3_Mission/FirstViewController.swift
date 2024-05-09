@@ -11,14 +11,14 @@ import UIKit
 class FirstViewController: UIViewController {
 
   // MARK: - Properties
-  let label: UILabel = {
+  private let label: UILabel = {
     let label = UILabel()
     label.text = "First View"
     label.textAlignment = .center
     return label
   }()
 
-  let button: UIButton = {
+  private let button: UIButton = {
     let button = UIButton(type: .system)  // Create a system (plain) button
     button.setTitle("Go to Second View", for: .normal)
     button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
