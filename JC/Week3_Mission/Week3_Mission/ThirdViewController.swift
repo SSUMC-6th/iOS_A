@@ -12,7 +12,7 @@ class ThirdViewController: UIViewController {
 
   // MARK: - Properties
 
-  let label: UILabel = {
+  private let label: UILabel = {
     let label = UILabel()
     label.text = "Third View"
     label.textAlignment = .center
