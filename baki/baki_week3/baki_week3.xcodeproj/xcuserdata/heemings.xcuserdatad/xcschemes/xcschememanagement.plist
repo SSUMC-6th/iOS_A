@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+<<<<<<<< HEAD:baki_week3/baki_week3.xcodeproj/xcuserdata/heemings.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>baki_week3.xcscheme_^#shared#^_</key>
+========
+		<key>SecondSession.xcscheme_^#shared#^_</key>
+>>>>>>>> main:lucy/SecondSession/SecondSession.xcodeproj/xcuserdata/kimsoomin.xcuserdatad/xcschemes/xcschememanagement.plist
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>
