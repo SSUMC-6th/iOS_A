@@ -1,8 +1,14 @@
 //
 //  AppDelegate.swift
+<<<<<<<< HEAD:lucy/FirstSession/FirstSesion/AppDelegate.swift
+//  FirstSesion
+//
+//  Created by 김수민 on 4/16/24.
+========
 //  SecondSession
 //
 //  Created by 김수민 on 4/26/24.
+>>>>>>>> JC/main:lucy/SecondSession/SecondSession/Others/AppDelegate.swift
 //
 
 import UIKit

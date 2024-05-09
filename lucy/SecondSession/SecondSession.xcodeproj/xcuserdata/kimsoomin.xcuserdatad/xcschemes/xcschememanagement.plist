@@ -2,17 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<<<<<<<< HEAD:baki/baki_week3/baki_week3.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+========
 	<key>SchemeUserState</key>
 	<dict>
-<<<<<<<< HEAD:baki_week3/baki_week3.xcodeproj/xcuserdata/heemings.xcuserdatad/xcschemes/xcschememanagement.plist
-		<key>baki_week3.xcscheme_^#shared#^_</key>
-========
 		<key>SecondSession.xcscheme_^#shared#^_</key>
->>>>>>>> main:lucy/SecondSession/SecondSession.xcodeproj/xcuserdata/kimsoomin.xcuserdatad/xcschemes/xcschememanagement.plist
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
+>>>>>>>> JC/main:lucy/SecondSession/SecondSession.xcodeproj/xcuserdata/kimsoomin.xcuserdatad/xcschemes/xcschememanagement.plist
 </dict>
 </plist>

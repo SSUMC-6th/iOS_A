@@ -1,18 +1,23 @@
 //
 //  SceneDelegate.swift
+<<<<<<<< HEAD:baki/baki_week3/week3/week3/SceneDelegate.swift
 //  week3
 //
 //  Created by 박희민 on 5/5/24.
+========
+//  SecondSession
+//
+//  Created by 김수민 on 4/26/24.
+>>>>>>>> JC/main:lucy/SecondSession/SecondSession/Others/SceneDelegate.swift
 //
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+<<<<<<<< HEAD:baki/baki_week3/week3/week3/SceneDelegate.swift
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
             
@@ -21,6 +26,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               rootViewController: ViewController())
         window?.makeKeyAndVisible()
 
+========
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        window?.rootViewController = ViewController()
+        window?.makeKeyAndVisible()
+>>>>>>>> JC/main:lucy/SecondSession/SecondSession/Others/SceneDelegate.swift
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +64,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

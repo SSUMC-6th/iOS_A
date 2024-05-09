@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A532BDB7AEF003290CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A522BDB7AEF003290CD /* AppDelegate.swift */; };
+		80AE1A552BDB7AEF003290CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A542BDB7AEF003290CD /* SceneDelegate.swift */; };
+		80AE1A572BDB7AEF003290CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A562BDB7AEF003290CD /* ViewController.swift */; };
+		80AE1A5A2BDB7AEF003290CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AE1A582BDB7AEF003290CD /* Main.storyboard */; };
+		80AE1A5C2BDB7AF0003290CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AE1A5B2BDB7AF0003290CD /* Assets.xcassets */; };
+		80AE1A5F2BDB7AF0003290CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AE1A5D2BDB7AF0003290CD /* LaunchScreen.storyboard */; };
+		80AE1A6B2BDB7C67003290CD /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A6A2BDB7C67003290CD /* ClockViewModel.swift */; };
+		80AE1A6D2BDB7C73003290CD /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A6C2BDB7C73003290CD /* Clock.swift */; };
+		80AE1A702BDB8933003290CD /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE1A6F2BDB8933003290CD /* Observable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80AE1A4F2BDB7AEF003290CD /* SecondSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AE1A522BDB7AEF003290CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80AE1A542BDB7AEF003290CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		80AE1A562BDB7AEF003290CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80AE1A592BDB7AEF003290CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80AE1A5B2BDB7AF0003290CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80AE1A5E2BDB7AF0003290CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80AE1A602BDB7AF0003290CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AE1A6A2BDB7C67003290CD /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		80AE1A6C2BDB7C73003290CD /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		80AE1A6F2BDB8933003290CD /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80AE1A4C2BDB7AEF003290CD /* Frameworks */ = {
+========
 		800D216F2BCE36AA004E1E15 /* CustomUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D216E2BCE36AA004E1E15 /* CustomUITableViewCell.swift */; };
 		800D21782BCE4978004E1E15 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D21772BCE4978004E1E15 /* Extension.swift */; };
 		800D217C2BCE52F0004E1E15 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D217B2BCE52F0004E1E15 /* SecondViewController.swift */; };
@@ -38,6 +67,7 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		80A2C0F92BCE2E110015AD1B /* Frameworks */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A462BDB7AEF003290CD = {
+			isa = PBXGroup;
+			children = (
+				80AE1A512BDB7AEF003290CD /* SecondSession */,
+				80AE1A502BDB7AEF003290CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80AE1A502BDB7AEF003290CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A4F2BDB7AEF003290CD /* SecondSession.app */,
+========
 		80A2C0F32BCE2E110015AD1B = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +105,68 @@
 			isa = PBXGroup;
 			children = (
 				80A2C0FC2BCE2E110015AD1B /* FirstSesion.app */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A512BDB7AEF003290CD /* SecondSession */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A602BDB7AF0003290CD /* Info.plist */,
+				80AE1A6E2BDB7C7A003290CD /* Others */,
+				80AE1A692BDB7C37003290CD /* Controllers */,
+				80AE1A682BDB7C32003290CD /* ViewModel */,
+				80AE1A672BDB7C29003290CD /* View */,
+				80AE1A662BDB7C24003290CD /* Model */,
+			);
+			path = SecondSession;
+			sourceTree = "<group>";
+		};
+		80AE1A662BDB7C24003290CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A6C2BDB7C73003290CD /* Clock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80AE1A672BDB7C29003290CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A582BDB7AEF003290CD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80AE1A682BDB7C32003290CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A6A2BDB7C67003290CD /* ClockViewModel.swift */,
+				80AE1A6F2BDB8933003290CD /* Observable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		80AE1A692BDB7C37003290CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A562BDB7AEF003290CD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		80AE1A6E2BDB7C7A003290CD /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				80AE1A542BDB7AEF003290CD /* SceneDelegate.swift */,
+				80AE1A522BDB7AEF003290CD /* AppDelegate.swift */,
+				80AE1A5D2BDB7AF0003290CD /* LaunchScreen.storyboard */,
+				80AE1A5B2BDB7AF0003290CD /* Assets.xcassets */,
+			);
+			path = Others;
+========
 		80A2C0FE2BCE2E110015AD1B /* FirstSesion */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +183,21 @@
 				800D217D2BCE6665004E1E15 /* SecondTabBarViewController.swift */,
 			);
 			path = FirstSesion;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A4E2BDB7AEF003290CD /* SecondSession */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80AE1A632BDB7AF0003290CD /* Build configuration list for PBXNativeTarget "SecondSession" */;
+			buildPhases = (
+				80AE1A4B2BDB7AEF003290CD /* Sources */,
+				80AE1A4C2BDB7AEF003290CD /* Frameworks */,
+				80AE1A4D2BDB7AEF003290CD /* Resources */,
+========
 		80A2C0FB2BCE2E110015AD1B /* FirstSesion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80A2C1102BCE2E120015AD1B /* Build configuration list for PBXNativeTarget "FirstSesion" */;
@@ -93,11 +205,17 @@
 				80A2C0F82BCE2E110015AD1B /* Sources */,
 				80A2C0F92BCE2E110015AD1B /* Frameworks */,
 				80A2C0FA2BCE2E110015AD1B /* Resources */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+			name = SecondSession;
+			productName = SecondSession;
+			productReference = 80AE1A4F2BDB7AEF003290CD /* SecondSession.app */;
+========
 			name = FirstSesion;
 			packageProductDependencies = (
 				80A2C1162BCE34480015AD1B /* SnapKit */,
@@ -105,24 +223,37 @@
 			);
 			productName = FirstSesion;
 			productReference = 80A2C0FC2BCE2E110015AD1B /* FirstSesion.app */;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A472BDB7AEF003290CD /* Project object */ = {
+========
 		80A2C0F42BCE2E110015AD1B /* Project object */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+					80AE1A4E2BDB7AEF003290CD = {
+========
 					80A2C0FB2BCE2E110015AD1B = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+			buildConfigurationList = 80AE1A4A2BDB7AEF003290CD /* Build configuration list for PBXProject "SecondSession" */;
+========
 			buildConfigurationList = 80A2C0F72BCE2E110015AD1B /* Build configuration list for PBXProject "FirstSesion" */;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,6 +261,14 @@
 				en,
 				Base,
 			);
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+			mainGroup = 80AE1A462BDB7AEF003290CD;
+			productRefGroup = 80AE1A502BDB7AEF003290CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80AE1A4E2BDB7AEF003290CD /* SecondSession */,
+========
 			mainGroup = 80A2C0F32BCE2E110015AD1B;
 			packageReferences = (
 				80A2C1152BCE34480015AD1B /* XCRemoteSwiftPackageReference "SnapKit" */,
@@ -139,23 +278,46 @@
 			projectRoot = "";
 			targets = (
 				80A2C0FB2BCE2E110015AD1B /* FirstSesion */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A4D2BDB7AEF003290CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AE1A5F2BDB7AF0003290CD /* LaunchScreen.storyboard in Resources */,
+				80AE1A5C2BDB7AF0003290CD /* Assets.xcassets in Resources */,
+				80AE1A5A2BDB7AEF003290CD /* Main.storyboard in Resources */,
+========
 		80A2C0FA2BCE2E110015AD1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				80A2C10C2BCE2E120015AD1B /* LaunchScreen.storyboard in Resources */,
 				80A2C1092BCE2E120015AD1B /* Assets.xcassets in Resources */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A4B2BDB7AEF003290CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AE1A572BDB7AEF003290CD /* ViewController.swift in Sources */,
+				80AE1A532BDB7AEF003290CD /* AppDelegate.swift in Sources */,
+				80AE1A552BDB7AEF003290CD /* SceneDelegate.swift in Sources */,
+				80AE1A6B2BDB7C67003290CD /* ClockViewModel.swift in Sources */,
+				80AE1A702BDB8933003290CD /* Observable.swift in Sources */,
+				80AE1A6D2BDB7C73003290CD /* Clock.swift in Sources */,
+========
 		80A2C0F82BCE2E110015AD1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,16 +330,32 @@
 				800D217C2BCE52F0004E1E15 /* SecondViewController.swift in Sources */,
 				80A2C1022BCE2E110015AD1B /* SceneDelegate.swift in Sources */,
 				800D216F2BCE36AA004E1E15 /* CustomUITableViewCell.swift in Sources */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A582BDB7AEF003290CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80AE1A592BDB7AEF003290CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80AE1A5D2BDB7AF0003290CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80AE1A5E2BDB7AF0003290CD /* Base */,
+========
 		80A2C10A2BCE2E120015AD1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				80A2C10B2BCE2E120015AD1B /* Base */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -185,7 +363,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A612BDB7AF0003290CD /* Debug */ = {
+========
 		80A2C10E2BCE2E120015AD1B /* Debug */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,7 +430,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A622BDB7AF0003290CD /* Release */ = {
+========
 		80A2C10F2BCE2E120015AD1B /* Release */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -304,7 +490,11 @@
 			};
 			name = Release;
 		};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A642BDB7AF0003290CD /* Debug */ = {
+========
 		80A2C1112BCE2E120015AD1B /* Debug */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -312,7 +502,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+				INFOPLIST_FILE = SecondSession/Info.plist;
+========
 				INFOPLIST_FILE = FirstSesion/Info.plist;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -322,7 +516,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+				PRODUCT_BUNDLE_IDENTIFIER = soomin.SecondSession;
+========
 				PRODUCT_BUNDLE_IDENTIFIER = soomin.FirstSesion;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -330,7 +528,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A652BDB7AF0003290CD /* Release */ = {
+========
 		80A2C1122BCE2E120015AD1B /* Release */ = {
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -338,7 +540,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+				INFOPLIST_FILE = SecondSession/Info.plist;
+========
 				INFOPLIST_FILE = FirstSesion/Info.plist;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -348,7 +554,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+				PRODUCT_BUNDLE_IDENTIFIER = soomin.SecondSession;
+========
 				PRODUCT_BUNDLE_IDENTIFIER = soomin.FirstSesion;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -359,20 +569,36 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A4A2BDB7AEF003290CD /* Build configuration list for PBXProject "SecondSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AE1A612BDB7AF0003290CD /* Debug */,
+				80AE1A622BDB7AF0003290CD /* Release */,
+========
 		80A2C0F72BCE2E110015AD1B /* Build configuration list for PBXProject "FirstSesion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A2C10E2BCE2E120015AD1B /* Debug */,
 				80A2C10F2BCE2E120015AD1B /* Release */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+		80AE1A632BDB7AF0003290CD /* Build configuration list for PBXNativeTarget "SecondSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AE1A642BDB7AF0003290CD /* Debug */,
+				80AE1A652BDB7AF0003290CD /* Release */,
+========
 		80A2C1102BCE2E120015AD1B /* Build configuration list for PBXNativeTarget "FirstSesion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80A2C1112BCE2E120015AD1B /* Debug */,
 				80A2C1122BCE2E120015AD1B /* Release */,
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -403,5 +629,9 @@
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
+<<<<<<<< HEAD:lucy/SecondSession/SecondSession.xcodeproj/project.pbxproj
+	rootObject = 80AE1A472BDB7AEF003290CD /* Project object */;
+========
 	rootObject = 80A2C0F42BCE2E110015AD1B /* Project object */;
+>>>>>>>> JC/main:lucy/FirstSession/FirstSesion.xcodeproj/project.pbxproj
 }
