@@ -1,14 +1,8 @@
 //
 //  SceneDelegate.swift
-<<<<<<<< HEAD:baki_week3/baki_week3/SceneDelegate.swift
-//  week3
+//  FirstSesion
 //
-//  Created by 박희민 on 5/5/24.
-========
-//  SecondSession
-//
-//  Created by 김수민 on 4/26/24.
->>>>>>>> main:lucy/SecondSession/SecondSession/Others/SceneDelegate.swift
+//  Created by 김수민 on 4/16/24.
 //
 
 import UIKit
@@ -19,14 +13,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         guard let windowScene = (scene as? UIWindowScene) else { return }
-            
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(
-              rootViewController: ViewController())
+        
+        // 탭 바 컨트롤러 세팅하기
+        let tabBarController = UITabBarController()
+        
+        // 첫번째 탭 바 세팅하기
+        let mainViewController = ViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0) // 예시로 시스템 아이템 가져왔습니다~
+        
+        // 두번째 탭 바 세팅하기
+        let secondTabBarVC = SecondTabBarViewController()
+        secondTabBarVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        
+        // 탭바에 컨트롤러들 추가하기
+        tabBarController.viewControllers = [navigationController, secondTabBarVC]
+        
+        // 윈도우에 루트 뷰 컨트롤러를 탭 바 컨트롤러로 수정하기
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -59,3 +66,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
