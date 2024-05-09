@@ -106,7 +106,6 @@ class MainViewController: UIViewController {
         debugPrint("로그인 성공")
 
         let profileViewController = ProfileViewController()
-
       }
     }
   }
