@@ -20,6 +20,7 @@ class LifeCycleViewController: UIViewController {
   let button: UIButton = {
     let button = UIButton(type: .system)  // Create a system (plain) button
     button.setTitle("Go to First View", for: .normal)
+    button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     return button
   }()
 
@@ -27,47 +28,33 @@ class LifeCycleViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
-    debugPrint("Life Cycle: viewDidLoad")
+    self.setSubViews()
+    self.setViewsLayout()
+    self.setNavigation()
+  }
 
+  // MARK: - Methods
+  private func setNavigation() {
+    navigationItem.title = label.text
+  }
+
+  private func setSubViews() {
     view.addSubview(label)
+    view.addSubview(button)
+  }
+
+  private func setViewsLayout() {
     label.snp.makeConstraints { make in
       make.center.equalToSuperview()
     }
 
-    button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
-    view.addSubview(button)
     button.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.top.equalTo(label.snp.bottom).offset(20)
     }
-
-    navigationItem.title = label.text
-
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    debugPrint("Life Cycle: viewWillAppear")
-  }
-
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    debugPrint("Life Cycle: viewDidAppear")
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    debugPrint("Life Cycle: viewWillDisappear")
-  }
-
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-    debugPrint("Life Cycle: viewDidDisappear")
-  }
-
-  // MARK: - Methods
-  @objc func buttonTapped() {
+  @objc private func buttonTapped() {
     debugPrint("Button Tapped")
     let firstViewController = FirstViewController()
     firstViewController.label.text = "First View"
