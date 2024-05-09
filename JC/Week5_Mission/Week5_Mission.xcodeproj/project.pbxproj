@@ -16,11 +16,12 @@
 		DA18C91F2BDF68FA00B46820 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C91E2BDF68FA00B46820 /* SnapKit-Dynamic */; };
 		DA18C9222BDF691600B46820 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C9212BDF691600B46820 /* Alamofire */; };
 		DA18C9242BDF691600B46820 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DA18C9232BDF691600B46820 /* AlamofireDynamic */; };
-		DA18C93A2BDF6A9900B46820 /* BoredAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C9392BDF6A9900B46820 /* BoredAPIModel.swift */; };
-		DA18C93C2BDF6A9E00B46820 /* APIDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93B2BDF6A9E00B46820 /* APIDataTableCell.swift */; };
+		DA18C93A2BDF6A9900B46820 /* BoredDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C9392BDF6A9900B46820 /* BoredDataModel.swift */; };
+		DA18C93C2BDF6A9E00B46820 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93B2BDF6A9E00B46820 /* TableViewCell.swift */; };
 		DA18C93F2BDF6AA400B46820 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93D2BDF6AA400B46820 /* MainViewController.swift */; };
 		DA18C9402BDF6AA400B46820 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C93E2BDF6AA400B46820 /* DetailViewController.swift */; };
 		DA18C9432BDF6B1000B46820 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18C9412BDF6B1000B46820 /* UIViewExtension.swift */; };
+		DA6044E42BEC5DCE0099FE5A /* BoredServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6044E32BEC5DCE0099FE5A /* BoredServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +30,12 @@
 		DA18C9042BDF687300B46820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA18C90B2BDF687500B46820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA18C9102BDF687500B46820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA18C9392BDF6A9900B46820 /* BoredAPIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoredAPIModel.swift; sourceTree = "<group>"; };
-		DA18C93B2BDF6A9E00B46820 /* APIDataTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataTableCell.swift; sourceTree = "<group>"; };
+		DA18C9392BDF6A9900B46820 /* BoredDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoredDataModel.swift; sourceTree = "<group>"; };
+		DA18C93B2BDF6A9E00B46820 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		DA18C93D2BDF6AA400B46820 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DA18C93E2BDF6AA400B46820 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DA18C9412BDF6B1000B46820 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		DA6044E32BEC5DCE0099FE5A /* BoredServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		DA18C9012BDF687300B46820 /* Week5_Mission */ = {
 			isa = PBXGroup;
 			children = (
+				DA6044E22BEC5DB40099FE5A /* Network */,
 				DA18C9422BDF6B1000B46820 /* Extension */,
 				DA18C9262BDF69F700B46820 /* Source */,
 				DA18C9252BDF69F700B46820 /* Model */,
@@ -86,7 +89,7 @@
 		DA18C9252BDF69F700B46820 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA18C9392BDF6A9900B46820 /* BoredAPIModel.swift */,
+				DA18C9392BDF6A9900B46820 /* BoredDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,7 +106,7 @@
 		DA18C9272BDF69F700B46820 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA18C93B2BDF6A9E00B46820 /* APIDataTableCell.swift */,
+				DA18C93B2BDF6A9E00B46820 /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +128,14 @@
 			name = Extension;
 			path = Week5_Mission/Extension;
 			sourceTree = SOURCE_ROOT;
+		};
+		DA6044E22BEC5DB40099FE5A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DA6044E32BEC5DCE0099FE5A /* BoredServer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -209,12 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA18C9032BDF687300B46820 /* AppDelegate.swift in Sources */,
-				DA18C93C2BDF6A9E00B46820 /* APIDataTableCell.swift in Sources */,
-				DA18C93A2BDF6A9900B46820 /* BoredAPIModel.swift in Sources */,
+				DA18C93C2BDF6A9E00B46820 /* TableViewCell.swift in Sources */,
+				DA18C93A2BDF6A9900B46820 /* BoredDataModel.swift in Sources */,
 				DA18C9052BDF687300B46820 /* SceneDelegate.swift in Sources */,
 				DA18C9432BDF6B1000B46820 /* UIViewExtension.swift in Sources */,
 				DA18C9402BDF6AA400B46820 /* DetailViewController.swift in Sources */,
 				DA18C93F2BDF6AA400B46820 /* MainViewController.swift in Sources */,
+				DA6044E42BEC5DCE0099FE5A /* BoredServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

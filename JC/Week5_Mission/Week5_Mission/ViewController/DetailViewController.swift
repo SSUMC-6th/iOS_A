@@ -9,7 +9,7 @@ import SnapKit
 import UIKit
 
 class DetailViewController: UIViewController {
-  
+
   // MARK: - UI Components
   var activity: UILabel = {
     let temp = UILabel()
@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
     temp.text = "accsibility"
     return temp
   }()
-  
+
   // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
