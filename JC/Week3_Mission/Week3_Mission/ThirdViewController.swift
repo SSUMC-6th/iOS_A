@@ -9,6 +9,9 @@ import SnapKit
 import UIKit
 
 class ThirdViewController: UIViewController {
+
+  // MARK: - Properties
+
   let label: UILabel = {
     let label = UILabel()
     label.text = "Third View"
@@ -16,37 +19,33 @@ class ThirdViewController: UIViewController {
     return label
   }()
 
+  // MARK: - Life Cycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
     debugPrint("Third View: viewDidLoad")
 
     view.backgroundColor = .systemBackground
 
-    view.addSubview(label)
-    label.snp.makeConstraints { make in
-      make.center.equalToSuperview()
-    }
+    self.setNavigation()
+    self.setSubViews()
+    self.setViewsLayout()
 
+  }
+
+  // MARK: - Methods
+
+  private func setNavigation() {
     navigationItem.title = label.text
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    debugPrint("Third View: viewWillAppear")
+  private func setSubViews() {
+    view.addSubview(label)
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    debugPrint("Third View: viewDidAppear")
-  }
-
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    debugPrint("Third View: viewWillDisappear")
-  }
-
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-    debugPrint("Third View: viewDidDisappear")
+  private func setViewsLayout() {
+    label.snp.makeConstraints { make in
+      make.center.equalToSuperview()
+    }
   }
 }
