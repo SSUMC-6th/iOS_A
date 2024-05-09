@@ -9,69 +9,55 @@ import FirebaseAuth
 import SnapKit
 import UIKit
 
-class ViewController: UIViewController {
-  // MARK: - UI Elements
-  
-  // Username text field
+class MainViewController: UIViewController {
+  // MARK: - UI Components
   private let usernameTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "Username"
     textField.borderStyle = .roundedRect
-    textField.translatesAutoresizingMaskIntoConstraints = false
     return textField
   }()
 
-  // Password text field
   private let passwordTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "Password"
     textField.borderStyle = .roundedRect
     textField.isSecureTextEntry = true
-    textField.translatesAutoresizingMaskIntoConstraints = false
     return textField
   }()
 
-  // Sign In button
   private lazy var signInButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Sign In", for: .normal)
     button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-    button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
 
-  // Sign Up button
   private lazy var signUpButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle("Sign Up", for: .normal)
     button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-    button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
 
-  // MARK: - View Lifecycle
-  
+  // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
     view.backgroundColor = .systemBackground
 
     setupViews()
-    setupConstraints()
+    setupViewLayouts()
+    setNavigation()
   }
 
-  // MARK: - UI Setup
-  
-  // Add UI elements to the view
+  // MARK: - View Logics
   private func setupViews() {
     view.addSubview(usernameTextField)
     view.addSubview(passwordTextField)
     view.addSubview(signInButton)
     view.addSubview(signUpButton)
   }
-
-  // Set up constraints for UI elements
-  private func setupConstraints() {
+  private func setupViewLayouts() {
     usernameTextField.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.centerY.equalToSuperview().offset(-50)
@@ -96,43 +82,59 @@ class ViewController: UIViewController {
       make.top.equalTo(signInButton.snp.bottom).offset(20)
     }
   }
+  private func setNavigation() {
+    navigationController?.title = "Settings"
+  }
 
   // MARK: - Button Actions
-  
-  // Handle sign in button tapped event
   @objc private func signInButtonTapped() {
     guard let username = usernameTextField.text, let password = passwordTextField.text else {
       return
     }
 
-    Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
+    Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
+
       if let error = error {
-        // Display error message on the screen
-        let alertController = UIAlertController(title: "에러", message: "이메일이나 비밀번호가 틀립니다.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-        self?.present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(
+          title: "에러", message: error.localizedDescription, preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "확인", style: .default))
+
+        self.present(alertController, animated: true)
+
       } else {
-        print("Sign in successful")
-        let profileVC = ProfileViewController()
-        self?.present(profileVC, animated: true, completion: nil)
+        debugPrint("로그인 성공")
+
+        let profileViewController = ProfileViewController()
+
       }
     }
   }
 
-  // Handle sign up button tapped event
   @objc private func signUpButtonTapped() {
     guard let username = usernameTextField.text, let password = passwordTextField.text else {
       return
     }
 
-    Auth.auth().createUser(withEmail: username, password: password) {
-      [weak self] authResult, error in
+    Auth.auth().createUser(withEmail: username, password: password) { authResult, error in
       if let error = error {
-        // Handle sign up error
-        print("Sign up error: \(error.localizedDescription)")
+        debugPrint("회원가입 에러: \(error.localizedDescription)")
+
+        let alertController = UIAlertController(
+          title: "회원가입 에러!", message: error.localizedDescription, preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "확인", style: .default))
+
+        self.present(alertController, animated: true)
+
       } else {
-        // Sign up successful
-        print("Sign up successful")
+
+        let alertController = UIAlertController(
+          title: "회원가입 성공", message: nil, preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "확인", style: .default))
+
+        self.present(alertController, animated: true)
       }
     }
   }

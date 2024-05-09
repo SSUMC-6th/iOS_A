@@ -3,29 +3,39 @@ import SnapKit
 import UIKit
 
 class ProfileViewController: UIViewController {
-  let emailLabel: UILabel = {
+
+  // MARK: - Properties
+  private let emailLabel: UILabel = {
     let label = UILabel()
     label.text = Auth.auth().currentUser?.email
     label.textAlignment = .center
     return label
   }()
 
-  lazy var logoutButton: UIButton = {
+  private lazy var logoutButton: UIButton = {
     let button = UIButton()
     button.setTitle("Logout", for: .normal)
     button.setTitleColor(.systemBlue, for: .normal)
     button.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
-
     return button
   }()
 
+  // MARK: - Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
 
+    self.setupViews()
+    self.setupViewsLayouts()
+  }
+
+  // MARK: - View Logics
+  private func setupViews() {
     view.addSubview(emailLabel)
     view.addSubview(logoutButton)
+  }
 
+  private func setupViewsLayouts() {
     emailLabel.snp.makeConstraints { make in
       make.center.equalToSuperview()
     }
@@ -36,12 +46,13 @@ class ProfileViewController: UIViewController {
     }
   }
 
+  // MARK: - Button Actions
   @objc func logoutButtonTapped() {
     do {
       try Auth.auth().signOut()
-      self.dismiss(animated: true, completion: nil)
+      debugPrint("로그아웃 성공")
     } catch {
-      print("Error signing out: \(error)")
+      debugPrint("로그아웃 간 에러 발생 : \(error.localizedDescription)")
     }
   }
 }
