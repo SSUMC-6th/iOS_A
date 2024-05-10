@@ -7,9 +7,11 @@ SSUMC 6기 iOS 스터디 A조
 | [7b7hom](https://github.com/7b7hom) |[kuj7373](https://github.com/kuj7373) | [heemings](https://github.com/heemings) | [jayn2u](https://github.com/jayn2u) |
 
 ## ⭐️ 스터디 규칙
-- [ ] 워크북 노션 채우기 (개념 내용, 미션)
-- [ ] 스터디 전까지 해당 주차 미션 PR 올리기
-- [ ] 파트장에게 approve 통과 시 머지시키기
+✅  워크북 노션 채우기 (개념 내용, 미션)
+
+✅  스터디 전까지 해당 주차 미션 PR 올리기
+
+✅  파트장에게 approve 통과 시 머지시키기
 
 
 ## 🌳 branch 규칙
