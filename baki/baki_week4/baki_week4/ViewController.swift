@@ -61,7 +61,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         configureSubviews()
         makeConstraints()
         view.backgroundColor = .white
-        
+        checklogin()
+    }
+    
+    func checklogin(){
         // 자동 로그인 여부 확인
         let autoLoginEnabled = UserDefaults.standard.bool(forKey: autoLoginKey)
         if autoLoginEnabled {
