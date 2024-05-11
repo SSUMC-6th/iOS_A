@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
     setupViews()
     setupLayout()
   }
-
+  
   // MARK: - Helpers
   func setupViews() {
     view.addSubview(emailTextField)
@@ -90,6 +90,7 @@ class MainViewController: UIViewController {
     }
   }
 
+  // MARK: - Button Actions
   @objc func loginButtonTapped() {
     guard let inputEmailString = emailTextField.text,
       let inputPasswordString =
@@ -108,9 +109,9 @@ class MainViewController: UIViewController {
       
       let profileLoginedViewController = ProfileLoginedViewController()
       profileLoginedViewController.emailLabel.text = inputEmailString
-      self.present(profileLoginedViewController, animated: true) {
-        debugPrint("Profile Logined View Loaded")
-      }
+      
+      guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+      sceneDelegate.window?.rootViewController = profileLoginedViewController
     }
 
   }
