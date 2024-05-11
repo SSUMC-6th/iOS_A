@@ -54,9 +54,11 @@ class ProfileLoginedViewController: UIViewController {
 
   // MARK: - Button Actions
   @objc func logoutButtonTapped() {
-    debugPrint("Logout success...!")
-    
-    guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+
+    UserDefaults.standard.removeObject(forKey: "currentUserUID")
+
+    guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+    else { return }
     sceneDelegate.window?.rootViewController = MainViewController()
   }
 

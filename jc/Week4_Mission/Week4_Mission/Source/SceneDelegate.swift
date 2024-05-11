@@ -5,8 +5,8 @@
 //  Created by Jiwoong CHOI on 5/10/24.
 //
 
-import UIKit
 import FirebaseAuth
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,8 +21,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: scene)
-    window?.rootViewController = MainViewController()
     window?.makeKeyAndVisible()
+
+    if let currentUser = Auth.auth().currentUser {
+      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"),
+        savedUID == currentUser.uid
+      {
+        let profileLoginedViewController = ProfileLoginedViewController()
+        profileLoginedViewController.emailLabel.text = currentUser.email
+
+        window?.rootViewController = profileLoginedViewController
+      } else {
+        window?.rootViewController = MainViewController()
+      }
+    } else {
+      window?.rootViewController = MainViewController()
+    }
+
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

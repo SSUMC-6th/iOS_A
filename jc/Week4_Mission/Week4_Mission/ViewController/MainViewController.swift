@@ -5,13 +5,25 @@
 //  Created by Jiwoong CHOI on 5/10/24.
 //
 
+import FirebaseAuth
 import SnapKit
 import UIKit
-import FirebaseAuth
 
 class MainViewController: UIViewController {
 
-  // MARK: - Properties
+  // MARK: - Life Cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    view.backgroundColor = .systemBackground
+    loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    signUpButton.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
+
+    setupViews()
+    setupLayout()
+  }
+
+  // MARK: - UI Components Properties
   let emailTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "이메일을 입력하세요"
@@ -45,19 +57,7 @@ class MainViewController: UIViewController {
     return button
   }()
 
-  // MARK: - Life Cycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    view.backgroundColor = .systemBackground
-    loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-    signUpButton.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
-
-    setupViews()
-    setupLayout()
-  }
-  
-  // MARK: - Helpers
+  // MARK: - UI Components Helpers
   func setupViews() {
     view.addSubview(emailTextField)
     view.addSubview(passwordTextField)
@@ -97,20 +97,25 @@ class MainViewController: UIViewController {
         passwordTextField.text
     else { return }
 
-    Auth.auth().signIn(withEmail: inputEmailString, password: inputPasswordString) { authResult, error in
+    Auth.auth().signIn(withEmail: inputEmailString, password: inputPasswordString) {
+      authResult, error in
       if let error = error {
         debugPrint("Error occured in signIn process")
         debugPrint("Error message below here")
         debugPrint(error.localizedDescription)
       }
-      
+
       guard let authResult = authResult else { return }
       debugPrint(authResult)
-      
+
+      UserDefaults.standard.setValue(authResult.user.uid, forKey: "currentUserUID")
+
       let profileLoginedViewController = ProfileLoginedViewController()
       profileLoginedViewController.emailLabel.text = inputEmailString
-      
-      guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+
+      guard
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+      else { return }
       sceneDelegate.window?.rootViewController = profileLoginedViewController
     }
 
