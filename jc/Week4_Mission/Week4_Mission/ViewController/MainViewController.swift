@@ -7,6 +7,7 @@
 
 import SnapKit
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
@@ -95,16 +96,21 @@ class MainViewController: UIViewController {
         passwordTextField.text
     else { return }
 
-    let presavedEmailString = UserDefaults.standard.string(forKey: inputEmailString)
-    let presavedPasswordString = UserDefaults.standard.string(forKey: inputPasswordString)
-
-    if inputEmailString == presavedEmailString && inputPasswordString == presavedPasswordString {
-      let profileView = ProfileLoginedViewController()
-      profileView.emailLabel.text = inputEmailString
-
-      self.present(profileView, animated: true)
-    } else {
-      debugPrint("Something wrong...!")
+    Auth.auth().signIn(withEmail: inputEmailString, password: inputPasswordString) { authResult, error in
+      if let error = error {
+        debugPrint("Error occured in signIn process")
+        debugPrint("Error message below here")
+        debugPrint(error.localizedDescription)
+      }
+      
+      guard let authResult = authResult else { return }
+      debugPrint(authResult)
+      
+      let profileLoginedViewController = ProfileLoginedViewController()
+      profileLoginedViewController.emailLabel.text = inputEmailString
+      self.present(profileLoginedViewController, animated: true) {
+        debugPrint("Profile Logined View Loaded")
+      }
     }
 
   }
@@ -115,10 +121,15 @@ class MainViewController: UIViewController {
         passwordTextField.text
     else { return }
 
-    UserDefaults.standard.set(emailString, forKey: emailString)
-    UserDefaults.standard.set(passwordString, forKey: passwordString)
-
-    debugPrint("Info saved...!")
+    Auth.auth().createUser(withEmail: emailString, password: passwordString) { authResult, error in
+      if let error = error {
+        debugPrint("Error occured in signUp process...!")
+        debugPrint("Error message below here")
+        debugPrint(error.localizedDescription)
+      }
+      guard let authResult = authResult else { return }
+      debugPrint(authResult)
+    }
   }
 
 }
