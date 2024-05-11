@@ -9,7 +9,7 @@ import SnapKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    var selected: Int = 1
+    let autoLoginKey = "autoLogin"
     
     private var idTextField: UITextField = {
         let idTextField = UITextField()
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 ]
         )
         
-        idTextField.borderStyle = . roundedRect
+        idTextField.borderStyle = .roundedRect
         idTextField.clearButtonMode = .always
         idTextField.autocapitalizationType = .none
         return idTextField
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     .foregroundColor : UIColor.black
                 ]
         )
-        pwTextField.borderStyle = . roundedRect
+        pwTextField.borderStyle = .roundedRect
         pwTextField.clearButtonMode = .always
         pwTextField.isSecureTextEntry = true
         pwTextField.autocapitalizationType = .none
@@ -61,6 +61,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         configureSubviews()
         makeConstraints()
         view.backgroundColor = .white
+        
+        // 자동 로그인 여부 확인
+        let autoLoginEnabled = UserDefaults.standard.bool(forKey: autoLoginKey)
+        if autoLoginEnabled {
+            // 저장된 아이디와 비밀번호 가져오기
+            let savedUsername = UserDefaults.standard.string(forKey: "username") ?? ""
+            let savedPassword = UserDefaults.standard.string(forKey: "password") ?? ""
+            
+            // 아이디와 비밀번호가 userdefault에서 비어있지 않으면 자동으로 로그인
+            if !savedUsername.isEmpty && !savedPassword.isEmpty {
+                let secondVC = SecondViewController()
+                secondVC.Username = savedUsername
+                navigationController?.pushViewController(secondVC, animated: false)
+            }
+        }
     }
     
     func configureSubviews(){
@@ -115,17 +130,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        // UserDefaults에 저장된 아이디와 비밀번호 가져오기
+        //UserDefaults에 저장된 아이디와 비밀번호 가져오기
         let savedUsername = UserDefaults.standard.string(forKey: "username") ?? ""
         let savedPassword = UserDefaults.standard.string(forKey: "password") ?? ""
-        
-        // 입력된 아이디와 비밀번호가 UserDefaults에 저장된 값과 일치하는지 확인
+
         if inputUsername == savedUsername && inputPassword == savedPassword {
-            //일치하면 다음 화면으로 이동
-            let secondVC = SecondViewController()
-            secondVC.Username = inputUsername
-            navigationController?.pushViewController(secondVC, animated: true)
+            // 로그인 성공 시 자동 로그인 여부 물어보기
+            let alertController = UIAlertController(title: "자동 로그인", message: "자동으로 로그인 하시겠습니까?", preferredStyle: .alert)
+            let yesAction = UIAlertAction(title: "네", style: .default) { _ in
+                UserDefaults.standard.set(true, forKey: self.autoLoginKey)
+                let secondVC = SecondViewController()
+                secondVC.Username = inputUsername
+                self.navigationController?.pushViewController(secondVC, animated: true)
+            }
+            
+            let noAction = UIAlertAction(title: "아니요", style: .cancel) { _ in
+                UserDefaults.standard.set(false, forKey: self.autoLoginKey)
+                let secondVC = SecondViewController()
+                secondVC.Username = inputUsername
+                self.navigationController?.pushViewController(secondVC, animated: true)
+            }
+            alertController.addAction(yesAction)
+            alertController.addAction(noAction)
+            present(alertController, animated: true, completion: nil)
         }
+        
         else {
             let alertController = UIAlertController(title: "로그인 실패", message: "아이디 또는 비밀번호가 일치하지 않습니다.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
