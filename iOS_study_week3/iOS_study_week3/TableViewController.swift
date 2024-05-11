@@ -48,6 +48,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let viewController = ViewController()
         viewController.selectedItem = data[indexPath.row] // 선택된 아이템 설정
-        navigationController?.pushViewController(ViewController(), animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
