@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 
+//Mark : == property
 class AddMemoViewController: UIViewController {
     
     lazy var textField: UITextField = { //lazy var -> 한 번만 초기화
@@ -16,6 +17,7 @@ class AddMemoViewController: UIViewController {
             if let text = textField.text, !text.isEmpty {
                 onMemoSaved?(text) // 메모를 전달하고 콜백 실행
             }
+        //Mark: == Life Cycle
         navigationController?.popViewController(animated: true) // 화면을 이전 뷰로 돌아가기
         }
     
