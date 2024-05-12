@@ -9,6 +9,7 @@ import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
 import SnapKit
+import SwiftUI
 import UIKit
 
 class GoogleAuthViewController: UIViewController {
@@ -19,16 +20,19 @@ class GoogleAuthViewController: UIViewController {
     view.backgroundColor = .systemBackground
     self.setupViews()
     self.setupViewsLayout()
-    
-    googleAuthButton.addTarget(self, action: #selector(makeUserAuthenticationInfo), for: .touchUpInside)
+
+    googleAuthButton.addTarget(
+      self, action: #selector(makeUserAuthenticationInfo), for: .touchUpInside)
   }
 
   // MARK: - UI Components Properties
   let googleAuthButton: UIButton = {
     let button = UIButton()
-    button.setTitle("Goggle Log-In", for: .normal)
+    button.backgroundColor = .white
+    button.setTitle("Google Log-In", for: .normal)
+    button.setTitleColor(.black, for: .normal)
     button.layer.cornerRadius = 5
-    button.backgroundColor = .systemBlue
+    button.layer.borderWidth = 1
     return button
   }()
 
@@ -75,7 +79,12 @@ class GoogleAuthViewController: UIViewController {
         }
 
         guard let authResult = authResult else { return }
-        debugPrint(authResult)
+        debugPrint("Log-in successfully...!")
+
+        guard
+          let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+        else { return }
+        sceneDelegate.window?.rootViewController = GoogleAuthLoginedViewController()
       }
 
     }
@@ -84,9 +93,7 @@ class GoogleAuthViewController: UIViewController {
 
 }
 
-// MARK: - Preview
-import SwiftUI
-
+// MARK: - Previews
 struct GoogleAuthViewControllerPreview: UIViewControllerRepresentable {
   func makeUIViewController(context: Context) -> GoogleAuthViewController {
     return GoogleAuthViewController()

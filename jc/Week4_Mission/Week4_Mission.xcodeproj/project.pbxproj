@@ -21,6 +21,7 @@
 		DAF4D79A2BF05294002B3196 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DAF4D7992BF05294002B3196 /* GoogleSignIn */; };
 		DAF4D79C2BF05294002B3196 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAF4D79B2BF05294002B3196 /* GoogleSignInSwift */; };
 		DAF4D79F2BF05354002B3196 /* GoogleAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */; };
+		DAF4D7A22BF06AB4002B3196 /* GoogleAuthLoginedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF4D7A12BF06AB4002B3196 /* GoogleAuthLoginedViewController.swift */; };
 		DAF834C22BEE0B4300A860E9 /* ProfileLoginedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF834C12BEE0B4300A860E9 /* ProfileLoginedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		DAD1DE0C2BEDF7DA00376C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAD1DE112BEDF7DA00376C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewController.swift; sourceTree = "<group>"; };
+		DAF4D7A12BF06AB4002B3196 /* GoogleAuthLoginedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthLoginedViewController.swift; sourceTree = "<group>"; };
 		DAF834C12BEE0B4300A860E9 /* ProfileLoginedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginedViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */,
+				DAF4D7A12BF06AB4002B3196 /* GoogleAuthLoginedViewController.swift */,
 			);
 			path = GoogleAuthViewController;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF4D7A22BF06AB4002B3196 /* GoogleAuthLoginedViewController.swift in Sources */,
 				DAD1DE082BEDF7D800376C30 /* MainViewController.swift in Sources */,
 				DAD1DE042BEDF7D800376C30 /* AppDelegate.swift in Sources */,
 				DAF4D79F2BF05354002B3196 /* GoogleAuthViewController.swift in Sources */,
