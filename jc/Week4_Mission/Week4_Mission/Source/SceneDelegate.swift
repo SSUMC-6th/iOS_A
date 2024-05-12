@@ -23,21 +23,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(windowScene: scene)
     window?.makeKeyAndVisible()
 
-    if let currentUser = Auth.auth().currentUser {
-      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"),
-        savedUID == currentUser.uid
-      {
-        let profileLoginedViewController = ProfileLoginedViewController()
-        profileLoginedViewController.emailLabel.text = currentUser.email
+//    Unmark these code for using Email authentication
+//    if let currentUser = Auth.auth().currentUser {
+//      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"),
+//        savedUID == currentUser.uid
+//      {
+//        let profileLoginedViewController = ProfileLoginedViewController()
+//        profileLoginedViewController.emailLabel.text = currentUser.email
+//
+//        window?.rootViewController = profileLoginedViewController
+//      } else {
+//        window?.rootViewController = MainViewController()
+//      }
+//    } else {
+//      window?.rootViewController = MainViewController()
+//    }
 
-        window?.rootViewController = profileLoginedViewController
-      } else {
-        window?.rootViewController = MainViewController()
-      }
-    } else {
-      window?.rootViewController = MainViewController()
-    }
-
+//    Unmark these code for using Google authentication
+    window?.rootViewController = GoogleAuthViewController()
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

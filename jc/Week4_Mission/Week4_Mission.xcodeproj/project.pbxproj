@@ -17,6 +17,10 @@
 		DAD1DE1B2BEDF81A00376C30 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DAD1DE1A2BEDF81A00376C30 /* SwiftFormatConfiguration */; };
 		DAD1DE1E2BEDF82500376C30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DAD1DE1D2BEDF82500376C30 /* SnapKit */; };
 		DAD1DE202BEDF82500376C30 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DAD1DE1F2BEDF82500376C30 /* SnapKit-Dynamic */; };
+		DAF4D7972BF043D0002B3196 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DAF4D7962BF043D0002B3196 /* Auth */; };
+		DAF4D79A2BF05294002B3196 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DAF4D7992BF05294002B3196 /* GoogleSignIn */; };
+		DAF4D79C2BF05294002B3196 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAF4D79B2BF05294002B3196 /* GoogleSignInSwift */; };
+		DAF4D79F2BF05354002B3196 /* GoogleAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */; };
 		DAF834C22BEE0B4300A860E9 /* ProfileLoginedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF834C12BEE0B4300A860E9 /* ProfileLoginedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,7 @@
 		DAD1DE072BEDF7D800376C30 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DAD1DE0C2BEDF7DA00376C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAD1DE112BEDF7DA00376C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewController.swift; sourceTree = "<group>"; };
 		DAF834C12BEE0B4300A860E9 /* ProfileLoginedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginedViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
@@ -38,9 +43,12 @@
 			files = (
 				DAD1DE1E2BEDF82500376C30 /* SnapKit in Frameworks */,
 				DAACCFCE2BEF72D1007E495D /* FirebaseAuth in Frameworks */,
+				DAF4D7972BF043D0002B3196 /* Auth in Frameworks */,
+				DAF4D79C2BF05294002B3196 /* GoogleSignInSwift in Frameworks */,
 				DAD1DE1B2BEDF81A00376C30 /* SwiftFormatConfiguration in Frameworks */,
 				DAD1DE192BEDF81A00376C30 /* SwiftFormat in Frameworks */,
 				DAD1DE202BEDF82500376C30 /* SnapKit-Dynamic in Frameworks */,
+				DAF4D79A2BF05294002B3196 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,13 +74,22 @@
 		DAD1DE022BEDF7D800376C30 /* Week4_Mission */ = {
 			isa = PBXGroup;
 			children = (
-				DAF834C02BEE0B2600A860E9 /* ViewController */,
+				DAF4D79D2BF05301002B3196 /* GoogleAuthViewController */,
+				DAF834C02BEE0B2600A860E9 /* EmailAuthViewController */,
 				DAF834BF2BEE0B1A00A860E9 /* Source */,
 				DAD1DE0C2BEDF7DA00376C30 /* Assets.xcassets */,
 				DAD1DE112BEDF7DA00376C30 /* Info.plist */,
 				DAACCFCF2BEF7427007E495D /* GoogleService-Info.plist */,
 			);
 			path = Week4_Mission;
+			sourceTree = "<group>";
+		};
+		DAF4D79D2BF05301002B3196 /* GoogleAuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAF4D79E2BF05354002B3196 /* GoogleAuthViewController.swift */,
+			);
+			path = GoogleAuthViewController;
 			sourceTree = "<group>";
 		};
 		DAF834BF2BEE0B1A00A860E9 /* Source */ = {
@@ -84,13 +101,13 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		DAF834C02BEE0B2600A860E9 /* ViewController */ = {
+		DAF834C02BEE0B2600A860E9 /* EmailAuthViewController */ = {
 			isa = PBXGroup;
 			children = (
 				DAD1DE072BEDF7D800376C30 /* MainViewController.swift */,
 				DAF834C12BEE0B4300A860E9 /* ProfileLoginedViewController.swift */,
 			);
-			path = ViewController;
+			path = EmailAuthViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +132,9 @@
 				DAD1DE1D2BEDF82500376C30 /* SnapKit */,
 				DAD1DE1F2BEDF82500376C30 /* SnapKit-Dynamic */,
 				DAACCFCD2BEF72D1007E495D /* FirebaseAuth */,
+				DAF4D7962BF043D0002B3196 /* Auth */,
+				DAF4D7992BF05294002B3196 /* GoogleSignIn */,
+				DAF4D79B2BF05294002B3196 /* GoogleSignInSwift */,
 			);
 			productName = Week4_Mission;
 			productReference = DAD1DE002BEDF7D800376C30 /* Week4_Mission.app */;
@@ -148,6 +168,8 @@
 				DAD1DE172BEDF81A00376C30 /* XCRemoteSwiftPackageReference "swift-format" */,
 				DAD1DE1C2BEDF82500376C30 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				DAACCFCC2BEF72D0007E495D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DAF4D7952BF043D0002B3196 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				DAF4D7982BF05294002B3196 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = DAD1DE012BEDF7D800376C30 /* Products */;
 			projectDirPath = "";
@@ -177,6 +199,7 @@
 			files = (
 				DAD1DE082BEDF7D800376C30 /* MainViewController.swift in Sources */,
 				DAD1DE042BEDF7D800376C30 /* AppDelegate.swift in Sources */,
+				DAF4D79F2BF05354002B3196 /* GoogleAuthViewController.swift in Sources */,
 				DAD1DE062BEDF7D800376C30 /* SceneDelegate.swift in Sources */,
 				DAF834C22BEE0B4300A860E9 /* ProfileLoginedViewController.swift in Sources */,
 			);
@@ -406,6 +429,22 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		DAF4D7952BF043D0002B3196 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+		DAF4D7982BF05294002B3196 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -433,6 +472,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DAD1DE1C2BEDF82500376C30 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		DAF4D7962BF043D0002B3196 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF4D7952BF043D0002B3196 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		DAF4D7992BF05294002B3196 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF4D7982BF05294002B3196 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		DAF4D79B2BF05294002B3196 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAF4D7982BF05294002B3196 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
