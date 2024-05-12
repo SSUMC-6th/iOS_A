@@ -7,6 +7,7 @@
 
 import Alamofire
 import SnapKit
+import SwiftUI
 import UIKit
 
 class MainViewController: UITableViewController {
@@ -102,5 +103,23 @@ class MainViewController: UITableViewController {
     }()
 
     navigationController?.pushViewController(detailViewController, animated: true)
+  }
+}
+
+struct MainViewControllerPreview: UIViewControllerRepresentable {
+  func makeUIViewController(context: Context) -> MainViewController {
+    let temp = MainViewController()
+    // Here you can set the properties of temp as per your requirements
+    return temp
+  }
+
+  func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+    // Leave this empty
+  }
+}
+
+struct MainViewController_Previews: PreviewProvider {
+  static var previews: some View {
+    MainViewControllerPreview()
   }
 }
