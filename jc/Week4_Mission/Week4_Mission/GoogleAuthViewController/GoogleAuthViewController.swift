@@ -83,3 +83,22 @@ class GoogleAuthViewController: UIViewController {
   }
 
 }
+
+// MARK: - Preview
+import SwiftUI
+
+struct GoogleAuthViewControllerPreview: UIViewControllerRepresentable {
+  func makeUIViewController(context: Context) -> GoogleAuthViewController {
+    return GoogleAuthViewController()
+  }
+
+  func updateUIViewController(_ uiViewController: GoogleAuthViewController, context: Context) {
+    // Leave this empty
+  }
+}
+
+struct GoogleAuthViewController_Previews: PreviewProvider {
+  static var previews: some View {
+    GoogleAuthViewControllerPreview()
+  }
+}
