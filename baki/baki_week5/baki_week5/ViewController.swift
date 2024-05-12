@@ -36,6 +36,14 @@ class ViewController: UIViewController {
             return button
         }()
     
+    private let weatherLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +57,7 @@ class ViewController: UIViewController {
     func configureSubviews() {
         view.addSubview(cityTextField)
         view.addSubview(WeatherButton)
+        view.addSubview(weatherLabel)
     }
 
     func makeConstraints() {
@@ -62,6 +71,11 @@ class ViewController: UIViewController {
             make.top.equalTo(cityTextField.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
         }
+        
+        weatherLabel.snp.makeConstraints { make in
+                    make.top.equalTo(WeatherButton.snp.bottom).offset(20)
+                    make.left.right.equalToSuperview().inset(20)
+                }
     }
 
 
@@ -71,22 +85,20 @@ class ViewController: UIViewController {
     }
     
     func fetchWeather(for city: String) {
-        let apiKey = "c3ea73a2cd4b35eb23650b5436498d7e"
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
+            let apiKey = "c3ea73a2cd4b35eb23650b5436498d7e"
+            let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
 
-        // Alamofire를 사용하여 네트워크 요청을 보내고, responseDecodable 메서드를 사용하여 WeatherResponse 모델로 디코딩합니다.
-        AF.request(urlString).responseDecodable(of: WeatherResponse.self) { response in
-            switch response.result {
-            case .success(let weatherResponse):
-                // 날씨 정보 출력
-                print("\(city)의 현재 온도: \(weatherResponse.main.temp) ℃")
-                print("\(city)의 날씨 상태: \(weatherResponse.weather[0].description)")
-            case .failure(let error):
-                print("Network error: \(error.localizedDescription)")
+            AF.request(urlString).responseDecodable(of: WeatherResponse.self) { response in
+                switch response.result {
+                case .success(let weatherResponse):
+                    // 날씨 정보와 온도를 라벨에 표시
+                    let temperature = String(format: "%.1f", weatherResponse.main.temp)
+                    let weatherInfo = "\(city)의 현재 온도: \(temperature) ℃\n\(city)의 날씨 상태: \(weatherResponse.weather[0].description)"
+                    self.weatherLabel.text = weatherInfo
+                case .failure(let error):
+                    print("Network error: \(error.localizedDescription)")
+                }
             }
-        }
-
-
         }
     
     
