@@ -40,7 +40,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     //    }
 
     //    Unmark these code for using Google authentication
-    window?.rootViewController = GoogleAuthViewController()
+    if let currentUser = Auth.auth().currentUser {
+      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"), savedUID == currentUser.uid {
+        window?.rootViewController = GoogleAuthLoginedViewController()
+      } else {
+        window?.rootViewController = GoogleAuthViewController()
+      }
+    } else {
+      window?.rootViewController = GoogleAuthViewController()
+    }
+    
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

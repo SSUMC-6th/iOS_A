@@ -80,6 +80,7 @@ class GoogleAuthViewController: UIViewController {
 
         guard let authResult = authResult else { return }
         debugPrint("Log-in successfully...!")
+        UserDefaults.standard.set(authResult.user.uid, forKey: "currentUserUID")
 
         guard
           let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate

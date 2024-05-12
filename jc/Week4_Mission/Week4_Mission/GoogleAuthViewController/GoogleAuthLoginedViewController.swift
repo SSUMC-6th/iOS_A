@@ -38,6 +38,7 @@ class GoogleAuthLoginedViewController: UIViewController {
     do {
       try firebaseAuth.signOut()
       debugPrint("Log-out successfully...!")
+      UserDefaults.standard.removeObject(forKey: "currentUserUID")
       guard
         let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
       else { return }
