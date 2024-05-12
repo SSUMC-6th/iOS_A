@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -66,6 +67,28 @@ class ViewController: UIViewController {
 
     @objc func WeatherButtonTapped() {
         let city = cityTextField.text ?? ""
-        
+        fetchWeather(for: city)
     }
+    
+    func fetchWeather(for city: String) {
+        let apiKey = "c3ea73a2cd4b35eb23650b5436498d7e"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
+
+        // Alamofire를 사용하여 네트워크 요청을 보내고, responseDecodable 메서드를 사용하여 WeatherResponse 모델로 디코딩합니다.
+        AF.request(urlString).responseDecodable(of: WeatherResponse.self) { response in
+            switch response.result {
+            case .success(let weatherResponse):
+                // 날씨 정보 출력
+                print("\(city)의 현재 온도: \(weatherResponse.main.temp) ℃")
+                print("\(city)의 날씨 상태: \(weatherResponse.weather[0].description)")
+            case .failure(let error):
+                print("Network error: \(error.localizedDescription)")
+            }
+        }
+
+
+        }
+    
+    
 }
+
