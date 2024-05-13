@@ -13,6 +13,7 @@
 		DAE675FA2BF2C8DA00E26B60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE675F92BF2C8DA00E26B60 /* Preview Assets.xcassets */; };
 		DAE676022BF2C90200E26B60 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DAE676012BF2C90200E26B60 /* SwiftFormat */; };
 		DAE676042BF2C90200E26B60 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DAE676032BF2C90200E26B60 /* SwiftFormatConfiguration */; };
+		DAE676062BF2D19800E26B60 /* TopInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676052BF2D19800E26B60 /* TopInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DAE675F52BF2C8DA00E26B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE675F72BF2C8DA00E26B60 /* Week6_Mission.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Week6_Mission.entitlements; sourceTree = "<group>"; };
 		DAE675F92BF2C8DA00E26B60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAE676052BF2D19800E26B60 /* TopInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				DAE675F12BF2C8D800E26B60 /* Week6_MissionApp.swift */,
 				DAE675F32BF2C8D800E26B60 /* ContentView.swift */,
+				DAE676052BF2D19800E26B60 /* TopInfoView.swift */,
 				DAE675F52BF2C8DA00E26B60 /* Assets.xcassets */,
 				DAE675F72BF2C8DA00E26B60 /* Week6_Mission.entitlements */,
 				DAE675F82BF2C8DA00E26B60 /* Preview Content */,
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE676062BF2D19800E26B60 /* TopInfoView.swift in Sources */,
 				DAE675F42BF2C8D800E26B60 /* ContentView.swift in Sources */,
 				DAE675F22BF2C8D800E26B60 /* Week6_MissionApp.swift in Sources */,
 			);
