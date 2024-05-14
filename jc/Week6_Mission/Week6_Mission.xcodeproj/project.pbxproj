@@ -23,6 +23,9 @@
 		DAE676162BF2E9E700E26B60 /* ThreeTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */; };
 		DAE676182BF2EA1C00E26B60 /* BigSaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */; };
 		DAE6761A2BF2EA4300E26B60 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676192BF2EA4300E26B60 /* AdBannerView.swift */; };
+		DAE6761D2BF2EDDF00E26B60 /* LowPriceDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6761C2BF2EDDF00E26B60 /* LowPriceDelivery.swift */; };
+		DAE6761F2BF2F00D00E26B60 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6761E2BF2F00D00E26B60 /* DeliveryView.swift */; };
+		DAE676212BF2F01500E26B60 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676202BF2F01400E26B60 /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTabsView.swift; sourceTree = "<group>"; };
 		DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSaleView.swift; sourceTree = "<group>"; };
 		DAE676192BF2EA4300E26B60 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		DAE6761C2BF2EDDF00E26B60 /* LowPriceDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowPriceDelivery.swift; sourceTree = "<group>"; };
+		DAE6761E2BF2F00D00E26B60 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
+		DAE676202BF2F01400E26B60 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 		DAE6761B2BF2ED6900E26B60 /* ThreeTabSubViews */ = {
 			isa = PBXGroup;
 			children = (
+				DAE6761C2BF2EDDF00E26B60 /* LowPriceDelivery.swift */,
+				DAE6761E2BF2F00D00E26B60 /* DeliveryView.swift */,
+				DAE676202BF2F01400E26B60 /* StoreView.swift */,
 			);
 			path = ThreeTabSubViews;
 			sourceTree = "<group>";
@@ -212,9 +221,12 @@
 				DAE676162BF2E9E700E26B60 /* ThreeTabsView.swift in Sources */,
 				DAE676062BF2D19800E26B60 /* TopInfoView.swift in Sources */,
 				DAE676082BF2E21800E26B60 /* HomeView.swift in Sources */,
+				DAE6761F2BF2F00D00E26B60 /* DeliveryView.swift in Sources */,
+				DAE6761D2BF2EDDF00E26B60 /* LowPriceDelivery.swift in Sources */,
 				DAE6760E2BF2E2B800E26B60 /* OrderView.swift in Sources */,
 				DAE676142BF2E9AF00E26B60 /* CouponBannerView.swift in Sources */,
 				DAE675F42BF2C8D800E26B60 /* ContentView.swift in Sources */,
+				DAE676212BF2F01500E26B60 /* StoreView.swift in Sources */,
 				DAE675F22BF2C8D800E26B60 /* Week6_MissionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

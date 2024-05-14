@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyView: View {
   var body: some View {
-    Text( "My View")
+    Text("My View")
   }
 }
 

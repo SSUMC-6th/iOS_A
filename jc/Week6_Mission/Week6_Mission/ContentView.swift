@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
- 
+
   var body: some View {
     TabView(selection: .constant(3)) {
       SearchView()
@@ -34,7 +34,7 @@ struct ContentView: View {
         .tabItem {
           Label("주문내역", systemImage: "list.bullet.rectangle.portrait")
         }
-      
+
       MyPageView()
         .tag(5)
         .tabItem {
