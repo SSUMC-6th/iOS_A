@@ -19,6 +19,10 @@
 		DAE6760C2BF2E2B100E26B60 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6760B2BF2E2B100E26B60 /* MyView.swift */; };
 		DAE6760E2BF2E2B800E26B60 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6760D2BF2E2B800E26B60 /* OrderView.swift */; };
 		DAE676102BF2E2C000E26B60 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6760F2BF2E2C000E26B60 /* MyPageView.swift */; };
+		DAE676142BF2E9AF00E26B60 /* CouponBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676132BF2E9AF00E26B60 /* CouponBannerView.swift */; };
+		DAE676162BF2E9E700E26B60 /* ThreeTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */; };
+		DAE676182BF2EA1C00E26B60 /* BigSaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */; };
+		DAE6761A2BF2EA4300E26B60 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE676192BF2EA4300E26B60 /* AdBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		DAE6760B2BF2E2B100E26B60 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		DAE6760D2BF2E2B800E26B60 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		DAE6760F2BF2E2C000E26B60 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		DAE676132BF2E9AF00E26B60 /* CouponBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponBannerView.swift; sourceTree = "<group>"; };
+		DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTabsView.swift; sourceTree = "<group>"; };
+		DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSaleView.swift; sourceTree = "<group>"; };
+		DAE676192BF2EA4300E26B60 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				DAE676052BF2D19800E26B60 /* TopInfoView.swift */,
+				DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */,
+				DAE676132BF2E9AF00E26B60 /* CouponBannerView.swift */,
+				DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */,
+				DAE676192BF2EA4300E26B60 /* AdBannerView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -185,11 +197,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE6760C2BF2E2B100E26B60 /* MyView.swift in Sources */,
+				DAE676182BF2EA1C00E26B60 /* BigSaleView.swift in Sources */,
 				DAE676102BF2E2C000E26B60 /* MyPageView.swift in Sources */,
+				DAE6761A2BF2EA4300E26B60 /* AdBannerView.swift in Sources */,
 				DAE6760A2BF2E2A100E26B60 /* SearchView.swift in Sources */,
+				DAE676162BF2E9E700E26B60 /* ThreeTabsView.swift in Sources */,
 				DAE676062BF2D19800E26B60 /* TopInfoView.swift in Sources */,
 				DAE676082BF2E21800E26B60 /* HomeView.swift in Sources */,
 				DAE6760E2BF2E2B800E26B60 /* OrderView.swift in Sources */,
+				DAE676142BF2E9AF00E26B60 /* CouponBannerView.swift in Sources */,
 				DAE675F42BF2C8D800E26B60 /* ContentView.swift in Sources */,
 				DAE675F22BF2C8D800E26B60 /* Week6_MissionApp.swift in Sources */,
 			);

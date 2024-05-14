@@ -9,26 +9,30 @@ import SwiftUI
 
 struct HomeView: View {
   var body: some View {
-    VStack {
-      TopInfoView()
-
-      Spacer()
-
+    ZStack {
+      Color.gray.opacity(0.2).ignoresSafeArea()
+      
       VStack {
-        HStack {
-          Image(systemName: "globe")
-            .imageScale(.large)
-            .foregroundStyle(.tint)
-          Text("Hello, world!")
-            .font(.largeTitle)
-        }
-
-        Text("Glad to meet you.")
-          .font(.caption)
+        TopInfoView()
+        
+        Spacer()
+        
+        CouponBannerView()
+        
+        Spacer()
+        
+        ThreeTabsView()
+        
+        Spacer()
+        
+        BigSaleView()
+        
+        Spacer()
+        
+        AdBannerView()
+        
+        Spacer()
       }
-      .padding()
-
-      Spacer()
     }
   }
 }
