@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    ZStack {
+    VStack {
       TopInfoView()
+      
+      Spacer()
+      
       VStack {
         HStack {
           Image(systemName: "globe")
@@ -24,6 +27,8 @@ struct ContentView: View {
           .font(.caption)
       }
       .padding()
+      
+      Spacer()
     }
   }
 }

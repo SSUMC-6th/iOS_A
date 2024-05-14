@@ -9,19 +9,31 @@ import SwiftUI
 
 struct TopInfoView: View {
   var body: some View {
-    GeometryReader { geometry in
-      Rectangle()
-        .fill(Color.mint)
-        .frame(width: geometry.size.width, height: 200, alignment: .top)
-        .clipShape(
-          UnevenRoundedRectangle(
-            cornerRadii: RectangleCornerRadii(
-              topLeading: 0, bottomLeading: 30, bottomTrailing: 30, topTrailing: 0))
-        )
-        .ignoresSafeArea()
-
-    }
-
+      ZStack {
+        Rectangle()
+          .foregroundColor(.mint)
+          .frame(width: 400, height: 150, alignment: .center)
+          .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 0, bottomLeading: 20, bottomTrailing: 20, topTrailing: 0)))
+        
+        VStack {
+          HStack {
+            Text("우리집")
+            Spacer()
+            
+            Image(systemName: "square.grid.2x2")
+            Image(systemName: "bell")
+            Image(systemName: "cart")
+          }
+          .padding([.leading, .trailing], 15)
+          .padding(.top, 40)
+          
+          Rectangle()
+            .fill(Color.white)
+            .frame(width: 370, height: 40)
+            .border(Color.black)
+        }
+      }
+      .ignoresSafeArea()
   }
 }
 
