@@ -76,7 +76,7 @@
 		DAE675F02BF2C8D800E26B60 /* Week6_Mission */ = {
 			isa = PBXGroup;
 			children = (
-				DAE676122BF2E2F300E26B60 /* HomeView */,
+				DAE676122BF2E2F300E26B60 /* HomeViewSubViews */,
 				DAE676112BF2E2C600E26B60 /* TabBarView */,
 				DAE675F12BF2C8D800E26B60 /* Week6_MissionApp.swift */,
 				DAE675F32BF2C8D800E26B60 /* ContentView.swift */,
@@ -107,16 +107,24 @@
 			path = TabBarView;
 			sourceTree = "<group>";
 		};
-		DAE676122BF2E2F300E26B60 /* HomeView */ = {
+		DAE676122BF2E2F300E26B60 /* HomeViewSubViews */ = {
 			isa = PBXGroup;
 			children = (
+				DAE6761B2BF2ED6900E26B60 /* ThreeTabSubViews */,
 				DAE676052BF2D19800E26B60 /* TopInfoView.swift */,
 				DAE676152BF2E9E700E26B60 /* ThreeTabsView.swift */,
 				DAE676132BF2E9AF00E26B60 /* CouponBannerView.swift */,
 				DAE676172BF2EA1C00E26B60 /* BigSaleView.swift */,
 				DAE676192BF2EA4300E26B60 /* AdBannerView.swift */,
 			);
-			path = HomeView;
+			path = HomeViewSubViews;
+			sourceTree = "<group>";
+		};
+		DAE6761B2BF2ED6900E26B60 /* ThreeTabSubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThreeTabSubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
