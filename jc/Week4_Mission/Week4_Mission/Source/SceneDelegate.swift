@@ -2,9 +2,10 @@
 //  SceneDelegate.swift
 //  Week4_Mission
 //
-//  Created by Jiwoong CHOI on 4/28/24.
+//  Created by Jiwoong CHOI on 5/10/24.
 //
 
+import FirebaseAuth
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -20,8 +21,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: scene)
-    window?.rootViewController = MainViewController()
     window?.makeKeyAndVisible()
+
+    //    Unmark these code for using Email authentication
+    //    if let currentUser = Auth.auth().currentUser {
+    //      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"),
+    //        savedUID == currentUser.uid
+    //      {
+    //        let profileLoginedViewController = ProfileLoginedViewController()
+    //        profileLoginedViewController.emailLabel.text = currentUser.email
+    //
+    //        window?.rootViewController = profileLoginedViewController
+    //      } else {
+    //        window?.rootViewController = MainViewController()
+    //      }
+    //    } else {
+    //      window?.rootViewController = MainViewController()
+    //    }
+
+    //    Unmark these code for using Google authentication
+    if let currentUser = Auth.auth().currentUser {
+      if let savedUID = UserDefaults.standard.string(forKey: "currentUserUID"), savedUID == currentUser.uid {
+        window?.rootViewController = GoogleAuthLoginedViewController()
+      } else {
+        window?.rootViewController = GoogleAuthViewController()
+      }
+    } else {
+      window?.rootViewController = GoogleAuthViewController()
+    }
+    
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

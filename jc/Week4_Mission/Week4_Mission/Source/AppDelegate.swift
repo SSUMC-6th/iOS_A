@@ -2,10 +2,12 @@
 //  AppDelegate.swift
 //  Week4_Mission
 //
-//  Created by Jiwoong CHOI on 4/28/24.
+//  Created by Jiwoong CHOI on 5/10/24.
 //
 
+import FirebaseAuth
 import FirebaseCore
+import GoogleSignIn
 import UIKit
 
 @main
@@ -38,6 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+  }
+
+  func application(
+    _ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+  ) -> Bool {
+    return GIDSignIn.sharedInstance.handle(url)
   }
 
 }
