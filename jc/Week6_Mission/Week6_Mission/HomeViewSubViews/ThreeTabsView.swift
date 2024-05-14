@@ -15,7 +15,7 @@ struct ThreeTabsView: View {
       DeliveryView()
       Spacer()
       StoreView()
-    }.padding([.leading, .trailing], 20)
+    }.padding([.leading, .trailing], 10)
   }
 }
 

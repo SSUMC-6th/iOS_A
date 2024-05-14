@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct BigSaleView: View {
-  private let cornerRadius : CGFloat = 20
-  private struct Product : Identifiable {
+  private let cornerRadius: CGFloat = 20
+  private struct Product: Identifiable {
     let name: String
-    
+
     var id: String {
       name
     }
   }
-  
-  private let productData : [Product] = [
+
+  private let productData: [Product] = [
     Product(name: "Test1"),
     Product(name: "Test2"),
     Product(name: "Test3"),
     Product(name: "Test4"),
-    Product(name: "Test5")
+    Product(name: "Test5"),
   ]
-  
+
   var body: some View {
     RoundedRectangle(cornerRadius: self.cornerRadius)
       .foregroundColor(.white)
@@ -38,9 +38,7 @@ struct BigSaleView: View {
             Image(systemName: "arrow.forward")
           }
           .padding()
-          
-          Spacer()
-          
+
           HStack {
             Spacer()
             ForEach(productData) { data in
@@ -49,9 +47,7 @@ struct BigSaleView: View {
             }
           }
           .padding()
-          
-          Spacer()
-          
+
           HStack {
             Spacer()
             ForEach(productData) { data in
@@ -60,8 +56,7 @@ struct BigSaleView: View {
             }
           }
           .padding()
-          
-          Spacer()
+
         }
       })
       .padding(10)

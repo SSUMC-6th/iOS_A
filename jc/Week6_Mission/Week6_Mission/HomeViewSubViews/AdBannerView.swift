@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct AdBannerView: View {
+  private let cornerRadius: CGFloat = 20
+
   var body: some View {
-    Text( /*@START_MENU_TOKEN@*/"Hello, World!" /*@END_MENU_TOKEN@*/)
+    RoundedRectangle(cornerRadius: self.cornerRadius)
+      .foregroundStyle(Color.white)
+      .overlay(content: {
+        Text("여기는 광고배너입니다.")
+      })
+      .padding(10)
   }
 }
 

@@ -9,17 +9,14 @@ import SwiftUI
 
 struct CouponBannerView: View {
   var body: some View {
-    ZStack {
-      RoundedRectangle(cornerRadius: 20)
-        .foregroundStyle(Color.white)
-        .frame(height: 80)
-        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.green, lineWidth: 5))
-        .overlay(content: {
-          Text("집콕러세요? 30% 쿠폰 드려요!")
-        })
-        .padding(10)
-
-    }
+    RoundedRectangle(cornerRadius: 20)
+      .foregroundStyle(Color.white)
+      .frame(height: 80)
+      .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.green, lineWidth: 5))
+      .overlay(content: {
+        Text("집콕러세요? 30% 쿠폰 드려요!")
+      })
+      .padding(10)
   }
 }
 

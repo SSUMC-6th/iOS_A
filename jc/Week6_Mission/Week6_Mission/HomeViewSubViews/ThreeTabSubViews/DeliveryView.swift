@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DeliveryView: View {
   private let cornerRadius: CGFloat = 20
-  private let size : CGFloat = 110
-  
+  private let size: CGFloat = 110
+
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: self.cornerRadius)
@@ -33,5 +33,5 @@ struct DeliveryView: View {
 }
 
 #Preview {
-    DeliveryView()
+  DeliveryView()
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoreView: View {
   private let cornerRadius: CGFloat = 20
-  private let size : CGFloat = 110
+  private let size: CGFloat = 110
 
   var body: some View {
     ZStack {
@@ -33,5 +33,5 @@ struct StoreView: View {
 }
 
 #Preview {
-    StoreView()
+  StoreView()
 }
