@@ -8,27 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+ 
   var body: some View {
-    VStack {
-      TopInfoView()
-      
-      Spacer()
-      
-      VStack {
-        HStack {
-          Image(systemName: "globe")
-            .imageScale(.large)
-            .foregroundStyle(.tint)
-          Text("Hello, world!")
-            .font(.largeTitle)
+    TabView(selection: .constant(3)) {
+      SearchView()
+        .tag(1)
+        .tabItem {
+          Label("검색", systemImage: "magnifyingglass")
         }
 
-        Text("Glad to meet you.")
-          .font(.caption)
-      }
-      .padding()
+      MyView()
+        .tag(2)
+        .tabItem {
+          Label("찜", systemImage: "heart")
+        }
+
+      HomeView()
+        .tag(3)
+        .tabItem {
+          Label("배민", systemImage: "circle")
+        }
+
+      OrderView()
+        .tag(4)
+        .tabItem {
+          Label("주문내역", systemImage: "list.bullet.rectangle.portrait")
+        }
       
-      Spacer()
+      MyPageView()
+        .tag(5)
+        .tabItem {
+          Label("my배민", systemImage: "face.smiling")
+        }
     }
   }
 }
