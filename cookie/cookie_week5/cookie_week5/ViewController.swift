@@ -1,15 +1,6 @@
-//
-//  ViewController.swift
-//  cookie_week5
-//
-//  Created by 김경서 on 5/14/24.
-//
-
 import UIKit
 import SnapKit
 import Alamofire
-
-
 
 class ViewController: UIViewController {
 
@@ -17,94 +8,87 @@ class ViewController: UIViewController {
     let feelsLikeLbl = UILabel()
     let idLbl = UILabel()
     let mainLbl = UILabel()
+    let cityNameLbl = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         configureUI()
         getWeather()
     }
-
-
 }
 
 extension ViewController {
     private func getWeather() {
+        let url = "https://api.openweathermap.org/data/2.5/weather?appid=226b681b506d6d26dbbe00de0ccc5a1d&q=seoul&units=metric"
         
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=226b681b506d6d26dbbe00de0ccc5a1d&q=seoul&units=metric") else { return }
-        
-        let urlSession = URLSession.shared
-        
-        let task = urlSession.dataTask(with: url) { data, response, error in
-            //에러 여부 체크
-            guard error == nil else { return print(error!) }
-            
-            //응답 확인
-            guard let response = response as? HTTPURLResponse,
-                  (200..<400).contains(response.statusCode) else { return print("Invalid Response") }
-            
-            //데이터 확인
-            guard let data = data else { return }
-            do {
-                let jsonDecoder = JSONDecoder()
-                let decodeData = try jsonDecoder.decode(WeatherData.self, from: data)
-                let temp = decodeData.main.temp
-                let feelsLike = decodeData.main.feelsLike
-                let id = decodeData.weather[0].id
-                let main = decodeData.weather[0].main
+        AF.request(url).responseDecodable(of: WeatherData.self) { response in
+            switch response.result {
+            case .success(let weatherData):
+                let temp = weatherData.main.temp
+                let feelsLike = weatherData.main.feelsLike
+                let id = weatherData.weather[0].id
+                let main = weatherData.weather[0].main
+                let cityName = weatherData.name
+                
                 DispatchQueue.main.async {
-                    self.tempLbl.text = "temp: \(String(temp))"
+                    self.tempLbl.text = "temp: \(temp)"
                     self.tempLbl.backgroundColor = .lightGray
-                    self.feelsLikeLbl.text = "feels_like: \(String(feelsLike))"
+                    self.feelsLikeLbl.text = "feels_like: \(feelsLike)"
                     self.feelsLikeLbl.backgroundColor = .lightGray
-                    self.idLbl.text = "id: \(String(id))"
+                    self.idLbl.text = "id: \(id)"
                     self.idLbl.backgroundColor = .lightGray
-                    self.mainLbl.text = "main: \(String(main))"
+                    self.mainLbl.text = "main: \(main)"
                     self.mainLbl.backgroundColor = .lightGray
+                    self.cityNameLbl.text = "City: \(cityName)"
+                    self.cityNameLbl.textColor = .blue
                 }
-            } catch {
-                print("Parshing Error")
-                print(error)
+            case .failure(let error):
+                print("Request error: \(error)")
             }
         }
-            
-        task.resume()
-    // 에러 : 있을수도 있고, 없을수도 있기 때문에 옵셔널 형태
-    // 데이터 : 에러가 없을 때 데이터가 있음
-    // 레스폰즈 : 결과
     }
 }
 
-//MARK: -UI
+// MARK: - UI
 extension ViewController {
     final private func configureUI() {
         setAttributes()
-        setConstraints()
+        makeConstraints()
     }
     final private func setAttributes() {
         tempLbl.text = "temp"
         feelsLikeLbl.text = "feels_Like"
         idLbl.text = "id"
         mainLbl.text = "main"
-        
+        cityNameLbl.text = "City"
     }
-    final private func setConstraints() {
-        [tempLbl, feelsLikeLbl, idLbl, mainLbl].forEach {
+    final private func makeConstraints() {
+        [tempLbl, feelsLikeLbl, idLbl, mainLbl, cityNameLbl].forEach {
             view.addSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+            }
         }
         
-        NSLayoutConstraint.activate([
-            tempLbl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            tempLbl.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            
-            feelsLikeLbl.topAnchor.constraint(equalTo: tempLbl.bottomAnchor, constant: 15),
-            feelsLikeLbl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-
-            idLbl.topAnchor.constraint(equalTo: feelsLikeLbl.bottomAnchor, constant: 15),
-            idLbl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-
-            mainLbl.topAnchor.constraint(equalTo: idLbl.bottomAnchor, constant: 15),
-            mainLbl.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-        ])
+        cityNameLbl.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().offset(-60)
+        }
+        
+        tempLbl.snp.makeConstraints { make in
+            make.top.equalTo(cityNameLbl.snp.bottom).offset(15)
+        }
+        
+        feelsLikeLbl.snp.makeConstraints { make in
+            make.top.equalTo(tempLbl.snp.bottom).offset(15)
+        }
+        
+        idLbl.snp.makeConstraints { make in
+            make.top.equalTo(feelsLikeLbl.snp.bottom).offset(15)
+        }
+        
+        mainLbl.snp.makeConstraints { make in
+            make.top.equalTo(idLbl.snp.bottom).offset(15)
+        }
     }
 }

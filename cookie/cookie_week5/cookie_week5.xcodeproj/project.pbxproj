@@ -11,13 +11,25 @@
 		1FA696952BF3018900613D10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA696942BF3018900613D10 /* SceneDelegate.swift */; };
 		1FA696972BF3018900613D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA696962BF3018900613D10 /* ViewController.swift */; };
 		1FA6969C2BF3018A00613D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA6969B2BF3018A00613D10 /* Assets.xcassets */; };
-		1FA696A82BF3033200613D10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1FA696A72BF3033200613D10 /* SnapKit */; };
-		1FA696AA2BF3033200613D10 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1FA696A92BF3033200613D10 /* SnapKit-Dynamic */; };
 		1FA696C02BF33B7D00613D10 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA696BF2BF33B7D00613D10 /* WeatherData.swift */; };
 		D3088D51CA46B5ED806490BC /* Pods_cookie_week5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436215A8D91E9E1CE60FE5E5 /* Pods_cookie_week5.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1F5277ED2BF3D350002AC4D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FA696AD2BF3389D00613D10 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 979486118B3E90C08386079D57962701;
+			remoteInfo = SnapKit;
+		};
+		1F5277EF2BF3D350002AC4D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FA696AD2BF3389D00613D10 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B9DCB5EC0B1CDADD221717CADDF62359;
+			remoteInfo = "SnapKit-SnapKit_Privacy";
+		};
 		1FA696B52BF3389D00613D10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FA696AD2BF3389D00613D10 /* Pods.xcodeproj */;
@@ -31,20 +43,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 085DBCE7DD98588B2ED103B1C1F36026;
 			remoteInfo = "Alamofire-Alamofire";
-		};
-		1FA696B92BF3389D00613D10 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FA696AD2BF3389D00613D10 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C3F44C782D64D7EB20B61CE3844EBFAD;
-			remoteInfo = Kingfisher;
-		};
-		1FA696BB2BF3389D00613D10 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FA696AD2BF3389D00613D10 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C298ABB78D9B05529B89D8322DB2E7B0;
-			remoteInfo = "Kingfisher-Kingfisher";
 		};
 		1FA696BD2BF3389D00613D10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -75,8 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3088D51CA46B5ED806490BC /* Pods_cookie_week5.framework in Frameworks */,
-				1FA696A82BF3033200613D10 /* SnapKit in Frameworks */,
-				1FA696AA2BF3033200613D10 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +115,9 @@
 			children = (
 				1FA696B62BF3389D00613D10 /* Alamofire */,
 				1FA696B82BF3389D00613D10 /* Alamofire-Alamofire */,
-				1FA696BA2BF3389D00613D10 /* Kingfisher */,
-				1FA696BC2BF3389D00613D10 /* Kingfisher-Kingfisher */,
 				1FA696BE2BF3389D00613D10 /* Pods-cookie_week5 */,
+				1F5277EE2BF3D350002AC4D1 /* SnapKit */,
+				1F5277F02BF3D350002AC4D1 /* SnapKit-SnapKit_Privacy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,8 +159,6 @@
 			);
 			name = cookie_week5;
 			packageProductDependencies = (
-				1FA696A72BF3033200613D10 /* SnapKit */,
-				1FA696A92BF3033200613D10 /* SnapKit-Dynamic */,
 			);
 			productName = cookie_week5;
 			productReference = 1FA6968F2BF3018900613D10 /* cookie_week5.app */;
@@ -195,7 +189,6 @@
 			);
 			mainGroup = 1FA696862BF3018900613D10;
 			packageReferences = (
-				1FA696A62BF3033200613D10 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 1FA696902BF3018900613D10 /* Products */;
 			projectDirPath = "";
@@ -213,6 +206,22 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1F5277EE2BF3D350002AC4D1 /* SnapKit */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SnapKit;
+			path = SnapKit.framework;
+			remoteRef = 1F5277ED2BF3D350002AC4D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1F5277F02BF3D350002AC4D1 /* SnapKit-SnapKit_Privacy */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SnapKit-SnapKit_Privacy";
+			path = SnapKit_Privacy.bundle;
+			remoteRef = 1F5277EF2BF3D350002AC4D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1FA696B62BF3389D00613D10 /* Alamofire */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -227,22 +236,6 @@
 			name = "Alamofire-Alamofire";
 			path = Alamofire.bundle;
 			remoteRef = 1FA696B72BF3389D00613D10 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1FA696BA2BF3389D00613D10 /* Kingfisher */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = Kingfisher;
-			path = Kingfisher.framework;
-			remoteRef = 1FA696B92BF3389D00613D10 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1FA696BC2BF3389D00613D10 /* Kingfisher-Kingfisher */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			name = "Kingfisher-Kingfisher";
-			path = Kingfisher.bundle;
-			remoteRef = 1FA696BB2BF3389D00613D10 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1FA696BE2BF3389D00613D10 /* Pods-cookie_week5 */ = {
@@ -360,7 +353,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -423,7 +416,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -518,30 +511,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1FA696A62BF3033200613D10 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1FA696A72BF3033200613D10 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1FA696A62BF3033200613D10 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		1FA696A92BF3033200613D10 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1FA696A62BF3033200613D10 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FA696872BF3018900613D10 /* Project object */;
 }

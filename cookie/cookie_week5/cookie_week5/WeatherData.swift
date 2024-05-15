@@ -1,15 +1,9 @@
-//
-//  WeatherManager.swift
-//  cookie_week5
-//
-//  Created by 김경서 on 5/14/24.
-//
-
 import Foundation
 
 struct WeatherData: Decodable {
     let main: Main
     let weather: [Weather]
+    let name: String
     
     struct Main: Decodable {
         let temp, feelsLike, tempMin, tempMax: Double
