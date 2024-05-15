@@ -6,7 +6,6 @@ class ViewController: UIViewController {
 
     let tempLbl = UILabel()
     let feelsLikeLbl = UILabel()
-    let idLbl = UILabel()
     let mainLbl = UILabel()
     let cityNameLbl = UILabel()
     let cityTextField = UITextField()
@@ -27,21 +26,18 @@ class ViewController: UIViewController {
             case .success(let weatherData):
                 let temp = weatherData.main.temp
                 let feelsLike = weatherData.main.feelsLike
-                let id = weatherData.weather[0].id
                 let main = weatherData.weather[0].main
                 let cityName = weatherData.name
                 
                 DispatchQueue.main.async {
-                    self.tempLbl.text = "temp: \(temp)"
-                    self.tempLbl.backgroundColor = .lightGray
-                    self.feelsLikeLbl.text = "feels_like: \(feelsLike)"
-                    self.feelsLikeLbl.backgroundColor = .lightGray
-                    self.idLbl.text = "id: \(id)"
-                    self.idLbl.backgroundColor = .lightGray
-                    self.mainLbl.text = "main: \(main)"
-                    self.mainLbl.backgroundColor = .lightGray
                     self.cityNameLbl.text = "City: \(cityName)"
                     self.cityNameLbl.textColor = .blue
+                    self.tempLbl.text = "Temp: \(temp)"
+                    self.tempLbl.backgroundColor = .lightGray
+                    self.feelsLikeLbl.text = "Feels like: \(feelsLike)"
+                    self.feelsLikeLbl.backgroundColor = .lightGray
+                    self.mainLbl.text = "Weather: \(main)"
+                    self.mainLbl.backgroundColor = .lightGray
                 }
             case .failure(let error):
                 print("Request error: \(error)")
@@ -65,16 +61,15 @@ extension ViewController {
         searchButton.backgroundColor = .blue
         searchButton.addTarget(self, action: #selector(searchWeather), for: .touchUpInside)
         
-        tempLbl.text = "temp"
-        feelsLikeLbl.text = "feels_Like"
-        idLbl.text = "id"
-        mainLbl.text = "main"
+        tempLbl.text = "Temp"
+        feelsLikeLbl.text = "Feels like"
+        mainLbl.text = "Weather"
         cityNameLbl.text = "City"
     }
     final private func makeConstraints() {
         view.addSubview(cityTextField)
         view.addSubview(searchButton)
-        [tempLbl, feelsLikeLbl, idLbl, mainLbl, cityNameLbl].forEach {
+        [tempLbl, feelsLikeLbl, mainLbl, cityNameLbl].forEach {
             view.addSubview($0)
             $0.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
@@ -105,12 +100,8 @@ extension ViewController {
             make.top.equalTo(tempLbl.snp.bottom).offset(15)
         }
         
-        idLbl.snp.makeConstraints { make in
-            make.top.equalTo(feelsLikeLbl.snp.bottom).offset(15)
-        }
-        
         mainLbl.snp.makeConstraints { make in
-            make.top.equalTo(idLbl.snp.bottom).offset(15)
+            make.top.equalTo(feelsLikeLbl.snp.bottom).offset(15)
         }
     }
     
