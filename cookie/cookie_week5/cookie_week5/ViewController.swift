@@ -9,18 +9,18 @@ class ViewController: UIViewController {
     let idLbl = UILabel()
     let mainLbl = UILabel()
     let cityNameLbl = UILabel()
+    let cityTextField = UITextField()
+    let searchButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureUI()
-        getWeather()
     }
-}
 
-extension ViewController {
-    private func getWeather() {
-        let url = "https://api.openweathermap.org/data/2.5/weather?appid=226b681b506d6d26dbbe00de0ccc5a1d&q=seoul&units=metric"
+    // 도시 이름을 파라미터로 받는 getWeather 메서드로 수정
+    private func getWeather(for city: String) {
+        let url = "https://api.openweathermap.org/data/2.5/weather?appid=226b681b506d6d26dbbe00de0ccc5a1d&q=\(city)&units=metric"
         
         AF.request(url).responseDecodable(of: WeatherData.self) { response in
             switch response.result {
@@ -57,6 +57,14 @@ extension ViewController {
         makeConstraints()
     }
     final private func setAttributes() {
+        
+        cityTextField.placeholder = "Enter city name"
+        cityTextField.borderStyle = .roundedRect
+        
+        searchButton.setTitle("Search", for: .normal)
+        searchButton.backgroundColor = .blue
+        searchButton.addTarget(self, action: #selector(searchWeather), for: .touchUpInside)
+        
         tempLbl.text = "temp"
         feelsLikeLbl.text = "feels_Like"
         idLbl.text = "id"
@@ -64,11 +72,25 @@ extension ViewController {
         cityNameLbl.text = "City"
     }
     final private func makeConstraints() {
+        view.addSubview(cityTextField)
+        view.addSubview(searchButton)
         [tempLbl, feelsLikeLbl, idLbl, mainLbl, cityNameLbl].forEach {
             view.addSubview($0)
             $0.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
             }
+        }
+        cityTextField.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.centerX.equalToSuperview()
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+        }
+                
+        searchButton.snp.makeConstraints { make in
+            make.top.equalTo(cityTextField.snp.bottom).offset(10)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(100)
         }
         
         cityNameLbl.snp.makeConstraints { make in
@@ -89,6 +111,12 @@ extension ViewController {
         
         mainLbl.snp.makeConstraints { make in
             make.top.equalTo(idLbl.snp.bottom).offset(15)
+        }
+    }
+    
+    @objc private func searchWeather() {
+        if let city = cityTextField.text, !city.isEmpty {
+            getWeather(for: city) // 사용자가 입력한 도시 이름으로 getWeather 호출
         }
     }
 }
