@@ -58,9 +58,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSubviews()
-        makeConstraints()
         view.backgroundColor = .white
+        view.addSubviews(idTextField, pwTextField, loginButton,signUpButton)
+        makeConstraints()
         checklogin()
     }
     
@@ -81,12 +81,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func configureSubviews(){
-        view.addSubview(idTextField)
-        view.addSubview(pwTextField)
-        view.addSubview(loginButton)
-        view.addSubview(signUpButton)
-    }
     
     // 레이아웃
     func makeConstraints(){

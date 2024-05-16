@@ -18,6 +18,7 @@
 		1A7F0E782BEF98DC0018184D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7F0E772BEF98DC0018184D /* SnapKit */; };
 		1A7F0E7A2BEF98DC0018184D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1A7F0E792BEF98DC0018184D /* SnapKit-Dynamic */; };
 		1A7F0E7C2BEF9B1F0018184D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F0E7B2BEF9B1F0018184D /* SecondViewController.swift */; };
+		1A856FE62BF58D6300285DFA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A856FE52BF58D6300285DFA /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1A7F0E672BEF872E0018184D /* baki_week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week4UITests.swift; sourceTree = "<group>"; };
 		1A7F0E692BEF872E0018184D /* baki_week4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week4UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A7F0E7B2BEF9B1F0018184D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1A856FE52BF58D6300285DFA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1A7F0E462BEF872D0018184D /* AppDelegate.swift */,
+				1A856FE52BF58D6300285DFA /* Extension.swift */,
 				1A7F0E482BEF872D0018184D /* SceneDelegate.swift */,
 				1A7F0E4A2BEF872D0018184D /* ViewController.swift */,
 				1A7F0E7B2BEF9B1F0018184D /* SecondViewController.swift */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A856FE62BF58D6300285DFA /* Extension.swift in Sources */,
 				1A7F0E7C2BEF9B1F0018184D /* SecondViewController.swift in Sources */,
 				1A7F0E4B2BEF872D0018184D /* ViewController.swift in Sources */,
 				1A7F0E472BEF872D0018184D /* AppDelegate.swift in Sources */,
