@@ -15,17 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<<< HEAD:JC/Week3_Mission/Week3_Mission.xcodeproj/xcshareddata/xcschemes/Week3_Mission.xcscheme
-               BlueprintIdentifier = "DAB06BC62BDE0A6A00060EE1"
-               BuildableName = "Week3_Mission.app"
-               BlueprintName = "Week3_Mission"
-               ReferencedContainer = "container:Week3_Mission.xcodeproj">
-========
-               BlueprintIdentifier = "DA67456E2BDE028C005EA4D5"
+               BlueprintIdentifier = "DAD1DDFF2BEDF7D800376C30"
                BuildableName = "Week4_Mission.app"
                BlueprintName = "Week4_Mission"
                ReferencedContainer = "container:Week4_Mission.xcodeproj">
->>>>>>>> JC/week4:JC/Week4_Mission/Week4_Mission.xcodeproj/xcshareddata/xcschemes/Week4_Mission.xcscheme
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,17 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-<<<<<<<< HEAD:JC/Week3_Mission/Week3_Mission.xcodeproj/xcshareddata/xcschemes/Week3_Mission.xcscheme
-            BlueprintIdentifier = "DAB06BC62BDE0A6A00060EE1"
-            BuildableName = "Week3_Mission.app"
-            BlueprintName = "Week3_Mission"
-            ReferencedContainer = "container:Week3_Mission.xcodeproj">
-========
-            BlueprintIdentifier = "DA67456E2BDE028C005EA4D5"
+            BlueprintIdentifier = "DAD1DDFF2BEDF7D800376C30"
             BuildableName = "Week4_Mission.app"
             BlueprintName = "Week4_Mission"
             ReferencedContainer = "container:Week4_Mission.xcodeproj">
->>>>>>>> JC/week4:JC/Week4_Mission/Week4_Mission.xcodeproj/xcshareddata/xcschemes/Week4_Mission.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -82,17 +68,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-<<<<<<<< HEAD:JC/Week3_Mission/Week3_Mission.xcodeproj/xcshareddata/xcschemes/Week3_Mission.xcscheme
-            BlueprintIdentifier = "DAB06BC62BDE0A6A00060EE1"
-            BuildableName = "Week3_Mission.app"
-            BlueprintName = "Week3_Mission"
-            ReferencedContainer = "container:Week3_Mission.xcodeproj">
-========
-            BlueprintIdentifier = "DA67456E2BDE028C005EA4D5"
+            BlueprintIdentifier = "DAD1DDFF2BEDF7D800376C30"
             BuildableName = "Week4_Mission.app"
             BlueprintName = "Week4_Mission"
             ReferencedContainer = "container:Week4_Mission.xcodeproj">
->>>>>>>> JC/week4:JC/Week4_Mission/Week4_Mission.xcodeproj/xcshareddata/xcschemes/Week4_Mission.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
