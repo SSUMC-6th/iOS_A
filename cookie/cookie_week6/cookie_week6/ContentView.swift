@@ -13,7 +13,6 @@ struct ContentView: View {
                         .fill(Color.mint)
                         .frame(width: geometry.size.width, height: 100)
                         .cornerRadius(10.0)
-                    
                 
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -37,23 +36,35 @@ struct ContentView: View {
             // Btn1, Btn2, Btn3 버튼들
             HStack(spacing: 10) {
                 Button(action: {}) {
-                    Text("Btn1")
+                    Image("btn1")
+                        .resizable()
+                        .scaledToFill()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 110, height: 110)
-                        .background(RoundedRectangle(cornerRadius: 10.0).strokeBorder())
+                        .background(RoundedRectangle(cornerRadius: 10.0))
+                        .clipped()
                 }
                 .buttonStyle(PlainButtonStyle())
                 
                 Button(action: {}) {
-                    Text("Btn2")
+                    Image("btn2")
+                        .resizable()
+                        .scaledToFill()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 110, height: 110)
-                        .background(RoundedRectangle(cornerRadius: 10.0).strokeBorder())
+                        .background(RoundedRectangle(cornerRadius: 10.0))
+                        .clipped()
                 }
                 .buttonStyle(PlainButtonStyle())
                 
                 Button(action: {}) {
-                    Text("Btn3")
+                    Image("btn3")
+                        .resizable()
+                        .scaledToFill()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 110, height: 110)
-                        .background(RoundedRectangle(cornerRadius: 10.0).strokeBorder())
+                        .background(RoundedRectangle(cornerRadius: 10.0))
+                        .clipped()
                 }
                 .buttonStyle(PlainButtonStyle())
             }
@@ -63,13 +74,18 @@ struct ContentView: View {
             Group {
                 VStack(spacing: 10) {
                     Text("대용량특가")
-                    ForEach(0..<2) { _ in
+                    ForEach(0..<2) { row in
                         HStack(spacing: 10) {
-                            ForEach(0..<5) { _ in
+                            ForEach(0..<5) { col in
                                 Button(action: {}) {
-                                    Text("")
+                                    Image("img\(row*5 + col+1)")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .aspectRatio(contentMode: .fill)
                                         .frame(width: 60, height: 60)
-                                        .background(RoundedRectangle(cornerRadius: 10.0).strokeBorder())
+                                        .clipped()
+                                        .background(RoundedRectangle(cornerRadius: 20.0))
+                                        .contentShape(Rectangle())
                                 }
                             }
                         }
@@ -77,7 +93,7 @@ struct ContentView: View {
                 }
             }
             .padding(7)
-            .background(RoundedRectangle(cornerRadius: 15.0).strokeBorder())
+            .background(RoundedRectangle(cornerRadius: 15.0).strokeBorder(Color.gray))
             
             // TabView
             TabView {
