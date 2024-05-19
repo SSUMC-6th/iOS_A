@@ -11,7 +11,7 @@ import SwiftUI
 struct baki_week6App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }

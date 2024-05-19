@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1AEC3EF52BFA3E0400649FEC /* baki_week6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3EF42BFA3E0400649FEC /* baki_week6App.swift */; };
-		1AEC3EF72BFA3E0400649FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3EF62BFA3E0400649FEC /* ContentView.swift */; };
 		1AEC3EF92BFA3E0500649FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC3EF82BFA3E0500649FEC /* Assets.xcassets */; };
 		1AEC3EFC2BFA3E0500649FEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC3EFB2BFA3E0500649FEC /* Preview Assets.xcassets */; };
-		1AEC3F062BFA3E0500649FEC /* baki_week6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F052BFA3E0500649FEC /* baki_week6Tests.swift */; };
-		1AEC3F102BFA3E0500649FEC /* baki_week6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F0F2BFA3E0500649FEC /* baki_week6UITests.swift */; };
-		1AEC3F122BFA3E0500649FEC /* baki_week6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F112BFA3E0500649FEC /* baki_week6UITestsLaunchTests.swift */; };
+		1AEC3F202BFA3E4100649FEC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1AEC3F1F2BFA3E4100649FEC /* SnapKit */; };
+		1AEC3F222BFA3E4100649FEC /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1AEC3F212BFA3E4100649FEC /* SnapKit-Dynamic */; };
+		1AEC3F282BFA550200649FEC /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F272BFA550200649FEC /* HeartView.swift */; };
+		1AEC3F2A2BFA551000649FEC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F292BFA551000649FEC /* SearchView.swift */; };
+		1AEC3F2C2BFA552500649FEC /* baeminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F2B2BFA552500649FEC /* baeminView.swift */; };
+		1AEC3F2E2BFA553500649FEC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F2D2BFA553500649FEC /* MenuView.swift */; };
+		1AEC3F302BFA553C00649FEC /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F2F2BFA553C00649FEC /* MyView.swift */; };
+		1AEC3F322BFA55E700649FEC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC3F312BFA55E700649FEC /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +40,16 @@
 /* Begin PBXFileReference section */
 		1AEC3EF12BFA3E0400649FEC /* baki_week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baki_week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEC3EF42BFA3E0400649FEC /* baki_week6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week6App.swift; sourceTree = "<group>"; };
-		1AEC3EF62BFA3E0400649FEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1AEC3EF82BFA3E0500649FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AEC3EFB2BFA3E0500649FEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1AEC3F012BFA3E0500649FEC /* baki_week6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baki_week6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AEC3F052BFA3E0500649FEC /* baki_week6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week6Tests.swift; sourceTree = "<group>"; };
 		1AEC3F0B2BFA3E0500649FEC /* baki_week6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baki_week6UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AEC3F0F2BFA3E0500649FEC /* baki_week6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week6UITests.swift; sourceTree = "<group>"; };
-		1AEC3F112BFA3E0500649FEC /* baki_week6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baki_week6UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1AEC3F272BFA550200649FEC /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		1AEC3F292BFA551000649FEC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1AEC3F2B2BFA552500649FEC /* baeminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baeminView.swift; sourceTree = "<group>"; };
+		1AEC3F2D2BFA553500649FEC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		1AEC3F2F2BFA553C00649FEC /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		1AEC3F312BFA55E700649FEC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEC3F202BFA3E4100649FEC /* SnapKit in Frameworks */,
+				1AEC3F222BFA3E4100649FEC /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				1AEC3EF32BFA3E0400649FEC /* baki_week6 */,
-				1AEC3F042BFA3E0500649FEC /* baki_week6Tests */,
-				1AEC3F0E2BFA3E0500649FEC /* baki_week6UITests */,
 				1AEC3EF22BFA3E0400649FEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +101,12 @@
 			isa = PBXGroup;
 			children = (
 				1AEC3EF42BFA3E0400649FEC /* baki_week6App.swift */,
-				1AEC3EF62BFA3E0400649FEC /* ContentView.swift */,
+				1AEC3F312BFA55E700649FEC /* MainTabView.swift */,
+				1AEC3F2B2BFA552500649FEC /* baeminView.swift */,
+				1AEC3F292BFA551000649FEC /* SearchView.swift */,
+				1AEC3F272BFA550200649FEC /* HeartView.swift */,
+				1AEC3F2D2BFA553500649FEC /* MenuView.swift */,
+				1AEC3F2F2BFA553C00649FEC /* MyView.swift */,
 				1AEC3EF82BFA3E0500649FEC /* Assets.xcassets */,
 				1AEC3EFA2BFA3E0500649FEC /* Preview Content */,
 			);
@@ -108,23 +119,6 @@
 				1AEC3EFB2BFA3E0500649FEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1AEC3F042BFA3E0500649FEC /* baki_week6Tests */ = {
-			isa = PBXGroup;
-			children = (
-				1AEC3F052BFA3E0500649FEC /* baki_week6Tests.swift */,
-			);
-			path = baki_week6Tests;
-			sourceTree = "<group>";
-		};
-		1AEC3F0E2BFA3E0500649FEC /* baki_week6UITests */ = {
-			isa = PBXGroup;
-			children = (
-				1AEC3F0F2BFA3E0500649FEC /* baki_week6UITests.swift */,
-				1AEC3F112BFA3E0500649FEC /* baki_week6UITestsLaunchTests.swift */,
-			);
-			path = baki_week6UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +137,10 @@
 			dependencies = (
 			);
 			name = baki_week6;
+			packageProductDependencies = (
+				1AEC3F1F2BFA3E4100649FEC /* SnapKit */,
+				1AEC3F212BFA3E4100649FEC /* SnapKit-Dynamic */,
+			);
 			productName = baki_week6;
 			productReference = 1AEC3EF12BFA3E0400649FEC /* baki_week6.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +213,9 @@
 				Base,
 			);
 			mainGroup = 1AEC3EE82BFA3E0400649FEC;
+			packageReferences = (
+				1AEC3F1E2BFA3E4100649FEC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1AEC3EF22BFA3E0400649FEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AEC3EF72BFA3E0400649FEC /* ContentView.swift in Sources */,
+				1AEC3F302BFA553C00649FEC /* MyView.swift in Sources */,
+				1AEC3F2A2BFA551000649FEC /* SearchView.swift in Sources */,
+				1AEC3F2E2BFA553500649FEC /* MenuView.swift in Sources */,
+				1AEC3F322BFA55E700649FEC /* MainTabView.swift in Sources */,
+				1AEC3F282BFA550200649FEC /* HeartView.swift in Sources */,
+				1AEC3F2C2BFA552500649FEC /* baeminView.swift in Sources */,
 				1AEC3EF52BFA3E0400649FEC /* baki_week6App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AEC3F062BFA3E0500649FEC /* baki_week6Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AEC3F122BFA3E0500649FEC /* baki_week6UITestsLaunchTests.swift in Sources */,
-				1AEC3F102BFA3E0500649FEC /* baki_week6UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +585,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AEC3F1E2BFA3E4100649FEC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AEC3F1F2BFA3E4100649FEC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AEC3F1E2BFA3E4100649FEC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1AEC3F212BFA3E4100649FEC /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AEC3F1E2BFA3E4100649FEC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1AEC3EE92BFA3E0400649FEC /* Project object */;
 }
