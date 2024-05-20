@@ -9,6 +9,9 @@ import SwiftUI
 import SnapKit
 
 struct baeminView: View {
+    
+    let screenWidth = UIScreen.main.bounds.size.width
+    
     let buttonTitles = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let imageTitles = ["menuimage1", "menuimage2", "menuimage3", "menuimage4", "menuimage5", "menuimage6", "menuimage7", "menuimage8", "menuimage9", "menuimage10"]
 
@@ -17,7 +20,7 @@ struct baeminView: View {
             ZStack {
                 Color.mint
                     .cornerRadius(20)
-                    .frame(height: 200)
+                    .frame(width: screenWidth, height: 200)
                     .padding(.top, -50)
                     
                     
@@ -52,12 +55,12 @@ struct baeminView: View {
                         .frame(height: 40)
                         .padding(.horizontal, 20)
                 }
-            }.padding(.top, -110)
+            }.padding(.top, -10)
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
-                    .frame(width: 360, height: 70)
+                    .frame(width: screenWidth - 40, height: 70)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom), lineWidth: 1)
@@ -70,33 +73,41 @@ struct baeminView: View {
             .padding(.horizontal, 20)
             
             
-            HStack(spacing: 20) {
+            HStack(spacing: 0) {
                 ImageButton(buttonText: "알뜰배달")
-                    .frame(width: 100, height: 100)
+                    .frame(width: (screenWidth - 10)/3-5, height: 100)
                 ImageButton(buttonText: "배달")
-                    .frame(width: 100, height: 100)
+                    .frame(width: (screenWidth - 10)/3-5, height: 100)
                 ImageButton(buttonText: "배달스토어")
-                    .frame(width: 100, height: 100)
+                    .frame(width: (screenWidth - 10)/3-5, height: 100)
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal,20)
             
-            
-            VStack(spacing: 20) {
-                Text("대용량특가")
-                    .fontWeight(.bold)
-                    .font(.title2)
-                    .padding(.trailing, 240)
-                ForEach(0..<2) { row in
-                    HStack(spacing: 12) {
-                        ForEach(0..<5) { col in
-                            let index = row * 5 + col
-                            if index < buttonTitles.count {
-                                MenuButton(imageName: imageTitles[index], buttonText: buttonTitles[index])
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.white)
+                    .frame(width: screenWidth - 40, height: 200)
+                VStack(spacing: 20) {
+                    
+                    Text("대용량특가")
+                        .fontWeight(.bold)
+                        .font(.title3)
+                        .padding(.trailing, 270)
+                    
+                    
+                        
+                        ForEach(0..<2) { row in
+                            HStack(spacing: 10) {
+                                ForEach(0..<5) { col in
+                                    let index = row * 5 + col
+                                    if index < buttonTitles.count {
+                                        MenuButton(imageName: imageTitles[index], buttonText: buttonTitles[index])
+                                    }
+                                }
                             }
+                            
                         }
                     }
-                    
-                }
             }
             .padding(.vertical, 10)
             .background(Color.white)
