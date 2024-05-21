@@ -9,6 +9,16 @@ import SwiftUI
 import SnapKit
 
 struct MainTabView: View {
+    
+    init() {
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            tabBarAppearance.backgroundColor = UIColor.white
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+            if #available(iOS 15.0, *) {
+                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            }
+        }
     var body: some View {
         TabView {
             baeminView()

@@ -21,7 +21,7 @@ struct baeminView: View {
                 Color.mint
                     .cornerRadius(20)
                     .frame(width: screenWidth, height: 200)
-                    .padding(.top, -50)
+                    .padding(.top, -40)
                     
                     
                 VStack{
@@ -55,7 +55,8 @@ struct baeminView: View {
                         .frame(height: 40)
                         .padding(.horizontal, 20)
                 }
-            }.padding(.top, -10)
+            }
+            
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
@@ -69,19 +70,20 @@ struct baeminView: View {
                 Text("집콕러세요? 30% 쿠폰 드려요")
                     .font(.title3)
             }
-            .padding(.top, 10)
+            .padding(.vertical, 10)
             .padding(.horizontal, 20)
             
             
             HStack(spacing: 0) {
                 ImageButton(buttonText: "알뜰배달")
-                    .frame(width: (screenWidth - 10)/3-5, height: 100)
+                    
                 ImageButton(buttonText: "배달")
-                    .frame(width: (screenWidth - 10)/3-5, height: 100)
+            
                 ImageButton(buttonText: "배달스토어")
-                    .frame(width: (screenWidth - 10)/3-5, height: 100)
+                   
             }
             .padding(.horizontal,20)
+            .padding(.vertical, 10)
             
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
@@ -90,8 +92,6 @@ struct baeminView: View {
                 VStack(spacing: 20) {
                     
                     Text("대용량특가")
-                        .fontWeight(.bold)
-                        .font(.title3)
                         .padding(.trailing, 270)
                     
                     
@@ -116,12 +116,15 @@ struct baeminView: View {
             
             Image("cf")
                 .resizable()
-                .frame(height: 100)
+                .frame(height: 150)
                 .cornerRadius(20)
                 .padding(.horizontal, 20)
-                .padding(.top, 10)
+                .padding(.vertical, 10)
+
             
         }.background(Color(UIColor.systemGray5))
+            .padding(.top,getSafeArea().bottom == 0 ? 150 : -100)
+
     }
 }
 
@@ -143,6 +146,7 @@ struct UISearchBarView: UIViewRepresentable {
 }
 
 struct ImageButton: View {
+    let screenWidth = UIScreen.main.bounds.size.width
     var imageName: String?
     var buttonText: String
 
@@ -156,14 +160,16 @@ struct ImageButton: View {
                 Text(buttonText)
             }
         }
-        .frame(width: 110, height: 100)
+        .frame(width: (screenWidth-50)/3, height: 100)
         .background(Color.white)
         .cornerRadius(10)
+        .padding(5)
         .shadow(radius: 2, x: 2, y: 2)
     }
 }
 
 struct MenuButton: View {
+    let screenWidth = UIScreen.main.bounds.size.width
     var imageName: String?
     var buttonText: String
 
@@ -177,7 +183,7 @@ struct MenuButton: View {
                 Text(buttonText)
             }
         }
-        .frame(width: 60, height: 60)
+        .frame(width: screenWidth/6, height: screenWidth/6)
         .background(Color.white)
         .cornerRadius(10)
     }
@@ -188,4 +194,11 @@ struct baeminView_Previews: PreviewProvider {
     static var previews: some View {
         baeminView()
     }
+}
+
+extension View{
+    func getSafeArea()->UIEdgeInsets{
+        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    //15이상에서는 사용이 안되지만 일단 한 번 사용해봤습니다
 }
