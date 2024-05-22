@@ -2,7 +2,7 @@
 //  iOS_study_week5UITests.swift
 //  iOS_study_week5UITests
 //
-//  Created by 김의정 on 5/7/24.
+//  Created by 김의정 on 5/12/24.
 //
 
 import XCTest

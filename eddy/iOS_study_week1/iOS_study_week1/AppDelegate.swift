@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iOS_study_week1
 //
-//  Created by 김의정 on 4/9/24.
+//  Created by 김의정 on 5/12/24.
 //
 
 import UIKit
