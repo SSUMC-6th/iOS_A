@@ -11,6 +11,12 @@
 		1F0A51232BF5C0C5002E8E7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A51222BF5C0C5002E8E7E /* ContentView.swift */; };
 		1F0A51252BF5C0C7002E8E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A51242BF5C0C7002E8E7E /* Assets.xcassets */; };
 		1F0A51282BF5C0C7002E8E7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A51272BF5C0C7002E8E7E /* Preview Assets.xcassets */; };
+		1F3CF8B22BFE5F730043F141 /* CustomRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CF8B12BFE5F730043F141 /* CustomRectangle.swift */; };
+		1F3CF8B42BFE5FA10043F141 /* CouponButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CF8B32BFE5FA10043F141 /* CouponButton.swift */; };
+		1F3CF8B62BFE5FB10043F141 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CF8B52BFE5FB10043F141 /* ButtonGroup.swift */; };
+		1F3CF8B82BFE5FC50043F141 /* ButtonGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CF8B72BFE5FC50043F141 /* ButtonGrid.swift */; };
+		1F3CF8BA2BFE5FD00043F141 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3CF8B92BFE5FD00043F141 /* CustomTabView.swift */; };
+		1FD8A05F2BFDD26D006D8E71 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD8A05E2BFDD26D006D8E71 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		1F0A51222BF5C0C5002E8E7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F0A51242BF5C0C7002E8E7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F0A51272BF5C0C7002E8E7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F3CF8B12BFE5F730043F141 /* CustomRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangle.swift; sourceTree = "<group>"; };
+		1F3CF8B32BFE5FA10043F141 /* CouponButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponButton.swift; sourceTree = "<group>"; };
+		1F3CF8B52BFE5FB10043F141 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		1F3CF8B72BFE5FC50043F141 /* ButtonGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGrid.swift; sourceTree = "<group>"; };
+		1F3CF8B92BFE5FD00043F141 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		1FD8A05E2BFDD26D006D8E71 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,14 @@
 		1F0A511F2BF5C0C5002E8E7E /* cookie_week6 */ = {
 			isa = PBXGroup;
 			children = (
+				1F3CF8B32BFE5FA10043F141 /* CouponButton.swift */,
 				1F0A51202BF5C0C5002E8E7E /* cookie_week6App.swift */,
+				1F3CF8B12BFE5F730043F141 /* CustomRectangle.swift */,
+				1F3CF8B52BFE5FB10043F141 /* ButtonGroup.swift */,
 				1F0A51222BF5C0C5002E8E7E /* ContentView.swift */,
+				1F3CF8B92BFE5FD00043F141 /* CustomTabView.swift */,
+				1F3CF8B72BFE5FC50043F141 /* ButtonGrid.swift */,
+				1FD8A05E2BFDD26D006D8E71 /* SearchView.swift */,
 				1F0A51242BF5C0C7002E8E7E /* Assets.xcassets */,
 				1F0A51262BF5C0C7002E8E7E /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3CF8B22BFE5F730043F141 /* CustomRectangle.swift in Sources */,
+				1F3CF8B62BFE5FB10043F141 /* ButtonGroup.swift in Sources */,
 				1F0A51232BF5C0C5002E8E7E /* ContentView.swift in Sources */,
+				1F3CF8BA2BFE5FD00043F141 /* CustomTabView.swift in Sources */,
+				1FD8A05F2BFDD26D006D8E71 /* SearchView.swift in Sources */,
 				1F0A51212BF5C0C5002E8E7E /* cookie_week6App.swift in Sources */,
+				1F3CF8B42BFE5FA10043F141 /* CouponButton.swift in Sources */,
+				1F3CF8B82BFE5FC50043F141 /* ButtonGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
