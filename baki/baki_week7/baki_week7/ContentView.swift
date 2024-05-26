@@ -13,13 +13,14 @@ struct ContentView: View {
         ZStack(alignment: .top) {
             ScrollView {
                 VStack {
-                    Spacer().frame(height: 60) // Space for the fixed header
+                    Spacer().frame(height: 50)
+                    
                     VStack(spacing: 0) {
-                        // Horizontal Scroll Content
+                        
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(0..<10) { _ in
-                                    RoundedRectangle(cornerRadius: 20)
+                            RoundedRectangle(cornerRadius: 20)
                                         .fill(Color.white)
                                         .frame(width: 150, height: 150)
                                         .shadow(radius: 3)
@@ -38,7 +39,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .padding(.top) 
+            .padding(.top)
 
             // Sticky Header
             VStack(spacing: 0) {
@@ -47,7 +48,7 @@ struct ContentView: View {
                     .padding(.vertical, 5)
             }
             .frame(maxWidth: .infinity)
-            .background(Color.white)
+            .background(Color.orange)
             .shadow(radius: 2)
         }
     }

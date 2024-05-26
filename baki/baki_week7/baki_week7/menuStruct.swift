@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct Post : Identifiable {
-    let id = UUID()
-    let title : String
-    let things : String
-    let name : String
-    
+struct Post: Identifiable {
+    var id = UUID()
+    var title: String
+    var locate: String
+    var price: String
+    var imageName: String
+    var reservation: String
+    var comments: Int
+    var likes: Int
 }
-
 

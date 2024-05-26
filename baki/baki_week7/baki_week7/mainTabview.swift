@@ -11,27 +11,31 @@ import SnapKit
 struct mainTabView: View {
     
     init() {
-                let tabBarAppearance = UITabBarAppearance()
-                tabBarAppearance.configureWithOpaqueBackground()
-                tabBarAppearance.backgroundColor = UIColor.white
-                UITabBar.appearance().standardAppearance = tabBarAppearance
-                if #available(iOS 15.0, *) {
-                    UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-                }
-            }
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = UIColor.white
+
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        UITabBar.appearance().tintColor = UIColor.orange
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
+    }
     
     var body: some View {
         TabView {
             ContentView()
                 .tabItem {
                     Label("홈", systemImage: "house")
+                        
                 }
             
             secondView()
                 .tabItem {
-                    Label("당근", systemImage: "house")
+                    Label("당근", systemImage: "carrot.fill")
                 }
-            
         }
     }
 }
@@ -41,3 +45,4 @@ struct TabView_Previews: PreviewProvider {
         mainTabView()
     }
 }
+
