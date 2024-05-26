@@ -17,6 +17,8 @@
 		1AE316652C038D5000D0D4CD /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316642C038D5000D0D4CD /* secondView.swift */; };
 		1AE316672C038ED200D0D4CD /* menuStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316662C038ED200D0D4CD /* menuStruct.swift */; };
 		1AE316692C038F0800D0D4CD /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316682C038F0800D0D4CD /* PostView.swift */; };
+		1AE3166B2C03986800D0D4CD /* secondPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE3166A2C03986800D0D4CD /* secondPostView.swift */; };
+		1AE3166D2C03990900D0D4CD /* secondmenuStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE3166C2C03990900D0D4CD /* secondmenuStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		1AE316642C038D5000D0D4CD /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		1AE316662C038ED200D0D4CD /* menuStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuStruct.swift; sourceTree = "<group>"; };
 		1AE316682C038F0800D0D4CD /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		1AE3166A2C03986800D0D4CD /* secondPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondPostView.swift; sourceTree = "<group>"; };
+		1AE3166C2C03990900D0D4CD /* secondmenuStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondmenuStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				1AE316332C038CC100D0D4CD /* baki_week7App.swift */,
 				1AE3165D2C038CFE00D0D4CD /* mainTabview.swift */,
 				1AE316352C038CC100D0D4CD /* ContentView.swift */,
+				1AE3166A2C03986800D0D4CD /* secondPostView.swift */,
+				1AE3166C2C03990900D0D4CD /* secondmenuStruct.swift */,
 				1AE316682C038F0800D0D4CD /* PostView.swift */,
 				1AE316662C038ED200D0D4CD /* menuStruct.swift */,
 				1AE316642C038D5000D0D4CD /* secondView.swift */,
@@ -259,8 +265,10 @@
 				1AE316362C038CC100D0D4CD /* ContentView.swift in Sources */,
 				1AE316652C038D5000D0D4CD /* secondView.swift in Sources */,
 				1AE316342C038CC100D0D4CD /* baki_week7App.swift in Sources */,
+				1AE3166B2C03986800D0D4CD /* secondPostView.swift in Sources */,
 				1AE316692C038F0800D0D4CD /* PostView.swift in Sources */,
 				1AE316672C038ED200D0D4CD /* menuStruct.swift in Sources */,
+				1AE3166D2C03990900D0D4CD /* secondmenuStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

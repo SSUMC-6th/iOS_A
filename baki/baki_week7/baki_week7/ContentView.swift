@@ -7,35 +7,31 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
             ScrollView {
                 VStack {
-                    Spacer().frame(height: 50)
                     
-                    VStack(spacing: 0) {
-                        
+                    Spacer().frame(height: 50)
+                
+                    
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(0..<10) { _ in
-                            RoundedRectangle(cornerRadius: 20)
-                                        .fill(Color.white)
-                                        .frame(width: 150, height: 150)
-                                        .shadow(radius: 3)
-                                        .padding(.leading)
+                            HStack(spacing: 0) {
+                                ForEach(secondPosts) { post in
+                                    SecondPostView(post: post)
                                 }
-                            }.padding(.horizontal)
-                                .padding(.vertical)
                         }
-
+                    }
+                    .padding(.bottom)
+                    
+                    ScrollView {
                         VStack {
                             ForEach(posts) { post in
                                 PostView(post: post)
+                                    .padding(.horizontal, 10)
                             }
                         }
-                        .padding(.horizontal, 10)
                     }
                 }
             }

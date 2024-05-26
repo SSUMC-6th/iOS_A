@@ -16,9 +16,7 @@ struct mainTabView: View {
         tabBarAppearance.backgroundColor = UIColor.white
 
         UITabBar.appearance().standardAppearance = tabBarAppearance
-        UITabBar.appearance().tintColor = UIColor.orange
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
-
+    
         if #available(iOS 15.0, *) {
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }
@@ -29,14 +27,13 @@ struct mainTabView: View {
             ContentView()
                 .tabItem {
                     Label("홈", systemImage: "house")
-                        
                 }
             
             secondView()
                 .tabItem {
                     Label("당근", systemImage: "carrot.fill")
                 }
-        }
+        }.accentColor(.orange)
     }
 }
 

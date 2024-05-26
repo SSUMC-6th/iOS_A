@@ -11,7 +11,7 @@ let posts = [
     Post(title: "에어팟",
          locate: "서울특별시 동작구",
          price: "",
-         imageName: "air", // Image name here
+         imageName: "air", 
          reservation: "",
          comments: 0,
          likes: 0),
@@ -85,7 +85,7 @@ struct PostView: View {
         }
         .background(Color.white)
         .cornerRadius(15.0)
-        .shadow(radius: 5)
+        .shadow(radius: 2)
         .padding(.vertical, 5)
     }
 }
