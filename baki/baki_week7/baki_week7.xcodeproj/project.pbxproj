@@ -15,6 +15,8 @@
 		1AE316612C038D1600D0D4CD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1AE316602C038D1600D0D4CD /* SnapKit */; };
 		1AE316632C038D1600D0D4CD /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1AE316622C038D1600D0D4CD /* SnapKit-Dynamic */; };
 		1AE316652C038D5000D0D4CD /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316642C038D5000D0D4CD /* secondView.swift */; };
+		1AE316672C038ED200D0D4CD /* menuStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316662C038ED200D0D4CD /* menuStruct.swift */; };
+		1AE316692C038F0800D0D4CD /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE316682C038F0800D0D4CD /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		1AE3164A2C038CC200D0D4CD /* baki_week7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baki_week7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE3165D2C038CFE00D0D4CD /* mainTabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabview.swift; sourceTree = "<group>"; };
 		1AE316642C038D5000D0D4CD /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
+		1AE316662C038ED200D0D4CD /* menuStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuStruct.swift; sourceTree = "<group>"; };
+		1AE316682C038F0800D0D4CD /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				1AE316332C038CC100D0D4CD /* baki_week7App.swift */,
 				1AE3165D2C038CFE00D0D4CD /* mainTabview.swift */,
 				1AE316352C038CC100D0D4CD /* ContentView.swift */,
+				1AE316682C038F0800D0D4CD /* PostView.swift */,
+				1AE316662C038ED200D0D4CD /* menuStruct.swift */,
 				1AE316642C038D5000D0D4CD /* secondView.swift */,
 				1AE316372C038CC200D0D4CD /* Assets.xcassets */,
 				1AE316392C038CC200D0D4CD /* Preview Content */,
@@ -253,6 +259,8 @@
 				1AE316362C038CC100D0D4CD /* ContentView.swift in Sources */,
 				1AE316652C038D5000D0D4CD /* secondView.swift in Sources */,
 				1AE316342C038CC100D0D4CD /* baki_week7App.swift in Sources */,
+				1AE316692C038F0800D0D4CD /* PostView.swift in Sources */,
+				1AE316672C038ED200D0D4CD /* menuStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
