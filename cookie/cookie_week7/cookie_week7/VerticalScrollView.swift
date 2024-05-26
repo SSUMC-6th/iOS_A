@@ -11,6 +11,7 @@ struct VerticalScrollView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 100, height: 100)
                 .clipped()
+                .cornerRadius(10)
                 .padding(.trailing, 10)
             VStack {
                 Text("\(row)번째 아이템")
