@@ -13,6 +13,7 @@
 		1F3D58722C0033E4008A5733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D58712C0033E4008A5733 /* Assets.xcassets */; };
 		1F3D58752C0033E4008A5733 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D58742C0033E4008A5733 /* Preview Assets.xcassets */; };
 		1F3D587C2C003404008A5733 /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D587B2C003404008A5733 /* VerticalScrollView.swift */; };
+		1FD7E01C2C030B9A001CC09E /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7E01B2C030B9A001CC09E /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1F3D58712C0033E4008A5733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F3D58742C0033E4008A5733 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F3D587B2C003404008A5733 /* VerticalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
+		1FD7E01B2C030B9A001CC09E /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				1F3D586D2C0033E3008A5733 /* cookie_week7App.swift */,
 				1F3D586F2C0033E3008A5733 /* ContentView.swift */,
 				1F28CF9B2C02FDA300938B63 /* HorizontalScrollView.swift */,
+				1FD7E01B2C030B9A001CC09E /* CustomTabView.swift */,
 				1F3D587B2C003404008A5733 /* VerticalScrollView.swift */,
 				1F3D58712C0033E4008A5733 /* Assets.xcassets */,
 				1F3D58732C0033E4008A5733 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD7E01C2C030B9A001CC09E /* CustomTabView.swift in Sources */,
 				1F3D58702C0033E3008A5733 /* ContentView.swift in Sources */,
 				1F28CF9C2C02FDA300938B63 /* HorizontalScrollView.swift in Sources */,
 				1F3D586E2C0033E3008A5733 /* cookie_week7App.swift in Sources */,
