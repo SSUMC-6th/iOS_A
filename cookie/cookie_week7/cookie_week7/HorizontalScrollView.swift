@@ -10,16 +10,23 @@ import SwiftUI
 struct HorizontalScrollView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(0..<20, id: \.self) { horizontalIndex in
-                        Text("Item \(horizontalIndex)")
+            HStack (spacing: 20) {
+                ForEach(1..<21, id: \.self) { horizontalIndex in
+                    VStack {
+                        Image("img")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: 100, height: 100)
-                            .background(Color.blue)
-                            .cornerRadius(10.0)
+                            .clipped()
+                        Text("아이템 \(horizontalIndex)")
+                            .font(.system(size: 14))
+                            .padding([.bottom, .horizontal])    // 텍스트 아래, 좌우에 패딩 적용
+                    }
+                    .frame(width: 100)
                 }
             }
         }
-        .frame(height: 100)
-        .padding()
+        .frame(height: 150)
+        .padding(.horizontal)
     }
 }
