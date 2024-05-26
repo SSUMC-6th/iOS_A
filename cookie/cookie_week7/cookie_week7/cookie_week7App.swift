@@ -12,6 +12,7 @@ struct cookie_week7App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .accentColor(.orange)
         }
     }
 }
