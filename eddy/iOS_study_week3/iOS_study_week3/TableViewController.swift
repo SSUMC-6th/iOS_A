@@ -43,7 +43,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // UITableViewDelegate 프로토콜에서 선택적으로 구현할 수 있는 메소드
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(data[indexPath.row]) 선택됨")
+//        print("\(data[indexPath.row]) 선택됨")
         tableView.deselectRow(at: indexPath, animated: true)
         
         let viewController = ViewController()
