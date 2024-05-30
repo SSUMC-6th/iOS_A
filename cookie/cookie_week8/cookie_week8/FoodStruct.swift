@@ -11,3 +11,8 @@ struct FoodGroup {
     var name: String
     var items: [FoodItem]
 }
+
+struct CartSection {
+    var id: UUID = UUID()
+    var items: [FoodItem]
+}

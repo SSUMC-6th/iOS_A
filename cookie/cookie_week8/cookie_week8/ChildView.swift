@@ -1,15 +1,19 @@
 import SwiftUI
 
 struct ChildView: View {
-    @Binding var cartItems: [FoodItem]
+    @Binding var cartSections: [CartSection]
 
     var body: some View {
         List {
-            ForEach(cartItems, id: \.id) { item in
-                HStack {
-                    Text(item.name)
-                    Spacer()
-                    Text("\(item.price)")
+            ForEach(cartSections, id: \.id) { section in
+                Section {
+                    ForEach(section.items, id: \.id) { item in
+                        HStack {
+                            Text(item.name)
+                            Spacer()
+                            Text("\(item.price)")
+                        }
+                    }
                 }
             }
             .onDelete(perform: removeItems)
@@ -18,6 +22,6 @@ struct ChildView: View {
     }
 
     func removeItems(at offsets: IndexSet) {
-        cartItems.remove(atOffsets: offsets)
+        cartSections.remove(atOffsets: offsets)
     }
 }
