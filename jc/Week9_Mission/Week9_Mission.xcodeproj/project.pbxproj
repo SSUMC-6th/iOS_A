@@ -17,6 +17,10 @@
 		DA8320D02C0C28F300D2A4F6 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320CF2C0C28F300D2A4F6 /* PostsView.swift */; };
 		DA8320D22C0C28FA00D2A4F6 /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */; };
 		DA8320D42C0C290000D2A4F6 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320D32C0C290000D2A4F6 /* CommentsView.swift */; };
+		DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */; };
+		DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */; };
+		DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E02C0C2B6A00D2A4F6 /* Moya */; };
+		DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,7 @@
 		DA8320CF2C0C28F300D2A4F6 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		DA8320D32C0C290000D2A4F6 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */,
+				DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */,
+				DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +113,7 @@
 		DA8320D72C0C291E00D2A4F6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */,
 				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
 				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
 			);
@@ -127,6 +136,11 @@
 			dependencies = (
 			);
 			name = Week9_Mission;
+			packageProductDependencies = (
+				DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */,
+				DA8320E02C0C2B6A00D2A4F6 /* Moya */,
+				DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */,
+			);
 			productName = Week9_Mission;
 			productReference = DA8320982C0C03F400D2A4F6 /* Week9_Mission.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +169,11 @@
 				Base,
 			);
 			mainGroup = DA83208F2C0C03F400D2A4F6;
+			packageReferences = (
+				DA8320DA2C0C2B3D00D2A4F6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */,
+				DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+			);
 			productRefGroup = DA8320992C0C03F400D2A4F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +207,7 @@
 				DA8320CE2C0C284200D2A4F6 /* UserView.swift in Sources */,
 				DA83209C2C0C03F400D2A4F6 /* Week9_MissionApp.swift in Sources */,
 				DA8320D42C0C290000D2A4F6 /* CommentsView.swift in Sources */,
+				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +427,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA8320DA2C0C2B3D00D2A4F6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8320DA2C0C2B3D00D2A4F6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DA8320E02C0C2B6A00D2A4F6 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
+			productName = SwiftFormat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA8320902C0C03F400D2A4F6 /* Project object */;
 }

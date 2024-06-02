@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct PostsView: View {
+    @State var items: [Posts] = []
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(items) { item in
+                Text(item.content)
+            }
+            .onAppear(perform: {
+                APIServer.shared.fetchPostsData { items in
+                    self.items = items
+                }
+            })
+            .navigationTitle("Posts")
+        }
     }
 }
 
