@@ -7,6 +7,7 @@
 
 import Alamofire
 import Foundation
+import Moya
 
 struct APIServer {
     static let shared = APIServer()
@@ -45,6 +46,25 @@ struct APIServer {
             case let .success(items):
                 completion(items)
 
+            case let .failure(error):
+                debugPrint(error)
+            }
+        }
+    }
+
+    // MARK: - Fetch With Moya
+
+    func fetchTodosData(completion : @escaping ([Todos]) -> Void) {
+        let provider = MoyaProvider<Korean>()
+        provider.request(.todos) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let items = try response.map([Todos].self, using: JSONDecoder())
+                    completion(items)
+                } catch {
+                    
+                }
             case let .failure(error):
                 debugPrint(error)
             }

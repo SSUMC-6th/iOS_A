@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct TodosView: View {
+    @State private var items: [Todos] = []
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(items) { item in
+                Text(item.title)
+            }
+            .onAppear(perform: {
+                APIServer.shared.fetchTodosData { items in
+                    self.items = items
+                }
+            })
+            .navigationTitle("Todos")
+        }
     }
 }
 

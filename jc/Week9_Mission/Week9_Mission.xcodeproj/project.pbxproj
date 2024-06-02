@@ -21,6 +21,8 @@
 		DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */; };
 		DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E02C0C2B6A00D2A4F6 /* Moya */; };
 		DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */; };
+		DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E52C0C321B00D2A4F6 /* Todos.swift */; };
+		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		DA8320D32C0C290000D2A4F6 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		DA8320E52C0C321B00D2A4F6 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
+		DA8320E82C0C33CA00D2A4F6 /* Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korean.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		DA83209A2C0C03F400D2A4F6 /* Week9_Mission */ = {
 			isa = PBXGroup;
 			children = (
+				DA8320E72C0C33BB00D2A4F6 /* Moya */,
 				DA8320D52C0C291500D2A4F6 /* Model */,
 				DA8320D62C0C291A00D2A4F6 /* View */,
 				DA8320D72C0C291E00D2A4F6 /* ViewModel */,
@@ -116,8 +121,17 @@
 				DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */,
 				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
 				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
+				DA8320E52C0C321B00D2A4F6 /* Todos.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA8320E72C0C33BB00D2A4F6 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				DA8320E82C0C33CA00D2A4F6 /* Korean.swift */,
+			);
+			path = Moya;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +217,14 @@
 				DA83209E2C0C03F400D2A4F6 /* ContentView.swift in Sources */,
 				DA8320CA2C0C1C9800D2A4F6 /* Users.swift in Sources */,
 				DA8320D22C0C28FA00D2A4F6 /* TodosView.swift in Sources */,
+				DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */,
 				DA8320D02C0C28F300D2A4F6 /* PostsView.swift in Sources */,
 				DA8320CE2C0C284200D2A4F6 /* UserView.swift in Sources */,
 				DA83209C2C0C03F400D2A4F6 /* Week9_MissionApp.swift in Sources */,
 				DA8320D42C0C290000D2A4F6 /* CommentsView.swift in Sources */,
 				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
+				DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
