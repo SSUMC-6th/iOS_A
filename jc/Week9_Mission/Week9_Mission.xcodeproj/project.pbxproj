@@ -23,6 +23,7 @@
 		DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */; };
 		DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E52C0C321B00D2A4F6 /* Todos.swift */; };
 		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
+		DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320EA2C0C37B700D2A4F6 /* Comments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		DA8320E52C0C321B00D2A4F6 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		DA8320E82C0C33CA00D2A4F6 /* Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korean.swift; sourceTree = "<group>"; };
+		DA8320EA2C0C37B700D2A4F6 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
 				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
 				DA8320E52C0C321B00D2A4F6 /* Todos.swift */,
+				DA8320EA2C0C37B700D2A4F6 /* Comments.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
 				DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */,
+				DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

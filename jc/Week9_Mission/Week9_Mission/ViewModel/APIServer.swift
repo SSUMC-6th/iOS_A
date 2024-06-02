@@ -13,6 +13,8 @@ struct APIServer {
     static let shared = APIServer()
 
     private let baseURL: String = "https://koreanjson.com/"
+    private let provider = MoyaProvider<Korean>()
+
 
     // MARK: - Fetch With URLSession
 
@@ -55,17 +57,32 @@ struct APIServer {
     // MARK: - Fetch With Moya
 
     func fetchTodosData(completion : @escaping ([Todos]) -> Void) {
-        let provider = MoyaProvider<Korean>()
         provider.request(.todos) { result in
             switch result {
-            case let .success(response):
+            case  .success(let response):
                 do {
                     let items = try response.map([Todos].self, using: JSONDecoder())
                     completion(items)
                 } catch {
-                    
+                    debugPrint("Error occured in decoding..!")
                 }
-            case let .failure(error):
+            case  .failure(let error):
+                debugPrint(error)
+            }
+        }
+    }
+    
+    func fetchCommentsData(completion : @escaping ([Comments]) -> Void) {
+        provider.request(.comments) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let items = try response.map([Comments].self, using: JSONDecoder())
+                    completion(items)
+                } catch {
+                    debugPrint("Error occured in decoding..!")
+                }
+            case .failure(let error):
                 debugPrint(error)
             }
         }

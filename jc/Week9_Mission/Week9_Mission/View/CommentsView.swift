@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct CommentsView: View {
+    @State private var items : [Comments] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(items) { item in
+                Text(item.content)
+            }
+            .onAppear(perform: {
+                APIServer.shared.fetchCommentsData { items in
+                    self.items = items
+                }
+            })
+            .navigationTitle("Comments")
+        }
     }
 }
 
