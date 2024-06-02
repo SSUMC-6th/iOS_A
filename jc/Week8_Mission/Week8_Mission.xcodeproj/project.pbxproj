@@ -11,6 +11,8 @@
 		DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320822C0C02DB00D2A4F6 /* ContentView.swift */; };
 		DA8320852C0C02DD00D2A4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */; };
 		DA8320892C0C02DD00D2A4F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8320882C0C02DD00D2A4F6 /* Preview Assets.xcassets */; };
+		DA8320C62C0C04A600D2A4F6 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320C52C0C04A600D2A4F6 /* FirstView.swift */; };
+		DA8320C82C0C04AB00D2A4F6 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320C72C0C04AB00D2A4F6 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8320862C0C02DD00D2A4F6 /* Week8_Mission.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Week8_Mission.entitlements; sourceTree = "<group>"; };
 		DA8320882C0C02DD00D2A4F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA8320C52C0C04A600D2A4F6 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		DA8320C72C0C04AB00D2A4F6 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				DA8320802C0C02DB00D2A4F6 /* Week8_MissionApp.swift */,
 				DA8320822C0C02DB00D2A4F6 /* ContentView.swift */,
+				DA8320C52C0C04A600D2A4F6 /* FirstView.swift */,
+				DA8320C72C0C04AB00D2A4F6 /* SecondView.swift */,
 				DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */,
 				DA8320862C0C02DD00D2A4F6 /* Week8_Mission.entitlements */,
 				DA8320872C0C02DD00D2A4F6 /* Preview Content */,
@@ -140,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */,
+				DA8320C62C0C04A600D2A4F6 /* FirstView.swift in Sources */,
+				DA8320C82C0C04AB00D2A4F6 /* SecondView.swift in Sources */,
 				DA8320812C0C02DB00D2A4F6 /* Week8_MissionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SecondView.swift
 //  Week8_Mission
 //
 //  Created by Jiwoong CHOI on 6/2/24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SecondView: View {
     var body: some View {
-      FirstView()
+        Text("This is Second View")
     }
 }
 
 #Preview {
-    ContentView()
+    SecondView()
 }
