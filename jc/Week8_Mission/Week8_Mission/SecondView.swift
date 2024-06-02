@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SecondView: View {
-    var body: some View {
-        Text("This is Second View")
-    }
+  var message: String = "Initialized Data"
+
+  var body: some View {
+    Text(message)
+  }
 }
 
 #Preview {
-    SecondView()
+  SecondView()
 }

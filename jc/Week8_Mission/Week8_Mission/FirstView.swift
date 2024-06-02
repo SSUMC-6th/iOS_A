@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct FirstView: View {
-  @State private var isSecondViewActive = false
+  @State private var message = "This is test message"
   
   var body: some View {
     NavigationStack {
-      NavigationLink("Go To Second View") {
-        SecondView()
+      NavigationLink(message) {
+        SecondView(message: message)
       }
     }
   }
