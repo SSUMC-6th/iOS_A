@@ -8,25 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var items : [Users] = []
-
   var body: some View {
-    NavigationStack {
-      List(items) { item in
-        VStack {
-          Text(item.name)
+    TabView {
+      UserView()
+        .tabItem {
+          Image(systemName: "person")
+          Text("Users")
         }
-      }
-      .onAppear(perform: {
-        APIServer.shared.fetchData { items in
-          self.items = items
+      
+      PostsView()
+        .tabItem {
+          Image(systemName: "list.clipboard")
+          Text("Posts")
         }
-      })
-      .navigationTitle("Sample Korean")
+      TodosView()
+        .tabItem {
+          Image(systemName: "checklist")
+          Text("Todos")
+        }
+      CommentsView()
+        .tabItem {
+          Image(systemName: "text.bubble")
+          Text("Comments")
+        }
     }
+    .tint(.black)
   }
-
-  
 }
 
 #Preview {

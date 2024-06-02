@@ -12,7 +12,7 @@ struct APIServer {
   
   private let baseURL: String = "https://koreanjson.com/"
   
-  func fetchData(completion : @escaping ([Users]) -> Void) {
+  func fetchUsersData(completion : @escaping ([Users]) -> Void) {
     guard let url = URL(string: baseURL + "users") else {
       return
     }
@@ -34,5 +34,9 @@ struct APIServer {
         debugPrint("Something errors in Encoding...!")
       }
     }.resume()
+  }
+  
+  func fetchPostsData() {
+    //
   }
 }
