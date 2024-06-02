@@ -8,17 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+  private let baseURL: String = "https://koreanjson.com/"
+  @State private var items : [Users] = []
+
+  var body: some View {
+    NavigationStack {
+      List(items) { item in
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+          Text(item.name)
         }
-        .padding()
+      }
+      .onAppear(perform: {
+        fetchData()
+      })
+      .navigationTitle("Sample Korean")
     }
+  }
+
+  private func fetchData() {
+    guard let url = URL(string: baseURL + "users") else {
+      return
+    }
+
+    URLSession.shared.dataTask(with: url) { data, _, _ in
+      guard let data = data else {
+        debugPrint("No data received...!")
+        return
+      }
+      
+      do {
+        let items = try JSONDecoder().decode([Users].self, from: data)
+        
+        DispatchQueue.main.async {
+          self.items = items
+        }
+        
+      } catch {
+        debugPrint("Something errors in Encoding...!")
+      }
+    }.resume()
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
