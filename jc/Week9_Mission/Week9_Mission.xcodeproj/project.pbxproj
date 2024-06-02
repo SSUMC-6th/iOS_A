@@ -78,7 +78,6 @@
 		DA83209A2C0C03F400D2A4F6 /* Week9_Mission */ = {
 			isa = PBXGroup;
 			children = (
-				DA8320E72C0C33BB00D2A4F6 /* Moya */,
 				DA8320D52C0C291500D2A4F6 /* Model */,
 				DA8320D62C0C291A00D2A4F6 /* View */,
 				DA8320D72C0C291E00D2A4F6 /* ViewModel */,
@@ -102,6 +101,8 @@
 		DA8320D52C0C291500D2A4F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAC431FF2C0D383B00D756FA /* DecodingModel */,
+				DA8320E72C0C33BB00D2A4F6 /* Moya */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,11 +121,7 @@
 		DA8320D72C0C291E00D2A4F6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */,
-				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
 				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
-				DA8320E52C0C321B00D2A4F6 /* Todos.swift */,
-				DA8320EA2C0C37B700D2A4F6 /* Comments.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -135,6 +132,17 @@
 				DA8320E82C0C33CA00D2A4F6 /* Korean.swift */,
 			);
 			path = Moya;
+			sourceTree = "<group>";
+		};
+		DAC431FF2C0D383B00D756FA /* DecodingModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA8320EA2C0C37B700D2A4F6 /* Comments.swift */,
+				DA8320E52C0C321B00D2A4F6 /* Todos.swift */,
+				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
+				DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */,
+			);
+			path = DecodingModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
