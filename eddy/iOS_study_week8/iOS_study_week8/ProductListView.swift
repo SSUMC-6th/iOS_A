@@ -1,14 +1,13 @@
 //
 //  ContentView.swift
-//  iOS_study_week7
+//  iOS_study_week8
 //
-//  Created by 김의정 on 5/27/24.
+//  Created by 김의정 on 6/4/24.
 //
-
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProductListView: View {
     let radomNumber = Int.random(in: 0..<productData.count)
     
     var body: some View {
@@ -18,7 +17,9 @@ struct ContentView: View {
                     ForEach(productData.indices, id: \.self) { index in
                         VStack {
                             // ProductView를 먼저 추가
-                            ProductView(product: productData[index])
+                            NavigationLink(destination: ProductDetailView(title: productData[index].title)) {ProductView(product: productData[index])
+                            }
+                            .buttonStyle(PlainButtonStyle())
 
                             // 랜덤 인덱스에 대해 수평 스크롤 뷰 추가
                             if index == Int.random(in: 0..<productData.count) {
@@ -61,6 +62,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ProductListView()
 }
-
