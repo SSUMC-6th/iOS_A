@@ -9,8 +9,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct SelectView: View {
     @Binding var selectedSize: String
     @Binding var isGoldCrust: Bool

@@ -57,8 +57,8 @@
 			children = (
 				1A74B29C2C0CC39A0020CA30 /* baki_week8App.swift */,
 				1A74B29E2C0CC39A0020CA30 /* ContentView.swift */,
-				1A74B2AC2C0CCFF50020CA30 /* OrderView.swift */,
 				1A74B2AA2C0CCB260020CA30 /* SelectView.swift */,
+				1A74B2AC2C0CCFF50020CA30 /* OrderView.swift */,
 				1A74B2A02C0CC39B0020CA30 /* Assets.xcassets */,
 				1A74B2A22C0CC39B0020CA30 /* Preview Content */,
 			);
