@@ -19,69 +19,21 @@ struct OrderDetailView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                     
-                    VStack {
-                        Text(self.menuTitle)
-                        Text(self.menuDetail)
-                    }
+                    MenuTitle(menuTitle: self.$menuTitle, menuDetail: self.$menuDetail)
                     
-                    VStack {
-                        HStack {
-                            Text("가격")
-                            Spacer()
-                            Text("필수")
-                        }
-                        
-                        HStack {
-                            
-                            Text("M")
-                            Text("20,000원")
-                        }
-                        
-                        HStack {
-                            Text("L")
-                            Text("23,000원")
-                        }
-                    }
+                    SizeOptionView()
                     
-                    VStack {
-                        HStack {
-                            VStack {
-                                Text("도우변경")
-                                Text("최대 1개 선택")
-                            }
-                            Spacer()
-                            Text("선택")
-                        }
-                        
-                        
-                        HStack {
-                            Text("크림리치골드 크러스트")
-                            Text("+4500원")
-                        }
-                    }
-                    
+                    DoughOptionView()
                 }
             }
             
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("배달최소주문금액")
-                    Text("17,000원")
-                }
-                
-                Button(action: {
-                    print("다음 페이지로 전환")
-                }, label: {
-                    Text("20,000원 담기")
-                })
-                .buttonStyle(RoundedButtonStyle())
-            }
+            OrderButtonView()
         }
         .ignoresSafeArea(edges: [.top, .leading, .trailing])
     }
 }
 
-struct RoundedButtonStyle : ButtonStyle {
+struct RoundedButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: 180)
