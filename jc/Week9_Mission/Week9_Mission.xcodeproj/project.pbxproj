@@ -24,6 +24,8 @@
 		DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E52C0C321B00D2A4F6 /* Todos.swift */; };
 		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
 		DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320EA2C0C37B700D2A4F6 /* Comments.swift */; };
+		DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432002C0D38BB00D756FA /* SettingView.swift */; };
+		DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432042C0D3A6100D756FA /* SettingItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		DA8320E52C0C321B00D2A4F6 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		DA8320E82C0C33CA00D2A4F6 /* Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korean.swift; sourceTree = "<group>"; };
 		DA8320EA2C0C37B700D2A4F6 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		DAC432002C0D38BB00D756FA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		DAC432042C0D3A6100D756FA /* SettingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				DAC431FF2C0D383B00D756FA /* DecodingModel */,
 				DA8320E72C0C33BB00D2A4F6 /* Moya */,
+				DAC432042C0D3A6100D756FA /* SettingItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				DA8320D32C0C290000D2A4F6 /* CommentsView.swift */,
 				DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */,
 				DA8320CD2C0C284200D2A4F6 /* UserView.swift */,
+				DAC432002C0D38BB00D756FA /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA83209E2C0C03F400D2A4F6 /* ContentView.swift in Sources */,
+				DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */,
 				DA8320CA2C0C1C9800D2A4F6 /* Users.swift in Sources */,
 				DA8320D22C0C28FA00D2A4F6 /* TodosView.swift in Sources */,
 				DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */,
@@ -233,6 +240,7 @@
 				DA8320CE2C0C284200D2A4F6 /* UserView.swift in Sources */,
 				DA83209C2C0C03F400D2A4F6 /* Week9_MissionApp.swift in Sources */,
 				DA8320D42C0C290000D2A4F6 /* CommentsView.swift in Sources */,
+				DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */,
 				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
 				DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */,

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CommentsView: View {
-    @State private var items : [Comments] = []
-    
+    @State private var items: [Comments] = []
+
     var body: some View {
         NavigationStack {
             List(items) { item in

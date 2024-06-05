@@ -31,6 +31,11 @@ struct ContentView: View {
                     Image(systemName: "text.bubble")
                     Text("Comments")
                 }
+            SettingView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Setting")
+                }
         }
         .tint(.black)
     }
