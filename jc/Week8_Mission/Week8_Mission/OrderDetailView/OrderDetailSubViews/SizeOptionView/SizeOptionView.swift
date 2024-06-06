@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SizeOptionView: View {
-  @Binding var mediumSizeChecked : Bool
-  @Binding var largeSizeChecked : Bool
+  @StateObject var orderSystem : OrderSystem
   
   var body: some View {
     VStack {
@@ -29,9 +28,9 @@ struct SizeOptionView: View {
           )
       }
 
-      MediumSizeOptionView(mediumSizeChecked: self.$mediumSizeChecked)
-
-      LargeSizeOptionView(largeSizeChecked: self.$largeSizeChecked)
+      MediumSizeOptionView(orderSystem: self.orderSystem)
+      
+      LargeSizeOptionView(orderSystem: self.orderSystem)
     }
     .padding()
   }

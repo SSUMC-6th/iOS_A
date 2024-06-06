@@ -11,9 +11,7 @@ struct OrderDetailView: View {
   @State private var menuTitle: String = "[재주문1위] 바싹 불고기 피자"
   @State private var menuDetail: String = "바싹 익힌 불고기의 풍미를 입안 가득 느낄 수 있는 자기제빵선명희피자의 야심작"
   
-  @State private var mediumSizeChecked = false
-  @State private var largeSizeChecked = false
-  @State private var doughOptionChecked = false
+  @StateObject var orderSystem = OrderSystem()
   
   var body: some View {
     NavigationStack {
@@ -29,16 +27,16 @@ struct OrderDetailView: View {
             Rectangle()
               .fill(.gray.opacity(0.2))
 
-            SizeOptionView(mediumSizeChecked: self.$mediumSizeChecked, largeSizeChecked: self.$largeSizeChecked)
-
+            SizeOptionView(orderSystem: self.orderSystem)
+            
             Rectangle()
               .fill(.gray.opacity(0.2))
 
-            DoughOptionView(doughOptionChecked: self.$doughOptionChecked)
+            DoughOptionView(orderSystem: self.orderSystem)
           }
         }
 
-        OrderButtonView(mediumOptionChecked: self.$mediumSizeChecked, largeOptionChecked: self.$largeSizeChecked, doughOptionChecked: self.$doughOptionChecked)
+        OrderButtonView(orderSystem: self.orderSystem)
       }
       .toolbar {
         ToolbarItemGroup {

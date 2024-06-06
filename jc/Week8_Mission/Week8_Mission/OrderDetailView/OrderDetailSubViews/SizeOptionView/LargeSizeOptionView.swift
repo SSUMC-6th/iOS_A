@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct LargeSizeOptionView: View {
-  @Binding var largeSizeChecked : Bool
+  @StateObject var orderSystem : OrderSystem
 
   var body: some View {
     HStack {
-      Toggle("", isOn: self.$largeSizeChecked)
+      Toggle("", isOn: self.$orderSystem.largeOptionChecked)
         .toggleStyle(CheckboxToggleStyle())
       Text("L")
       Spacer()

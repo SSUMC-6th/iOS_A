@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DoughOptionView: View {
-  @Binding var doughOptionChecked : Bool
+  @StateObject var orderSystem : OrderSystem
   
   var body: some View {
     VStack {
@@ -33,7 +33,7 @@ struct DoughOptionView: View {
       }
 
       HStack {
-        Toggle("", isOn: self.$doughOptionChecked)
+        Toggle("", isOn: self.$orderSystem.doughOptionChecked)
           .toggleStyle(CheckboxToggleStyle())
         Text("크림리치골드 크러스트")
         Spacer()

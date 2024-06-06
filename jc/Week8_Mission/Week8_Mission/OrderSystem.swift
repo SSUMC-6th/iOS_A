@@ -8,11 +8,7 @@
 import Foundation
 
 class OrderSystem : ObservableObject {
-  @Published private var sizeOption : String
-  @Published private var doughOption : String
-  
-  init(sizeOption: String, doughOption: String) {
-    self.sizeOption = sizeOption
-    self.doughOption = doughOption
-  }
+  @Published var mediumOptionChecked = false
+  @Published var largeOptionChecked = false
+  @Published var doughOptionChecked = false
 }

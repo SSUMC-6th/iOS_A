@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct OrderButtonView: View {
-  @Binding var mediumOptionChecked : Bool
-  @Binding var largeOptionChecked : Bool
-  @Binding var doughOptionChecked : Bool
+  @StateObject var orderSystem : OrderSystem
 
   var body: some View {
     HStack {
@@ -34,15 +32,15 @@ struct OrderButtonView: View {
   private func totalPrice() -> Int {
     var totalPrice = 0
    
-    if self.mediumOptionChecked {
+    if self.orderSystem.mediumOptionChecked {
       totalPrice += 20000
     }
     
-    if self.largeOptionChecked {
+    if self.orderSystem.largeOptionChecked {
       totalPrice += 23000
     }
     
-    if self.doughOptionChecked {
+    if self.orderSystem.doughOptionChecked {
       totalPrice += 4500
     }
     

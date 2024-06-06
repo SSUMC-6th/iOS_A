@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MediumSizeOptionView: View {
-  @Binding var mediumSizeChecked : Bool
-
+  @StateObject var orderSystem : OrderSystem
+  
   var body: some View {
     HStack {
-      Toggle("", isOn: self.$mediumSizeChecked)
+      Toggle("", isOn: self.$orderSystem.mediumOptionChecked)
         .toggleStyle(CheckboxToggleStyle())
       Text("M")
       Spacer()
