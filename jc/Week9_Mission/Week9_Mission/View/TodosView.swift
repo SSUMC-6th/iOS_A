@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct TodosView: View {
-  @StateObject var koreanData : KoreanData
-  
-    var body: some View {
-        NavigationStack {
-          List(koreanData.todosItem) { item in
-                Text(item.title)
-            }
-            .onAppear(perform: {
-                APIServer.shared.fetchTodosData { todosItem in
-                  DispatchQueue.main.async {
-                    self.koreanData.todosItem = todosItem
-                  }
-                }
-            })
-            .navigationTitle("Todos")
+  @StateObject var koreanData: KoreanData
+
+  var body: some View {
+    NavigationStack {
+      List(koreanData.todosItem) { item in
+        Text(item.title)
+      }
+      .onAppear(perform: {
+        APIServer.shared.fetchTodosData { todosItem in
+          DispatchQueue.main.async {
+            self.koreanData.todosItem = todosItem
+          }
         }
+      })
+      .navigationTitle("Todos")
     }
+  }
 }

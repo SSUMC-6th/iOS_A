@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct CommentsView: View {
-  @StateObject var koreanData : KoreanData
-  
-    var body: some View {
-        NavigationStack {
-          List(koreanData.commentsItem) { item in
-                Text(item.content)
-            }
-            .onAppear(perform: {
-                APIServer.shared.fetchCommentsData { commentsItem in
-                  DispatchQueue.main.async {
-                    self.koreanData.commentsItem = commentsItem
-                  }
-                }
-            })
-            .navigationTitle("Comments")
+  @StateObject var koreanData: KoreanData
+
+  var body: some View {
+    NavigationStack {
+      List(koreanData.commentsItem) { item in
+        Text(item.content)
+      }
+      .onAppear(perform: {
+        APIServer.shared.fetchCommentsData { commentsItem in
+          DispatchQueue.main.async {
+            self.koreanData.commentsItem = commentsItem
+          }
         }
+      })
+      .navigationTitle("Comments")
     }
+  }
 }

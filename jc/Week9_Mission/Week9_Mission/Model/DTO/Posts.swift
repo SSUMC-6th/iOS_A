@@ -8,10 +8,10 @@
 import Foundation
 
 struct Posts: Codable, Identifiable {
-    let id: Int
-    let title: String
-    let content: String
-    let createdAt: String
-    let updatedAt: String
-    let UserId: Int
+  let id: Int
+  let title: String
+  let content: String
+  let createdAt: String
+  let updatedAt: String
+  let UserId: Int
 }

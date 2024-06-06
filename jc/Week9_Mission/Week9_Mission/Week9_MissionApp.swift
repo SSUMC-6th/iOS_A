@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct Week9_MissionApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

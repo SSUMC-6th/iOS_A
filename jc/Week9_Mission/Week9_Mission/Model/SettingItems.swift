@@ -8,14 +8,22 @@
 import Foundation
 import SwiftUI
 
-struct SettingItems: Identifiable, Hashable {
-    let id = UUID()
+struct SettingItems: Identifiable {
+  let id = UUID()
 
-    let titleString: String
-    let iconString: String
+  let titleString: String
+  let iconString: String
+  let detailType : DetailType
 
-    init(title: String, iconString: String) {
-        titleString = title
-        self.iconString = iconString
-    }
+  init(titleString: String, iconString: String, detailType: DetailType) {
+    self.titleString = titleString
+    self.iconString = iconString
+    self.detailType = detailType
+  }
+}
+
+enum DetailType {
+  case Auth
+  case Type1
+  case Type2
 }

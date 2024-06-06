@@ -20,13 +20,18 @@
 		DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */; };
 		DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */; };
 		DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E02C0C2B6A00D2A4F6 /* Moya */; };
-		DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */; };
 		DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E52C0C321B00D2A4F6 /* Todos.swift */; };
 		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
 		DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320EA2C0C37B700D2A4F6 /* Comments.swift */; };
 		DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9810A22C115C0B002CF563 /* KoreanData.swift */; };
 		DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432002C0D38BB00D756FA /* SettingView.swift */; };
 		DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432042C0D3A6100D756FA /* SettingItems.swift */; };
+		DAE166692C12647A00FCC018 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DAE166682C12647A00FCC018 /* SwiftFormat */; };
+		DAE1666B2C12647A00FCC018 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DAE1666A2C12647A00FCC018 /* SwiftFormatConfiguration */; };
+		DAE1666D2C126AA800FCC018 /* DetailSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1666C2C126AA800FCC018 /* DetailSettingView.swift */; };
+		DAE1666F2C126AFB00FCC018 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1666E2C126AFA00FCC018 /* AuthenticationView.swift */; };
+		DAE166712C126B1600FCC018 /* Type1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE166702C126B1600FCC018 /* Type1View.swift */; };
+		DAE166732C126B2600FCC018 /* Type2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE166722C126B2600FCC018 /* Type2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,10 @@
 		DA9810A22C115C0B002CF563 /* KoreanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanData.swift; sourceTree = "<group>"; };
 		DAC432002C0D38BB00D756FA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		DAC432042C0D3A6100D756FA /* SettingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItems.swift; sourceTree = "<group>"; };
+		DAE1666C2C126AA800FCC018 /* DetailSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSettingView.swift; sourceTree = "<group>"; };
+		DAE1666E2C126AFA00FCC018 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		DAE166702C126B1600FCC018 /* Type1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1View.swift; sourceTree = "<group>"; };
+		DAE166722C126B2600FCC018 /* Type2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */,
-				DA8320E42C0C2CE300D2A4F6 /* SwiftFormat in Frameworks */,
+				DAE166692C12647A00FCC018 /* SwiftFormat in Frameworks */,
+				DAE1666B2C12647A00FCC018 /* SwiftFormatConfiguration in Frameworks */,
 				DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +132,7 @@
 				DA8320CF2C0C28F300D2A4F6 /* PostsView.swift */,
 				DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */,
 				DA8320D32C0C290000D2A4F6 /* CommentsView.swift */,
-				DAC432002C0D38BB00D756FA /* SettingView.swift */,
+				DAE166742C126BC600FCC018 /* SettingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +156,26 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		DAE166742C126BC600FCC018 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				DAC432002C0D38BB00D756FA /* SettingView.swift */,
+				DAE1666C2C126AA800FCC018 /* DetailSettingView.swift */,
+				DAE166752C126BEA00FCC018 /* DetailSettingSubViews */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		DAE166752C126BEA00FCC018 /* DetailSettingSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				DAE1666E2C126AFA00FCC018 /* AuthenticationView.swift */,
+				DAE166702C126B1600FCC018 /* Type1View.swift */,
+				DAE166722C126B2600FCC018 /* Type2View.swift */,
+			);
+			path = DetailSettingSubViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,7 +195,8 @@
 			packageProductDependencies = (
 				DA8320DB2C0C2B3D00D2A4F6 /* Alamofire */,
 				DA8320E02C0C2B6A00D2A4F6 /* Moya */,
-				DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */,
+				DAE166682C12647A00FCC018 /* SwiftFormat */,
+				DAE1666A2C12647A00FCC018 /* SwiftFormatConfiguration */,
 			);
 			productName = Week9_Mission;
 			productReference = DA8320982C0C03F400D2A4F6 /* Week9_Mission.app */;
@@ -198,7 +229,7 @@
 			packageReferences = (
 				DA8320DA2C0C2B3D00D2A4F6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */,
-				DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+				DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */,
 			);
 			productRefGroup = DA8320992C0C03F400D2A4F6 /* Products */;
 			projectDirPath = "";
@@ -226,7 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE166712C126B1600FCC018 /* Type1View.swift in Sources */,
 				DA83209E2C0C03F400D2A4F6 /* ContentView.swift in Sources */,
+				DAE166732C126B2600FCC018 /* Type2View.swift in Sources */,
 				DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */,
 				DA8320CA2C0C1C9800D2A4F6 /* Users.swift in Sources */,
 				DA8320D22C0C28FA00D2A4F6 /* TodosView.swift in Sources */,
@@ -239,7 +272,9 @@
 				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
 				DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */,
+				DAE1666F2C126AFB00FCC018 /* AuthenticationView.swift in Sources */,
 				DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */,
+				DAE1666D2C126AA800FCC018 /* DetailSettingView.swift in Sources */,
 				DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,12 +512,12 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+		DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			repositoryURL = "https://github.com/apple/swift-format";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.53.10;
+				minimumVersion = 510.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -498,10 +533,15 @@
 			package = DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		DA8320E32C0C2CE300D2A4F6 /* SwiftFormat */ = {
+		DAE166682C12647A00FCC018 /* SwiftFormat */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA8320E22C0C2CE300D2A4F6 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
+			package = DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */;
 			productName = SwiftFormat;
+		};
+		DAE1666A2C12647A00FCC018 /* SwiftFormatConfiguration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */;
+			productName = SwiftFormatConfiguration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

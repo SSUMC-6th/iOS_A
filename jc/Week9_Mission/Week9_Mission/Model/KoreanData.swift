@@ -7,9 +7,9 @@
 
 import Foundation
 
-class KoreanData : ObservableObject {
-  @Published var usersItem : [Users] = []
-  @Published var postsItem : [Posts] = []
-  @Published var todosItem : [Todos] = []
-  @Published var commentsItem : [Comments] = []
+class KoreanData: ObservableObject {
+  @Published var usersItem: [Users] = []
+  @Published var postsItem: [Posts] = []
+  @Published var todosItem: [Todos] = []
+  @Published var commentsItem: [Comments] = []
 }

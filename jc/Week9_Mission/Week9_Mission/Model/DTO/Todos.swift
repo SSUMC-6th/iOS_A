@@ -8,10 +8,10 @@
 import Foundation
 
 struct Todos: Codable, Identifiable {
-    let id: Int
-    let title: String
-    let completed: Bool
-    let createdAt: String
-    let updatedAt: String
-    let UserId: Int
+  let id: Int
+  let title: String
+  let completed: Bool
+  let createdAt: String
+  let updatedAt: String
+  let UserId: Int
 }
