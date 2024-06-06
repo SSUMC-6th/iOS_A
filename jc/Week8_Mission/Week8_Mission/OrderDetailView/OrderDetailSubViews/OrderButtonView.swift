@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct OrderButtonView: View {
+  @Binding var mediumOptionChecked : Bool
+  @Binding var largeOptionChecked : Bool
+  @Binding var doughOptionChecked : Bool
+
   var body: some View {
     HStack {
       VStack(alignment: .leading) {
@@ -20,25 +24,28 @@ struct OrderButtonView: View {
           print("다음 페이지로 전환")
         },
         label: {
-          Text("20,000원 담기")
+          Text("\(totalPrice())원 담기")
         }
       )
       .buttonStyle(RoundedButtonStyle())
     }
   }
-}
-
-struct RoundedButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .frame(width: 180)
-      .foregroundStyle(.white)
-      .padding()
-      .background(.mint)
-      .clipShape(RoundedRectangle(cornerRadius: 10))
+  
+  private func totalPrice() -> Int {
+    var totalPrice = 0
+   
+    if self.mediumOptionChecked {
+      totalPrice += 20000
+    }
+    
+    if self.largeOptionChecked {
+      totalPrice += 23000
+    }
+    
+    if self.doughOptionChecked {
+      totalPrice += 4500
+    }
+    
+    return totalPrice
   }
-}
-
-#Preview {
-  OrderButtonView()
 }

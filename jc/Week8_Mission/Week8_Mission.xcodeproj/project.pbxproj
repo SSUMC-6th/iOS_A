@@ -14,6 +14,11 @@
 		DA3D89FC2C111C7F00502FE6 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA3D89FB2C111C7F00502FE6 /* SwiftFormat */; };
 		DA3D89FE2C111C7F00502FE6 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DA3D89FD2C111C7F00502FE6 /* SwiftFormatConfiguration */; };
 		DA3D8A002C111D3100502FE6 /* OrderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D89FF2C111D3000502FE6 /* OrderButtonView.swift */; };
+		DA3D8A022C112E5500502FE6 /* MediumSizeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A012C112E5500502FE6 /* MediumSizeOptionView.swift */; };
+		DA3D8A042C112E8000502FE6 /* LargeSizeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A032C112E8000502FE6 /* LargeSizeOptionView.swift */; };
+		DA3D8A082C1130E600502FE6 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A072C1130E500502FE6 /* CheckboxToggleStyle.swift */; };
+		DA3D8A0C2C1131A200502FE6 /* OrderSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0B2C1131A200502FE6 /* OrderSystem.swift */; };
+		DA3D8A102C11375100502FE6 /* RoundedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8A0F2C11375100502FE6 /* RoundedButtonStyle.swift */; };
 		DA8320812C0C02DB00D2A4F6 /* Week8_MissionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320802C0C02DB00D2A4F6 /* Week8_MissionApp.swift */; };
 		DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320822C0C02DB00D2A4F6 /* ContentView.swift */; };
 		DA8320852C0C02DD00D2A4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */; };
@@ -26,6 +31,11 @@
 		DA3D89F52C111BA100502FE6 /* SizeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeOptionView.swift; sourceTree = "<group>"; };
 		DA3D89F72C111BD100502FE6 /* DoughOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoughOptionView.swift; sourceTree = "<group>"; };
 		DA3D89FF2C111D3000502FE6 /* OrderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButtonView.swift; sourceTree = "<group>"; };
+		DA3D8A012C112E5500502FE6 /* MediumSizeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSizeOptionView.swift; sourceTree = "<group>"; };
+		DA3D8A032C112E8000502FE6 /* LargeSizeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSizeOptionView.swift; sourceTree = "<group>"; };
+		DA3D8A072C1130E500502FE6 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		DA3D8A0B2C1131A200502FE6 /* OrderSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSystem.swift; sourceTree = "<group>"; };
+		DA3D8A0F2C11375100502FE6 /* RoundedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonStyle.swift; sourceTree = "<group>"; };
 		DA83207D2C0C02DB00D2A4F6 /* Week8_Mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week8_Mission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8320802C0C02DB00D2A4F6 /* Week8_MissionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week8_MissionApp.swift; sourceTree = "<group>"; };
 		DA8320822C0C02DB00D2A4F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,11 +61,30 @@
 			isa = PBXGroup;
 			children = (
 				DA3D89F32C111B8F00502FE6 /* MenuTitle.swift */,
-				DA3D89F52C111BA100502FE6 /* SizeOptionView.swift */,
+				DA3D8A0D2C11323600502FE6 /* SizeOptionView */,
 				DA3D89F72C111BD100502FE6 /* DoughOptionView.swift */,
 				DA3D89FF2C111D3000502FE6 /* OrderButtonView.swift */,
 			);
 			path = OrderDetailSubViews;
+			sourceTree = "<group>";
+		};
+		DA3D8A092C11315000502FE6 /* OrderDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D89EF2C110F4D00502FE6 /* OrderDetailView.swift */,
+				DA3D89F92C111BEC00502FE6 /* OrderDetailSubViews */,
+			);
+			path = OrderDetailView;
+			sourceTree = "<group>";
+		};
+		DA3D8A0D2C11323600502FE6 /* SizeOptionView */ = {
+			isa = PBXGroup;
+			children = (
+				DA3D89F52C111BA100502FE6 /* SizeOptionView.swift */,
+				DA3D8A012C112E5500502FE6 /* MediumSizeOptionView.swift */,
+				DA3D8A032C112E8000502FE6 /* LargeSizeOptionView.swift */,
+			);
+			path = SizeOptionView;
 			sourceTree = "<group>";
 		};
 		DA8320742C0C02DB00D2A4F6 = {
@@ -77,13 +106,15 @@
 		DA83207F2C0C02DB00D2A4F6 /* Week8_Mission */ = {
 			isa = PBXGroup;
 			children = (
+				DA3D8A092C11315000502FE6 /* OrderDetailView */,
 				DA8320802C0C02DB00D2A4F6 /* Week8_MissionApp.swift */,
 				DA8320822C0C02DB00D2A4F6 /* ContentView.swift */,
-				DA3D89EF2C110F4D00502FE6 /* OrderDetailView.swift */,
-				DA3D89F92C111BEC00502FE6 /* OrderDetailSubViews */,
+				DA3D8A072C1130E500502FE6 /* CheckboxToggleStyle.swift */,
 				DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */,
 				DA8320862C0C02DD00D2A4F6 /* Week8_Mission.entitlements */,
 				DA8320872C0C02DD00D2A4F6 /* Preview Content */,
+				DA3D8A0B2C1131A200502FE6 /* OrderSystem.swift */,
+				DA3D8A0F2C11375100502FE6 /* RoundedButtonStyle.swift */,
 			);
 			path = Week8_Mission;
 			sourceTree = "<group>";
@@ -173,12 +204,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3D8A0C2C1131A200502FE6 /* OrderSystem.swift in Sources */,
 				DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */,
+				DA3D8A042C112E8000502FE6 /* LargeSizeOptionView.swift in Sources */,
 				DA3D89F82C111BD100502FE6 /* DoughOptionView.swift in Sources */,
 				DA3D89F42C111B8F00502FE6 /* MenuTitle.swift in Sources */,
+				DA3D8A102C11375100502FE6 /* RoundedButtonStyle.swift in Sources */,
 				DA3D89F62C111BA100502FE6 /* SizeOptionView.swift in Sources */,
 				DA8320812C0C02DB00D2A4F6 /* Week8_MissionApp.swift in Sources */,
+				DA3D8A082C1130E600502FE6 /* CheckboxToggleStyle.swift in Sources */,
 				DA3D89F02C110F4D00502FE6 /* OrderDetailView.swift in Sources */,
+				DA3D8A022C112E5500502FE6 /* MediumSizeOptionView.swift in Sources */,
 				DA3D8A002C111D3100502FE6 /* OrderButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

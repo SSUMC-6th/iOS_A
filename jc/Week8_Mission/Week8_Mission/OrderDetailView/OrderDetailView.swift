@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct OrderDetailView: View {
-  @State var menuTitle: String = "[재주문1위] 바싹 불고기 피자"
-  @State var menuDetail: String = "바싹 익힌 불고기의 풍미를 입안 가득 느낄 수 있는 자기제빵선명희피자의 야심작"
-
+  @State private var menuTitle: String = "[재주문1위] 바싹 불고기 피자"
+  @State private var menuDetail: String = "바싹 익힌 불고기의 풍미를 입안 가득 느낄 수 있는 자기제빵선명희피자의 야심작"
+  
+  @State private var mediumSizeChecked = false
+  @State private var largeSizeChecked = false
+  @State private var doughOptionChecked = false
+  
   var body: some View {
     NavigationStack {
       VStack {
@@ -25,16 +29,16 @@ struct OrderDetailView: View {
             Rectangle()
               .fill(.gray.opacity(0.2))
 
-            SizeOptionView()
+            SizeOptionView(mediumSizeChecked: self.$mediumSizeChecked, largeSizeChecked: self.$largeSizeChecked)
 
             Rectangle()
               .fill(.gray.opacity(0.2))
 
-            DoughOptionView()
+            DoughOptionView(doughOptionChecked: self.$doughOptionChecked)
           }
         }
 
-        OrderButtonView()
+        OrderButtonView(mediumOptionChecked: self.$mediumSizeChecked, largeOptionChecked: self.$largeSizeChecked, doughOptionChecked: self.$doughOptionChecked)
       }
       .toolbar {
         ToolbarItemGroup {

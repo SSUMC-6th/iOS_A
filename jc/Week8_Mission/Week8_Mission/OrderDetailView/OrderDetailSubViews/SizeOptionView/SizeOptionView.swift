@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SizeOptionView: View {
+  @Binding var mediumSizeChecked : Bool
+  @Binding var largeSizeChecked : Bool
+  
   var body: some View {
     VStack {
       HStack {
@@ -26,22 +29,10 @@ struct SizeOptionView: View {
           )
       }
 
-      HStack {
-        Text("M")
-        Spacer()
-        Text("20,000원")
-      }
+      MediumSizeOptionView(mediumSizeChecked: self.$mediumSizeChecked)
 
-      HStack {
-        Text("L")
-        Spacer()
-        Text("23,000원")
-      }
+      LargeSizeOptionView(largeSizeChecked: self.$largeSizeChecked)
     }
     .padding()
   }
-}
-
-#Preview {
-  SizeOptionView()
 }
