@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct TodosView: View {
-    @State private var items: [Todos] = []
-
+  @StateObject var koreanData : KoreanData
+  
     var body: some View {
         NavigationStack {
-            List(items) { item in
+          List(koreanData.todosItem) { item in
                 Text(item.title)
             }
             .onAppear(perform: {
-                APIServer.shared.fetchTodosData { items in
-                    self.items = items
+                APIServer.shared.fetchTodosData { todosItem in
+                  self.koreanData.todosItem = todosItem
                 }
             })
             .navigationTitle("Todos")
         }
     }
-}
-
-#Preview {
-    TodosView()
 }

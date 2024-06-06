@@ -24,6 +24,7 @@
 		DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E52C0C321B00D2A4F6 /* Todos.swift */; };
 		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
 		DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320EA2C0C37B700D2A4F6 /* Comments.swift */; };
+		DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9810A22C115C0B002CF563 /* KoreanData.swift */; };
 		DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432002C0D38BB00D756FA /* SettingView.swift */; };
 		DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432042C0D3A6100D756FA /* SettingItems.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		DA8320E52C0C321B00D2A4F6 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		DA8320E82C0C33CA00D2A4F6 /* Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korean.swift; sourceTree = "<group>"; };
 		DA8320EA2C0C37B700D2A4F6 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		DA9810A22C115C0B002CF563 /* KoreanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanData.swift; sourceTree = "<group>"; };
 		DAC432002C0D38BB00D756FA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		DAC432042C0D3A6100D756FA /* SettingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +86,7 @@
 			children = (
 				DA8320D52C0C291500D2A4F6 /* Model */,
 				DA8320D62C0C291A00D2A4F6 /* View */,
-				DA8320D72C0C291E00D2A4F6 /* ViewModel */,
+				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
 				DA83209B2C0C03F400D2A4F6 /* Week9_MissionApp.swift */,
 				DA83209D2C0C03F400D2A4F6 /* ContentView.swift */,
 				DA83209F2C0C03F600D2A4F6 /* Assets.xcassets */,
@@ -105,9 +107,10 @@
 		DA8320D52C0C291500D2A4F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DAC431FF2C0D383B00D756FA /* DecodingModel */,
+				DAC431FF2C0D383B00D756FA /* DTO */,
 				DA8320E72C0C33BB00D2A4F6 /* Moya */,
 				DAC432042C0D3A6100D756FA /* SettingItems.swift */,
+				DA9810A22C115C0B002CF563 /* KoreanData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,21 +118,13 @@
 		DA8320D62C0C291A00D2A4F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA8320CF2C0C28F300D2A4F6 /* PostsView.swift */,
-				DA8320D32C0C290000D2A4F6 /* CommentsView.swift */,
-				DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */,
 				DA8320CD2C0C284200D2A4F6 /* UserView.swift */,
+				DA8320CF2C0C28F300D2A4F6 /* PostsView.swift */,
+				DA8320D12C0C28FA00D2A4F6 /* TodosView.swift */,
+				DA8320D32C0C290000D2A4F6 /* CommentsView.swift */,
 				DAC432002C0D38BB00D756FA /* SettingView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DA8320D72C0C291E00D2A4F6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DA8320E72C0C33BB00D2A4F6 /* Moya */ = {
@@ -140,7 +135,7 @@
 			path = Moya;
 			sourceTree = "<group>";
 		};
-		DAC431FF2C0D383B00D756FA /* DecodingModel */ = {
+		DAC431FF2C0D383B00D756FA /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				DA8320EA2C0C37B700D2A4F6 /* Comments.swift */,
@@ -148,7 +143,7 @@
 				DA8320C92C0C1C9800D2A4F6 /* Users.swift */,
 				DA8320D82C0C2A8B00D2A4F6 /* Posts.swift */,
 			);
-			path = DecodingModel;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +239,7 @@
 				DA8320D92C0C2A8B00D2A4F6 /* Posts.swift in Sources */,
 				DA8320CC2C0C25BE00D2A4F6 /* APIServer.swift in Sources */,
 				DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */,
+				DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */,
 				DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

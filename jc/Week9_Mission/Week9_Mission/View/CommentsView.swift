@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct CommentsView: View {
-    @State private var items: [Comments] = []
-
+  @StateObject var koreanData : KoreanData
+  
     var body: some View {
         NavigationStack {
-            List(items) { item in
+          List(koreanData.commentsItem) { item in
                 Text(item.content)
             }
             .onAppear(perform: {
-                APIServer.shared.fetchCommentsData { items in
-                    self.items = items
+                APIServer.shared.fetchCommentsData { commentsItem in
+                  self.koreanData.commentsItem = commentsItem
                 }
             })
             .navigationTitle("Comments")
         }
     }
-}
-
-#Preview {
-    CommentsView()
 }

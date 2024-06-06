@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct PostsView: View {
-    @State var items: [Posts] = []
-
+  @StateObject var koreanData : KoreanData
+  
     var body: some View {
         NavigationStack {
-            List(items) { item in
+          List(koreanData.postsItem) { item in
                 Text(item.content)
             }
             .onAppear(perform: {
-                APIServer.shared.fetchPostsData { items in
-                    self.items = items
+                APIServer.shared.fetchPostsData { postsItems in
+                  self.koreanData.postsItem = postsItems
                 }
             })
             .navigationTitle("Posts")
         }
     }
-}
-
-#Preview {
-    PostsView()
 }

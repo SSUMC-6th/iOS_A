@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+  @StateObject private var koreanData = KoreanData()
+  
     var body: some View {
         TabView {
-            UserView()
+          UserView(koreanData: self.koreanData)
                 .tabItem {
                     Image(systemName: "person")
                     Text("Users")
                 }
 
-            PostsView()
+          PostsView(koreanData: self.koreanData)
                 .tabItem {
                     Image(systemName: "list.clipboard")
                     Text("Posts")
                 }
-            TodosView()
+          TodosView(koreanData: self.koreanData)
                 .tabItem {
                     Image(systemName: "checklist")
                     Text("Todos")
                 }
-            CommentsView()
+          CommentsView(koreanData: self.koreanData)
                 .tabItem {
                     Image(systemName: "text.bubble")
                     Text("Comments")
