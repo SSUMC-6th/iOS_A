@@ -19,7 +19,9 @@ struct UserView: View {
             }
             .onAppear(perform: {
                 APIServer.shared.fetchUsersData { userItems in
-                  koreanData.usersItem = userItems
+                  DispatchQueue.main.async {
+                    self.koreanData.usersItem = userItems
+                  }
                 }
             })
             .navigationTitle("Users")

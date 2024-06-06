@@ -17,7 +17,9 @@ struct TodosView: View {
             }
             .onAppear(perform: {
                 APIServer.shared.fetchTodosData { todosItem in
-                  self.koreanData.todosItem = todosItem
+                  DispatchQueue.main.async {
+                    self.koreanData.todosItem = todosItem
+                  }
                 }
             })
             .navigationTitle("Todos")

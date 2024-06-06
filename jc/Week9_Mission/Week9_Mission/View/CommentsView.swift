@@ -17,7 +17,9 @@ struct CommentsView: View {
             }
             .onAppear(perform: {
                 APIServer.shared.fetchCommentsData { commentsItem in
-                  self.koreanData.commentsItem = commentsItem
+                  DispatchQueue.main.async {
+                    self.koreanData.commentsItem = commentsItem
+                  }
                 }
             })
             .navigationTitle("Comments")

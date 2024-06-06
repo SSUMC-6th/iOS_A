@@ -17,7 +17,9 @@ struct PostsView: View {
             }
             .onAppear(perform: {
                 APIServer.shared.fetchPostsData { postsItems in
-                  self.koreanData.postsItem = postsItems
+                  DispatchQueue.main.async {
+                    self.koreanData.postsItem = postsItems
+                  }
                 }
             })
             .navigationTitle("Posts")
