@@ -23,6 +23,7 @@
 		DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320822C0C02DB00D2A4F6 /* ContentView.swift */; };
 		DA8320852C0C02DD00D2A4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */; };
 		DA8320892C0C02DD00D2A4F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8320882C0C02DD00D2A4F6 /* Preview Assets.xcassets */; };
+		DA9810A12C1152CE002CF563 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9810A02C1152CE002CF563 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DA8320842C0C02DD00D2A4F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8320862C0C02DD00D2A4F6 /* Week8_Mission.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Week8_Mission.entitlements; sourceTree = "<group>"; };
 		DA8320882C0C02DD00D2A4F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA9810A02C1152CE002CF563 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3D8A092C11315000502FE6 /* OrderDetailView */,
+				DA9810A02C1152CE002CF563 /* CartView.swift */,
 				DA8320802C0C02DB00D2A4F6 /* Week8_MissionApp.swift */,
 				DA8320822C0C02DB00D2A4F6 /* ContentView.swift */,
 				DA3D8A072C1130E500502FE6 /* CheckboxToggleStyle.swift */,
@@ -206,6 +209,7 @@
 			files = (
 				DA3D8A0C2C1131A200502FE6 /* OrderSystem.swift in Sources */,
 				DA8320832C0C02DB00D2A4F6 /* ContentView.swift in Sources */,
+				DA9810A12C1152CE002CF563 /* CartView.swift in Sources */,
 				DA3D8A042C112E8000502FE6 /* LargeSizeOptionView.swift in Sources */,
 				DA3D89F82C111BD100502FE6 /* DoughOptionView.swift in Sources */,
 				DA3D89F42C111B8F00502FE6 /* MenuTitle.swift in Sources */,
