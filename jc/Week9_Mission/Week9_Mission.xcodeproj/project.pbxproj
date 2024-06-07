@@ -24,6 +24,7 @@
 		DA8320E92C0C33CA00D2A4F6 /* Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320E82C0C33CA00D2A4F6 /* Korean.swift */; };
 		DA8320EB2C0C37B700D2A4F6 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8320EA2C0C37B700D2A4F6 /* Comments.swift */; };
 		DA899F222C128D6300F32E4D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899F212C128D6300F32E4D /* AuthViewModel.swift */; };
+		DA899F242C12931800F32E4D /* BaseTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899F232C12931800F32E4D /* BaseTextFieldStyle.swift */; };
 		DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9810A22C115C0B002CF563 /* KoreanData.swift */; };
 		DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432002C0D38BB00D756FA /* SettingView.swift */; };
 		DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432042C0D3A6100D756FA /* SettingItems.swift */; };
@@ -56,6 +57,7 @@
 		DA8320EA2C0C37B700D2A4F6 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		DA899F1F2C1278E500F32E4D /* Week9-Mission-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Week9-Mission-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DA899F212C128D6300F32E4D /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DA899F232C12931800F32E4D /* BaseTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFieldStyle.swift; sourceTree = "<group>"; };
 		DA9810A22C115C0B002CF563 /* KoreanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanData.swift; sourceTree = "<group>"; };
 		DAC432002C0D38BB00D756FA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		DAC432042C0D3A6100D756FA /* SettingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItems.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 				DA8320D52C0C291500D2A4F6 /* Model */,
 				DA8320D62C0C291A00D2A4F6 /* View */,
 				DA899F202C128D2500F32E4D /* ViewModel */,
-				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
+				DA899F252C12935B00F32E4D /* Foundataion */,
 				DA83209D2C0C03F400D2A4F6 /* ContentView.swift */,
 				DA83209B2C0C03F400D2A4F6 /* Week9_MissionApp.swift */,
 				DA83209F2C0C03F600D2A4F6 /* Assets.xcassets */,
@@ -131,6 +133,7 @@
 				DA8320E72C0C33BB00D2A4F6 /* Moya */,
 				DAC432042C0D3A6100D756FA /* SettingItems.swift */,
 				DA9810A22C115C0B002CF563 /* KoreanData.swift */,
+				DA8320CB2C0C25BE00D2A4F6 /* APIServer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				DA899F212C128D6300F32E4D /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA899F252C12935B00F32E4D /* Foundataion */ = {
+			isa = PBXGroup;
+			children = (
+				DA899F232C12931800F32E4D /* BaseTextFieldStyle.swift */,
+			);
+			path = Foundataion;
 			sourceTree = "<group>";
 		};
 		DAC431FF2C0D383B00D756FA /* DTO */ = {
@@ -287,6 +298,7 @@
 				DA8320E62C0C321B00D2A4F6 /* Todos.swift in Sources */,
 				DA8320D02C0C28F300D2A4F6 /* PostsView.swift in Sources */,
 				DA8320CE2C0C284200D2A4F6 /* UserView.swift in Sources */,
+				DA899F242C12931800F32E4D /* BaseTextFieldStyle.swift in Sources */,
 				DA83209C2C0C03F400D2A4F6 /* Week9_MissionApp.swift in Sources */,
 				DA8320D42C0C290000D2A4F6 /* CommentsView.swift in Sources */,
 				DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */,
