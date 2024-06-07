@@ -22,7 +22,7 @@ struct AuthView: View {
   var body: some View {
     if let currentUser = Auth.auth().currentUser {
       VStack {
-        Text("Welcome \(self.authViewModel.emailAddress)")
+        Text("Welcome \(currentUser.email!)")
         Button(
           action: {
             self.signOut()
