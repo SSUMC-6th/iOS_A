@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct Type1View: View {
-    var body: some View {
-        Text("Type 1 View")
-    }
+  var body: some View {
+    Text("Type 1 View")
+  }
 }
 
 #Preview {
-    Type1View()
+  Type1View()
 }

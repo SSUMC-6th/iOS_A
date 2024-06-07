@@ -13,7 +13,7 @@ struct SettingItems: Identifiable {
 
   let titleString: String
   let iconString: String
-  let detailType : DetailType
+  let detailType: DetailType
 
   init(titleString: String, iconString: String, detailType: DetailType) {
     self.titleString = titleString

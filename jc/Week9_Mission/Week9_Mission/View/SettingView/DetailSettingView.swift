@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct DetailSettingView: View {
-  let item : SettingItems
-  
-    var body: some View {
-      switch item.detailType {
-      case .Auth:
-        AuthenticationView()
-      case .Type1:
-        Type1View()
-      case .Type2:
-        Type2View()
-      }
+  let item: SettingItems
+
+  var body: some View {
+    switch item.detailType {
+    case .Auth:
+      AuthenticationView()
+    case .Type1:
+      Type1View()
+    case .Type2:
+      Type2View()
     }
+  }
 }
