@@ -39,7 +39,6 @@ struct ContentView: View {
           Text("Setting")
         }
     }
-    .tint(.black)
   }
 }
 
