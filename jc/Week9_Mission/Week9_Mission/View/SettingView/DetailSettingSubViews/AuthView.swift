@@ -9,26 +9,23 @@ import FirebaseAuth
 import FirebaseCore
 import SwiftUI
 
-struct AuthenticationView: View {
-  @State private var isAuthenticated: Bool = false
-  
-  @State private var emailAddress: String = ""
-  @State private var password: String = ""
+struct AuthView: View {
+  @StateObject private var authViewModel = AuthViewModel()
   
   @State private var showAlert: Bool = false
   @State private var alertTitle: String = ""
   @State private var alertMessage: String = ""
 
   var body: some View {
-    if self.isAuthenticated {
-      Text("Welcome user \(self.emailAddress)")
+    if self.authViewModel.isAuthenticated {
+      Text("Welcome user \(self.authViewModel.emailAddress)")
     } else {
       VStack {
-        TextField("Email Address", text: self.$emailAddress)
+        TextField("Email Address", text: self.$authViewModel.emailAddress)
           .baseTextFieldStyle()
           .keyboardType(.emailAddress)
         
-        SecureField("Password", text: self.$password)
+        SecureField("Password", text: self.$authViewModel.password)
           .baseTextFieldStyle()
           .keyboardType(.alphabet)
         
@@ -56,20 +53,20 @@ struct AuthenticationView: View {
   }
   
   private func signIn() {
-    Auth.auth().signIn(withEmail: self.emailAddress, password: self.password) { _, error in
+    Auth.auth().signIn(withEmail: self.authViewModel.emailAddress, password: self.authViewModel.password) { _, error in
       if let error = error {
         debugPrint("Somethings got wrong \(error.localizedDescription)")
       } else {
-        self.isAuthenticated = true
+        self.authViewModel.isAuthenticated = true
         self.showAlert = true
         self.alertTitle = "Sign-In Successful"
-        self.alertMessage = "Welcome \(self.emailAddress)"
+        self.alertMessage = "Welcome \(self.authViewModel.emailAddress)"
       }
     }
   }
   
   private func signUp() {
-    Auth.auth().createUser(withEmail: self.emailAddress, password: self.password) { _, error in
+    Auth.auth().createUser(withEmail: self.authViewModel.emailAddress, password: self.authViewModel.password) { _, error in
       
       if let error = error {
         debugPrint("Somethings got wrong \(error.localizedDescription)")
@@ -99,5 +96,5 @@ extension View {
 }
 
 #Preview {
-  AuthenticationView()
+  AuthView()
 }

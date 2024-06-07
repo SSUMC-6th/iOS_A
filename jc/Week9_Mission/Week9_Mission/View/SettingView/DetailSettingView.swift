@@ -13,7 +13,7 @@ struct DetailSettingView: View {
   var body: some View {
     switch item.detailType {
     case .Auth:
-      AuthenticationView()
+      AuthView()
     case .Type1:
       Type1View()
     case .Type2:
