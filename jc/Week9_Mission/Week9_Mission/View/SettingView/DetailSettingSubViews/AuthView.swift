@@ -13,8 +13,6 @@ import GoogleSignIn
 struct AuthView: View {
   // MARK: - Properties
 
-  @StateObject private var authViewModel = AuthViewModel()
-
   @State private var emailAddress: String = ""
   @State private var password: String = ""
 
@@ -27,7 +25,7 @@ struct AuthView: View {
   var body: some View {
     if Auth.auth().currentUser != nil {
       VStack {
-        Text("Welcome \(self.authViewModel.getCurrentUserEmail())")
+        Text("Welcome \(Auth.auth().currentUser!.email!)")
         Button(
           action: {
             self.signOut()
@@ -104,7 +102,7 @@ struct AuthView: View {
       } else {
         self.showAlert = true
         self.alertTitle = "Sign-In Successfully"
-        self.alertMessage = "Welcome \(self.authViewModel.getCurrentUserEmail())"
+        self.alertMessage = "Welcome \(Auth.auth().currentUser!.email!)"
       }
     }
   }
@@ -161,7 +159,7 @@ struct AuthView: View {
         } else {
           self.showAlert = true
           self.alertTitle = "Sign-In Successfully"
-          self.alertMessage = "Welcome \(self.authViewModel.getCurrentUserEmail())"
+          self.alertMessage = "Welcome \(Auth.auth().currentUser!.email!)"
         }
       }
     }
@@ -170,7 +168,7 @@ struct AuthView: View {
   private func signOut() {
     self.showAlert = true
     self.alertTitle = "Sign-Out Successfully"
-    self.alertMessage = "See you again! \(self.authViewModel.getCurrentUserEmail())"
+    self.alertMessage = "See you again! \(Auth.auth().currentUser!.email!)"
     do {
       try Auth.auth().signOut()
     } catch let signOutError {
