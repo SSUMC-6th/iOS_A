@@ -26,6 +26,8 @@
 		DA899F222C128D6300F32E4D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899F212C128D6300F32E4D /* AuthViewModel.swift */; };
 		DA899F242C12931800F32E4D /* BaseTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA899F232C12931800F32E4D /* BaseTextFieldStyle.swift */; };
 		DA9810A32C115C0B002CF563 /* KoreanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9810A22C115C0B002CF563 /* KoreanData.swift */; };
+		DAB9CAF32C15D99A00A6DF12 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DAB9CAF22C15D99A00A6DF12 /* GoogleSignIn */; };
+		DAB9CAF52C15D99A00A6DF12 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAB9CAF42C15D99A00A6DF12 /* GoogleSignInSwift */; };
 		DAC432012C0D38BB00D756FA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432002C0D38BB00D756FA /* SettingView.swift */; };
 		DAC432052C0D3A6100D756FA /* SettingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC432042C0D3A6100D756FA /* SettingItems.swift */; };
 		DAE166692C12647A00FCC018 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DAE166682C12647A00FCC018 /* SwiftFormat */; };
@@ -75,9 +77,11 @@
 			files = (
 				DA8320DC2C0C2B3D00D2A4F6 /* Alamofire in Frameworks */,
 				DAE1667A2C126E2D00FCC018 /* FirebaseAuth in Frameworks */,
+				DAB9CAF52C15D99A00A6DF12 /* GoogleSignInSwift in Frameworks */,
 				DAE166692C12647A00FCC018 /* SwiftFormat in Frameworks */,
 				DAE1666B2C12647A00FCC018 /* SwiftFormatConfiguration in Frameworks */,
 				DA8320E12C0C2B6A00D2A4F6 /* Moya in Frameworks */,
+				DAB9CAF32C15D99A00A6DF12 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +231,8 @@
 				DAE166682C12647A00FCC018 /* SwiftFormat */,
 				DAE1666A2C12647A00FCC018 /* SwiftFormatConfiguration */,
 				DAE166792C126E2D00FCC018 /* FirebaseAuth */,
+				DAB9CAF22C15D99A00A6DF12 /* GoogleSignIn */,
+				DAB9CAF42C15D99A00A6DF12 /* GoogleSignInSwift */,
 			);
 			productName = Week9_Mission;
 			productReference = DA8320982C0C03F400D2A4F6 /* Week9_Mission.app */;
@@ -261,6 +267,7 @@
 				DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */,
 				DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */,
 				DAE166782C126E2D00FCC018 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DAB9CAF12C15D99A00A6DF12 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = DA8320992C0C03F400D2A4F6 /* Products */;
 			projectDirPath = "";
@@ -546,6 +553,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		DAB9CAF12C15D99A00A6DF12 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
 		DAE166672C12647A00FCC018 /* XCRemoteSwiftPackageReference "swift-format" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-format";
@@ -574,6 +589,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA8320DF2C0C2B6A00D2A4F6 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		DAB9CAF22C15D99A00A6DF12 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAB9CAF12C15D99A00A6DF12 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		DAB9CAF42C15D99A00A6DF12 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAB9CAF12C15D99A00A6DF12 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		DAE166682C12647A00FCC018 /* SwiftFormat */ = {
 			isa = XCSwiftPackageProductDependency;
