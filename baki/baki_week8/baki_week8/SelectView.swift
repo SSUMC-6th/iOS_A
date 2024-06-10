@@ -56,6 +56,8 @@ struct SelectView: View {
             }
             .padding(.vertical)
             
+            
+            
             // 도우 변경 섹션
             Section(header:
                         HStack {
