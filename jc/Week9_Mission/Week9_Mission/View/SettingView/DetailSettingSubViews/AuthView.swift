@@ -11,7 +11,11 @@ import SwiftUI
 
 struct AuthView: View {
   // MARK: - Properties
+
   @StateObject private var authViewModel = AuthViewModel()
+
+  @State private var emailAddress: String = ""
+  @State private var password: String = ""
 
   @State private var showAlert: Bool = false
   @State private var alertTitle: String = ""
@@ -22,14 +26,15 @@ struct AuthView: View {
   var body: some View {
     if let currentUser = Auth.auth().currentUser {
       VStack {
-        Text("Welcome \(currentUser.email!)")
+        Text("Welcome \(self.authViewModel.getCurrentUserEmail())")
         Button(
           action: {
             self.signOut()
           },
           label: {
             Text("Sign-Out")
-          })
+          }
+        )
       }
       .alert(self.alertTitle, isPresented: self.$showAlert) {
         //
@@ -38,11 +43,11 @@ struct AuthView: View {
       }
     } else {
       VStack {
-        TextField("Email Address", text: self.$authViewModel.emailAddress)
+        TextField("Email Address", text: self.$emailAddress)
           .baseTextFieldStyle()
           .keyboardType(.emailAddress)
 
-        SecureField("Password", text: self.$authViewModel.password)
+        SecureField("Password", text: self.$password)
           .baseTextFieldStyle()
           .keyboardType(.alphabet)
 
@@ -53,7 +58,8 @@ struct AuthView: View {
             },
             label: {
               Text("Sign-In")
-            })
+            }
+          )
 
           Button(
             action: {
@@ -61,7 +67,8 @@ struct AuthView: View {
             },
             label: {
               Text("Sign-Up")
-            })
+            }
+          )
         }
       }
       .alert(self.alertTitle, isPresented: self.$showAlert) {
@@ -70,28 +77,27 @@ struct AuthView: View {
         Text(self.alertMessage)
       }
     }
-    
   }
 
   // MARK: - Auth Methods
 
   private func signIn() {
     Auth.auth().signIn(
-      withEmail: self.authViewModel.emailAddress, password: self.authViewModel.password
+      withEmail: self.emailAddress, password: self.password
     ) { _, error in
       if let error = error {
         debugPrint("Somethings got wrong \(error.localizedDescription)")
       } else {
         self.showAlert = true
         self.alertTitle = "Sign-In Successfully"
-        self.alertMessage = "Welcome \(self.authViewModel.emailAddress)"
+        self.alertMessage = "Welcome \(self.authViewModel.getCurrentUserEmail())"
       }
     }
   }
 
   private func signUp() {
     Auth.auth().createUser(
-      withEmail: self.authViewModel.emailAddress, password: self.authViewModel.password
+      withEmail: self.emailAddress, password: self.password
     ) { _, error in
       if let error = error {
         debugPrint("Somethings got wrong \(error.localizedDescription)")
@@ -106,7 +112,7 @@ struct AuthView: View {
   private func signOut() {
     self.showAlert = true
     self.alertTitle = "Sign-Out Successfully"
-    self.alertMessage = "See you again! \(self.authViewModel.emailAddress)"
+    self.alertMessage = "See you again! \(self.authViewModel.getCurrentUserEmail())"
     do {
       try Auth.auth().signOut()
     } catch let signOutError {

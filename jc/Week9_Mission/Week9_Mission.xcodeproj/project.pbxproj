@@ -103,7 +103,6 @@
 		DA83209A2C0C03F400D2A4F6 /* Week9_Mission */ = {
 			isa = PBXGroup;
 			children = (
-				DA899F1F2C1278E500F32E4D /* Week9-Mission-Info.plist */,
 				DA8320D52C0C291500D2A4F6 /* Model */,
 				DA8320D62C0C291A00D2A4F6 /* View */,
 				DA899F202C128D2500F32E4D /* ViewModel */,
@@ -113,6 +112,7 @@
 				DA83209F2C0C03F600D2A4F6 /* Assets.xcassets */,
 				DA8320A12C0C03F600D2A4F6 /* Week9_Mission.entitlements */,
 				DAE166762C126DE400FCC018 /* GoogleService-Info.plist */,
+				DA899F1F2C1278E500F32E4D /* Week9-Mission-Info.plist */,
 				DA8320A22C0C03F600D2A4F6 /* Preview Content */,
 			);
 			path = Week9_Mission;
@@ -457,12 +457,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "JiwoongCHOI.Week9-Mission";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,12 +495,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "JiwoongCHOI.Week9-Mission";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
