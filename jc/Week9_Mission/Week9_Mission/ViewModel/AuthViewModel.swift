@@ -9,7 +9,11 @@ import FirebaseAuth
 import Foundation
 
 class AuthViewModel: ObservableObject {
-  @Published private var currentUser: FirebaseAuth.User? = Auth.auth().currentUser
+  @Published var currentUser: FirebaseAuth.User?
+
+  init() {
+    self.currentUser = Auth.auth().currentUser
+  }
 
   func getCurrentUserEmail() -> String {
     if let currentUser = self.currentUser, let email = currentUser.email {

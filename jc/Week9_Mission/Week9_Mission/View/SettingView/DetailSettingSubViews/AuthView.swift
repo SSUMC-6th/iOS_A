@@ -8,11 +8,10 @@
 import FirebaseAuth
 import FirebaseCore
 import SwiftUI
+import GoogleSignIn
 
 struct AuthView: View {
   // MARK: - Properties
-
-  @StateObject private var authViewModel = AuthViewModel()
 
   @State private var emailAddress: String = ""
   @State private var password: String = ""
@@ -24,9 +23,9 @@ struct AuthView: View {
   // MARK: - Body Properties
 
   var body: some View {
-    if let currentUser = Auth.auth().currentUser {
+    if Auth.auth().currentUser != nil {
       VStack {
-        Text("Welcome \(self.authViewModel.getCurrentUserEmail())")
+        Text("Welcome \(Auth.auth().currentUser!.email!)")
         Button(
           action: {
             self.signOut()
@@ -54,25 +53,38 @@ struct AuthView: View {
         HStack {
           Button(
             action: {
-              self.signIn()
+              self.signInWithEmail()
             },
             label: {
-              Text("Sign-In")
+              Text("Sign In")
             }
           )
+          .buttonStyle(.bordered)
 
           Button(
             action: {
-              self.signUp()
+              self.signUpWithEmail()
             },
             label: {
-              Text("Sign-Up")
+              Text("Sign Up")
             }
           )
+          .buttonStyle(.bordered)
         }
+
+        Button(
+          action: {
+            self.signInWithGoogle()
+          },
+          label: {
+            Text("Sign in with Google")
+          }
+        )
+        .buttonStyle(.bordered)
       }
       .alert(self.alertTitle, isPresented: self.$showAlert) {
         //
+
       } message: {
         Text(self.alertMessage)
       }
@@ -81,7 +93,7 @@ struct AuthView: View {
 
   // MARK: - Auth Methods
 
-  private func signIn() {
+  private func signInWithEmail() {
     Auth.auth().signIn(
       withEmail: self.emailAddress, password: self.password
     ) { _, error in
@@ -90,12 +102,12 @@ struct AuthView: View {
       } else {
         self.showAlert = true
         self.alertTitle = "Sign-In Successfully"
-        self.alertMessage = "Welcome \(self.authViewModel.getCurrentUserEmail())"
+        self.alertMessage = "Welcome \(Auth.auth().currentUser!.email!)"
       }
     }
   }
 
-  private func signUp() {
+  private func signUpWithEmail() {
     Auth.auth().createUser(
       withEmail: self.emailAddress, password: self.password
     ) { _, error in
@@ -108,11 +120,55 @@ struct AuthView: View {
       }
     }
   }
+  
+  private func signInWithGoogle() {
+    guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+    // Create Google Sign In configuration object.
+    let config = GIDConfiguration(clientID: clientID)
+    GIDSignIn.sharedInstance.configuration = config
+    
+    guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let window = windowScene.windows.first,
+          let rootViewController = window.rootViewController else {
+      print("There is no root view controller!")
+      return
+    }
+
+    // Start the sign in flow!
+    GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { result, error in
+      guard error == nil else {
+        // ...
+        return
+      }
+
+      guard let user = result?.user,
+        let idToken = user.idToken?.tokenString
+      else {
+        // ...
+        return
+      }
+
+      let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                     accessToken: user.accessToken.tokenString)
+
+      // ...
+      Auth.auth().signIn(with: credential) { result, error in
+        if let error = error {
+          debugPrint(error.localizedDescription)
+        } else {
+          self.showAlert = true
+          self.alertTitle = "Sign-In Successfully"
+          self.alertMessage = "Welcome \(Auth.auth().currentUser!.email!)"
+        }
+      }
+    }
+  }
 
   private func signOut() {
     self.showAlert = true
     self.alertTitle = "Sign-Out Successfully"
-    self.alertMessage = "See you again! \(self.authViewModel.getCurrentUserEmail())"
+    self.alertMessage = "See you again! \(Auth.auth().currentUser!.email!)"
     do {
       try Auth.auth().signOut()
     } catch let signOutError {
