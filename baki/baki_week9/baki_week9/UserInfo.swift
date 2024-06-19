@@ -4,15 +4,10 @@
 //
 //  Created by 박희민 on 6/19/24.
 //
+import Foundation
 
-import SwiftUI
-
-struct UserInfo: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    UserInfo()
+struct UserInfo: Identifiable {
+    var id: Int
+    var username: String
+    var password: String
 }
