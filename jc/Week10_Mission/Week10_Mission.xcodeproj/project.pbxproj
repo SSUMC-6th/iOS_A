@@ -8,21 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		DA2C7DF02C2BED0700910DC1 /* Week10_MissionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7DEF2C2BED0700910DC1 /* Week10_MissionApp.swift */; };
-		DA2C7DF22C2BED0700910DC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7DF12C2BED0700910DC1 /* ContentView.swift */; };
+		DA2C7DF22C2BED0700910DC1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7DF12C2BED0700910DC1 /* AuthView.swift */; };
 		DA2C7DF42C2BED0900910DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2C7DF32C2BED0900910DC1 /* Assets.xcassets */; };
 		DA2C7DF82C2BED0900910DC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2C7DF72C2BED0900910DC1 /* Preview Assets.xcassets */; };
 		DA2C7E002C2BED2900910DC1 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = DA2C7DFF2C2BED2900910DC1 /* SwiftFormat */; };
 		DA2C7E022C2BED2900910DC1 /* SwiftFormatConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = DA2C7E012C2BED2900910DC1 /* SwiftFormatConfiguration */; };
 		DA2C7E052C2BED7D00910DC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DA2C7E042C2BED7D00910DC1 /* Moya */; };
+		DA2C7E092C2BF71F00910DC1 /* AuthMoyaTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E082C2BF71F00910DC1 /* AuthMoyaTargetType.swift */; };
+		DA2C7E0B2C2BF8B900910DC1 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E0A2C2BF8B900910DC1 /* LoginResponseDTO.swift */; };
+		DA2C7E0D2C2BF9DF00910DC1 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E0C2C2BF9DF00910DC1 /* AuthViewModel.swift */; };
+		DA2C7E122C2C063300910DC1 /* SignupResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E112C2C063300910DC1 /* SignupResponseDTO.swift */; };
+		DA2C7E142C2C098300910DC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E132C2C098300910DC1 /* ContentView.swift */; };
+		DA2C7E162C2C09AC00910DC1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2C7E152C2C09AB00910DC1 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA2C7DEC2C2BED0700910DC1 /* Week10_Mission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week10_Mission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2C7DEF2C2BED0700910DC1 /* Week10_MissionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week10_MissionApp.swift; sourceTree = "<group>"; };
-		DA2C7DF12C2BED0700910DC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA2C7DF12C2BED0700910DC1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		DA2C7DF32C2BED0900910DC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA2C7DF52C2BED0900910DC1 /* Week10_Mission.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Week10_Mission.entitlements; sourceTree = "<group>"; };
 		DA2C7DF72C2BED0900910DC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA2C7E082C2BF71F00910DC1 /* AuthMoyaTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMoyaTargetType.swift; sourceTree = "<group>"; };
+		DA2C7E0A2C2BF8B900910DC1 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		DA2C7E0C2C2BF9DF00910DC1 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DA2C7E102C2BFCB100910DC1 /* Week10-Mission-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Week10-Mission-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DA2C7E112C2C063300910DC1 /* SignupResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseDTO.swift; sourceTree = "<group>"; };
+		DA2C7E132C2C098300910DC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA2C7E152C2C09AB00910DC1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +71,15 @@
 		DA2C7DEE2C2BED0700910DC1 /* Week10_Mission */ = {
 			isa = PBXGroup;
 			children = (
+				DA2C7E102C2BFCB100910DC1 /* Week10-Mission-Info.plist */,
 				DA2C7DEF2C2BED0700910DC1 /* Week10_MissionApp.swift */,
-				DA2C7DF12C2BED0700910DC1 /* ContentView.swift */,
+				DA2C7E132C2C098300910DC1 /* ContentView.swift */,
+				DA2C7E152C2C09AB00910DC1 /* MainView.swift */,
+				DA2C7DF12C2BED0700910DC1 /* AuthView.swift */,
+				DA2C7E0A2C2BF8B900910DC1 /* LoginResponseDTO.swift */,
+				DA2C7E112C2C063300910DC1 /* SignupResponseDTO.swift */,
+				DA2C7E0C2C2BF9DF00910DC1 /* AuthViewModel.swift */,
+				DA2C7E082C2BF71F00910DC1 /* AuthMoyaTargetType.swift */,
 				DA2C7DF32C2BED0900910DC1 /* Assets.xcassets */,
 				DA2C7DF52C2BED0900910DC1 /* Week10_Mission.entitlements */,
 				DA2C7DF62C2BED0900910DC1 /* Preview Content */,
@@ -154,8 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2C7DF22C2BED0700910DC1 /* ContentView.swift in Sources */,
+				DA2C7E0D2C2BF9DF00910DC1 /* AuthViewModel.swift in Sources */,
+				DA2C7E162C2C09AC00910DC1 /* MainView.swift in Sources */,
+				DA2C7E0B2C2BF8B900910DC1 /* LoginResponseDTO.swift in Sources */,
+				DA2C7E142C2C098300910DC1 /* ContentView.swift in Sources */,
+				DA2C7DF22C2BED0700910DC1 /* AuthView.swift in Sources */,
 				DA2C7DF02C2BED0700910DC1 /* Week10_MissionApp.swift in Sources */,
+				DA2C7E122C2C063300910DC1 /* SignupResponseDTO.swift in Sources */,
+				DA2C7E092C2BF71F00910DC1 /* AuthMoyaTargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +315,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Week10-Mission-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -327,6 +354,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Week10-Mission-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

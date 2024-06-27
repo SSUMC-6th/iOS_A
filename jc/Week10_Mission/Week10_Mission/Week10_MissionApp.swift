@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Week10_MissionApp: App {
+  @StateObject var authViewModel =  AuthViewModel()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .environmentObject(self.authViewModel)
     }
 }
