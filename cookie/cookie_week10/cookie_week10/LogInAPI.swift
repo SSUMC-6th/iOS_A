@@ -2,8 +2,8 @@ import Moya
 import Foundation
 
 enum LoginAPI {
-    case login(id: String, pw: String)
-    case signup(id: String, pw: String)
+    case login(id: String, password: String)
+    case signup(id: String, password: String)
 }
 
 extension LoginAPI: TargetType {
@@ -31,16 +31,16 @@ extension LoginAPI: TargetType {
     
     var task: Task {
         switch self {
-        case let .login(id, pw):
+        case let .login(id, password):
             let parameters: [String: Any] = [
                 "username": id,
-                "password": pw
+                "password": password
             ]
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
-        case .signup(id: let id, pw: let pw):
+        case .signup(id: let id, password: let password):
             let parameters: [String: Any] = [
                 "username": id,
-                "password": pw
+                "password": password
             ]
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
@@ -50,4 +50,3 @@ extension LoginAPI: TargetType {
         return ["Content-Type": "application/json"]
     }
 }
-
