@@ -71,9 +71,9 @@ struct LoginView: View {
                 Spacer()
             }
             .padding()
-            .alert(isPresented: $showAlert) {
+            .alert(isPresented: $showAlert){
                 if showAutoLoginAlert {
-                    return Alert(
+                    Alert(
                         title: Text("자동 로그인 활성화"),
                         message: Text("자동 로그인을 활성화 하시겠습니까?"),
                         primaryButton: .default(Text("취소").foregroundColor(.blue), action: {
@@ -84,19 +84,19 @@ struct LoginView: View {
                         })
                     )
                 } else {
-                    return Alert(
+                    Alert(
                         title: Text(""),
                         message: Text(alertMessage),
                         dismissButton: .default(Text("확인"))
                     )
                 }
             }
+            
         }
     }
     
     // MARK: Function
     let provider = MoyaProvider<LoginAPI>()
-    
     func loginAPI(id: String, password: String, completion: @escaping (Bool) -> Void) {
         provider.request(.login(id: id, password: password)) { result in
             DispatchQueue.main.async {
@@ -137,8 +137,4 @@ struct LoginView: View {
 struct TokenResponse: Decodable {
     var access_token: String
     var refresh_token: String
-}
-
-#Preview {
-    LoginView()
 }
